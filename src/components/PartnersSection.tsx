@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Sun,
   Palette,
@@ -15,8 +13,6 @@ import {
 } from 'lucide-react';
 
 export const PartnersSection: React.FC = () => {
-  const [activeNode, setActiveNode] = useState<number | null>(null);
-
   const partners = [
     {
       id: 'solartech',
@@ -131,7 +127,7 @@ export const PartnersSection: React.FC = () => {
             
             <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight">
               Powering the{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 animate-text-gradient bg-[length:200%_auto]">
                 Ecosystem.
               </span>
             </h2>
@@ -151,18 +147,13 @@ export const PartnersSection: React.FC = () => {
 
         {/* Interactive Holographic Bento Matrix Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
-          {partners.map((p, idx) => {
+          {partners.map((p) => {
             const Icon = p.icon;
-            const isHovered = activeNode === idx;
 
             return (
               <div
                 key={p.id}
-                onMouseEnter={() => setActiveNode(idx)}
-                onMouseLeave={() => setActiveNode(null)}
-                className={`relative rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200 p-5 sm:p-6 lg:p-7 flex flex-col justify-between transition-all duration-300 group overflow-hidden ${p.borderColor} ${
-                  isHovered ? 'shadow-lg -translate-y-0.5 bg-white' : 'hover:shadow-md'
-                }`}
+                className={`relative rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200 p-5 sm:p-6 lg:p-7 flex flex-col justify-between transition-all duration-300 group overflow-hidden ${p.borderColor} hover:shadow-xl hover:-translate-y-1.5 hover:bg-white`}
               >
                 {/* Background Gradient Spotlight */}
                 <div
@@ -192,7 +183,7 @@ export const PartnersSection: React.FC = () => {
 
                   {/* Icon & Partner Title */}
                   <div className="flex items-center gap-3 sm:gap-3.5 mb-3.5 sm:mb-4">
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:scale-105 group-hover:border-purple-300 transition-all shrink-0">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:border-purple-300 transition-all shrink-0">
                       <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${p.iconColor}`} />
                     </div>
                     <div>
@@ -222,7 +213,7 @@ export const PartnersSection: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1 text-purple-600 font-bold text-[10px] sm:text-xs group-hover:translate-x-0.5 transition-transform">
+                  <div className="flex items-center gap-1 text-purple-600 font-bold text-[10px] sm:text-xs group-hover:translate-x-1 transition-transform">
                     <ShieldCheck className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     <span>VERIFIED</span>
                   </div>
@@ -239,7 +230,7 @@ export const PartnersSection: React.FC = () => {
           <div className="absolute top-0 bottom-0 right-0 w-10 sm:w-16 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />
 
           <div className="flex items-center gap-6 sm:gap-8 overflow-hidden whitespace-nowrap">
-            <div className="flex items-center gap-6 sm:gap-8 animate-[marquee_20s_linear_infinite]">
+            <div className="flex items-center gap-6 sm:gap-8 animate-marquee">
               {partners.concat(partners).map((p, i) => (
                 <div key={i} className="inline-flex items-center gap-2 sm:gap-3 font-mono text-[11px] sm:text-xs font-bold text-slate-300">
                   <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
