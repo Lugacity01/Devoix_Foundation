@@ -40,13 +40,10 @@ export const MissionVision: React.FC = () => {
   return (
     <section id="mission" className="py-16 sm:py-20 lg:py-24 bg-slate-50 text-slate-900 relative overflow-hidden border-b border-slate-200 selection:bg-purple-600 selection:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Tag */}
         <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-purple-600 mb-3 sm:mb-4">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-600" />
-          </span>
+          <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-purple-600" />
           <span>SECTION 02 // MISSION & VISION</span>
         </div>
 
@@ -54,7 +51,7 @@ export const MissionVision: React.FC = () => {
         <div className="max-w-3xl mb-10 sm:mb-14">
           <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight">
             Guided by purpose.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 animate-text-gradient bg-[length:200%_auto]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
               Driven by impact.
             </span>
           </h2>
@@ -62,10 +59,10 @@ export const MissionVision: React.FC = () => {
 
         {/* Mission & Vision Side-by-Side Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
-          
+
           {/* Mission Card */}
-          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-400 transition-all duration-300 relative overflow-hidden group">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all">
+          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 shadow-sm relative overflow-hidden group hover:border-purple-300 transition-all">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 mb-4 sm:mb-6">
               <Target className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
 
@@ -73,7 +70,7 @@ export const MissionVision: React.FC = () => {
               <span>OUR MISSION</span>
             </div>
 
-            <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-purple-700 transition-colors">
+            <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900 mb-3 leading-snug">
               Commercial Excellence Meets Social Impact
             </h3>
 
@@ -83,8 +80,8 @@ export const MissionVision: React.FC = () => {
           </div>
 
           {/* Vision Card */}
-          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-400 transition-all duration-300 relative overflow-hidden group">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 shadow-sm relative overflow-hidden group hover:border-indigo-300 transition-all">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 mb-4 sm:mb-6">
               <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
 
@@ -92,7 +89,7 @@ export const MissionVision: React.FC = () => {
               <span>OUR VISION</span>
             </div>
 
-            <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900 mb-3 leading-snug group-hover:text-indigo-700 transition-colors">
+            <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900 mb-3 leading-snug">
               A Flourishing African Creative Ecosystem
             </h3>
 
@@ -126,16 +123,16 @@ export const MissionVision: React.FC = () => {
               return (
                 <div
                   key={i}
-                  className="relative p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 hover:border-purple-400 shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden flex flex-col justify-between"
+                  className="relative p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 hover:border-purple-400/80 shadow-sm hover:shadow-md transition-all group overflow-hidden flex flex-col justify-between"
                 >
                   {/* Scaled Watermark Number */}
-                  <div className="absolute top-2 right-4 sm:top-4 sm:right-6 font-display text-5xl sm:text-6xl font-black text-slate-100 group-hover:text-purple-100 transition-colors pointer-events-none select-none">
+                  <div className="absolute top-2 right-4 sm:top-4 sm:right-6 font-display text-5xl sm:text-6xl font-black text-slate-100 group-hover:text-purple-50 transition-colors pointer-events-none select-none">
                     {v.num}
                   </div>
 
                   <div className="relative z-10">
                     <div className="flex items-center justify-between mb-4 sm:mb-5">
-                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-purple-50 border border-purple-200/80 flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white group-hover:scale-110 transition-all shadow-sm">
+                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-purple-50 border border-purple-200/80 flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shadow-sm">
                         <Icon className="w-5 h-5" />
                       </div>
                       <span className="px-2.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider bg-slate-100 text-slate-700 group-hover:bg-purple-100 group-hover:text-purple-800 transition-colors">
@@ -157,7 +154,7 @@ export const MissionVision: React.FC = () => {
                     <span className="font-semibold group-hover:text-purple-600 transition-colors">
                       {v.principle}
                     </span>
-                    <span className="text-slate-400 group-hover:text-purple-600 group-hover:translate-x-1.5 transition-all text-xs">
+                    <span className="text-slate-400 group-hover:text-purple-600 group-hover:translate-x-1 transition-all text-xs">
                       →
                     </span>
                   </div>
