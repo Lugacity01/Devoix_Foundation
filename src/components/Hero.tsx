@@ -87,13 +87,10 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column: Visual Showcase Stage with Non-Stop Kinetic Floating Animation (Span 5) */}
+          {/* Right Column: Visual Showcase Stage (Clean, crisp, no blur shadow behind, no dark shadow overlay) */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0">
             <div className="relative mx-auto max-w-md lg:max-w-none animate-float">
               
-              {/* Decorative Corner Glow Frames */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 rounded-3xl blur-md opacity-40 group-hover:opacity-80 transition duration-1000 group-hover:duration-200 animate-pulse-glow" />
-
               {/* Main Photo/Reel Frame */}
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-purple-500/40 bg-[#0D071E] aspect-[16/10] sm:aspect-[4/5] group">
                 <img
@@ -101,7 +98,6 @@ export const Hero: React.FC = () => {
                   alt="Dovoix FilmHouse & Foundation Production Stage"
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080312] via-[#080312]/25 to-transparent" />
 
                 {/* Top Overlay Badge */}
                 <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between">
