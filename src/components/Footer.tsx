@@ -55,23 +55,8 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 sm:space-y-3 text-xs font-mono">
               <li>
-                <Link href="/#about" className="text-slate-400 hover:text-white transition-colors">
-                  WHO WE ARE
-                </Link>
-              </li>
-              <li>
-                <Link href="/#mission" className="text-slate-400 hover:text-white transition-colors">
-                  MISSION & VISION
-                </Link>
-              </li>
-              <li>
-                <Link href="/#executives" className="text-slate-400 hover:text-white transition-colors">
-                  OUR EXECUTIVES
-                </Link>
-              </li>
-              <li>
-                <Link href="/#partners" className="text-slate-400 hover:text-white transition-colors">
-                  PARTNERS
+                <Link href="/" className="text-slate-400 hover:text-white transition-colors">
+                  HOME
                 </Link>
               </li>
               <li>
@@ -80,13 +65,8 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/#impact" className="text-slate-400 hover:text-white transition-colors">
-                  COMBINED IMPACT
-                </Link>
-              </li>
-              <li>
-                <Link href="/#highlights" className="text-slate-400 hover:text-white transition-colors">
-                  LATEST HIGHLIGHTS
+                <Link href="/register" className="text-slate-400 hover:text-white transition-colors">
+                  STUDENT REGISTRATION
                 </Link>
               </li>
               <li>

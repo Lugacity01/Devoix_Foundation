@@ -20,14 +20,9 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Who We Are', href: '/#about' },
-    { name: 'Mission & Vision', href: '/#mission' },
-    { name: 'Executives', href: '/#executives' },
-    { name: 'Partners', href: '/#partners' },
-    { name: 'Impact', href: '/#impact' },
+    { name: 'Home', href: '/' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Our Arms', href: '/#gateway' },
-    { name: 'Highlights', href: '/#highlights' },
+    { name: 'Register', href: '/register' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -44,7 +39,7 @@ export const Navbar: React.FC = () => {
         <Logo variant="light" />
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -64,7 +59,7 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Desktop Work With Us Button -> Routes to /contact */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xs font-mono font-bold uppercase tracking-wider border border-purple-400/40 transition-all shadow-md shadow-purple-950/40 group"
@@ -80,7 +75,7 @@ export const Navbar: React.FC = () => {
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-label="Toggle Navigation Menu"
-          className="lg:hidden p-2 text-slate-300 hover:text-white hover:bg-purple-900/20 rounded-lg transition-colors border border-purple-500/20"
+          className="md:hidden p-2 text-slate-300 hover:text-white hover:bg-purple-900/20 rounded-lg transition-colors border border-purple-500/20"
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -88,7 +83,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {isOpen && (
-        <div className="lg:hidden bg-[#080312] border-b border-purple-900/40 px-4 py-6 flex flex-col gap-3">
+        <div className="md:hidden bg-[#080312] border-b border-purple-900/40 px-4 py-6 flex flex-col gap-3">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -96,7 +91,7 @@ export const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-xs font-mono font-bold uppercase tracking-wider py-2 border-b border-purple-900/20 ${
+                className={`text-xs font-mono font-bold uppercase tracking-wider py-2.5 border-b border-purple-900/20 ${
                   isActive ? 'text-purple-400 font-extrabold' : 'text-slate-300 hover:text-purple-400'
                 }`}
               >
