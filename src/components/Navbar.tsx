@@ -28,11 +28,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-black/95 backdrop-blur-md border-b border-white/10 py-3.5 shadow-xl shadow-black/50'
           : 'bg-black/85 backdrop-blur-md border-b border-white/10 py-4'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Main Brand Monochrome Logo */}
@@ -46,11 +45,10 @@ export const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-xs font-mono font-bold uppercase tracking-wider transition-colors py-1 ${
-                  isActive
+                className={`text-xs font-mono font-bold uppercase tracking-wider transition-colors py-1 ${isActive
                     ? 'text-white border-b-2 border-white'
                     : 'text-zinc-400 hover:text-white'
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
@@ -91,9 +89,8 @@ export const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-xs font-mono font-bold uppercase tracking-wider py-2.5 border-b border-white/5 ${
-                  isActive ? 'text-white font-extrabold' : 'text-zinc-400 hover:text-white'
-                }`}
+                className={`text-xs font-mono font-bold uppercase tracking-wider py-2.5 border-b border-white/5 ${isActive ? 'text-white font-extrabold' : 'text-zinc-400 hover:text-white'
+                  }`}
               >
                 {link.name}
               </Link>

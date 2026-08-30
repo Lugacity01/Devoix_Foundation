@@ -6,7 +6,7 @@ export const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-14 sm:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white text-black relative overflow-hidden border-b border-zinc-200 selection:bg-black selection:text-white">
       <div className="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 relative z-10">
-        
+
         {/* Section Header Tag */}
         <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-zinc-800 mb-3 sm:mb-4">
           <span className="relative flex h-2 w-2">
@@ -18,7 +18,7 @@ export const AboutSection: React.FC = () => {
 
         {/* Split Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 items-center">
-          
+
           {/* Left Column: Human Narrative & Dual Arm Intro */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-black tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-5 2xl:mb-6">
@@ -81,7 +81,7 @@ export const AboutSection: React.FC = () => {
           {/* Right Column: Visual Stage with Bounded Height */}
           <div className="lg:col-span-5 relative mt-4 lg:mt-0 flex justify-center">
             <div className="relative w-full max-w-md lg:max-w-sm xl:max-w-md 2xl:max-w-lg animate-float-slow">
-              
+
               {/* Photo Frame with bounded max height */}
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-zinc-200 shadow-xl bg-zinc-100 aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/5] max-h-[380px] sm:max-h-[440px] lg:max-h-[460px] 2xl:max-h-[500px] group hover:shadow-2xl transition-shadow duration-500">
                 <img

@@ -6,7 +6,7 @@ import { ArrowRight, Film, HeartHandshake, Play, Sparkles } from 'lucide-react';
 export const Hero: React.FC = () => {
   return (
     <section className="relative pt-24 pb-14 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20 xl:pt-36 xl:pb-24 2xl:pt-40 2xl:pb-28 bg-black text-white overflow-hidden selection:bg-white selection:text-black border-b border-zinc-900">
-      
+
       {/* Dynamic Monochrome Ambient Glow */}
       <div className="absolute top-1/4 left-1/4 w-[400px] sm:w-[600px] 2xl:w-[800px] h-[300px] sm:h-[450px] 2xl:h-[600px] bg-white/5 rounded-full blur-[140px] pointer-events-none animate-pulse-glow" />
       <div className="absolute bottom-1/4 right-1/4 w-[350px] sm:w-[500px] 2xl:w-[700px] h-[250px] sm:h-[350px] 2xl:h-[500px] bg-zinc-700/10 rounded-full blur-[120px] pointer-events-none animate-pulse-glow [animation-delay:2.5s]" />
@@ -14,10 +14,10 @@ export const Hero: React.FC = () => {
 
       <div className="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 2xl:gap-16 items-center">
-          
+
           {/* Left Column: Headline, Purpose & Dual CTAs (Span 7) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            
+
             {/* Top Brand Tag */}
             <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-zinc-300 mb-4 sm:mb-5 2xl:mb-6 border border-white/20 px-3.5 py-1.5 rounded-full bg-zinc-900/80 backdrop-blur-md">
               <span className="relative flex h-2 w-2">
@@ -90,7 +90,7 @@ export const Hero: React.FC = () => {
           {/* Right Column: Visual Showcase Stage with Bounded Height (Span 5) */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0 flex justify-center">
             <div className="relative w-full max-w-md lg:max-w-sm xl:max-w-md 2xl:max-w-lg animate-float">
-              
+
               {/* Decorative Frame */}
               <div className="absolute -inset-1 bg-gradient-to-r from-zinc-700 via-zinc-800 to-zinc-950 rounded-3xl blur-md opacity-40 group-hover:opacity-80 transition duration-1000 animate-pulse-glow" />
 
