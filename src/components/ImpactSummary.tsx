@@ -39,7 +39,7 @@ export const ImpactSummary: React.FC = () => {
           {impactStats.map((stat, idx) => (
             <div
               key={idx}
-              className="p-3.5 sm:p-4 2xl:p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+              className="p-3.5 sm:p-4 2xl:p-5 rounded-2xl bg-white border border-slate-200 hover:border-purple-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
             >
               <div className="font-mono text-[9px] sm:text-[10px] font-bold text-purple-600 uppercase tracking-widest mb-2">
                 METRIC // 0{idx + 1}
@@ -60,8 +60,8 @@ export const ImpactSummary: React.FC = () => {
           ))}
         </div>
 
-        {/* Supporting Visual & Founder Pull Quote (Dark Purple Box) */}
-        <div className="relative rounded-2xl sm:rounded-3xl bg-[#080312] text-white border-2 border-purple-500/40 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 shadow-[0_0_50px_rgba(157,78,221,0.2)] group max-h-[500px]">
+        {/* Supporting Visual & Founder Pull Quote (Clean crisp borders, no heavy shadows) */}
+        <div className="relative rounded-2xl sm:rounded-3xl bg-[#080312] text-white border-2 border-purple-500/40 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 group max-h-[500px]">
           
           {/* Left Column: Co-Founder Pull Quote (Span 7) */}
           <div className="lg:col-span-7 p-5 sm:p-6 lg:p-8 2xl:p-10 flex flex-col justify-between relative z-10">
@@ -89,10 +89,10 @@ export const ImpactSummary: React.FC = () => {
             <img
               src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80"
               alt="Dovoix Outreach Moment & Solar Hub"
-              className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#080312] via-[#080312]/20 to-transparent" />
-            <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3 p-2.5 sm:p-3 rounded-xl bg-[#080312]/95 border border-purple-500/40 backdrop-blur-md">
+            <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3 p-2.5 sm:p-3 rounded-xl bg-[#080312]/95 border border-purple-500/40">
               <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono font-bold text-purple-300 uppercase tracking-wider mb-0.5">
                 <Sparkles className="w-3 h-3 text-purple-400" />
                 <span>ON THE FIELD // SOLAR HUB</span>
