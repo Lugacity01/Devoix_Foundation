@@ -34,11 +34,11 @@ export const LatestHighlights: React.FC = () => {
   ];
 
   return (
-    <section id="highlights" className="py-14 sm:py-16 lg:py-20 xl:py-24 2xl:py-28 bg-white text-slate-900 relative overflow-hidden border-b border-slate-200 selection:bg-purple-600 selection:text-white">
-      <div className="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 relative z-10">
+    <section id="highlights" className="py-16 sm:py-20 lg:py-24 bg-white text-slate-900 relative overflow-hidden border-b border-slate-200 selection:bg-purple-600 selection:text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between pb-6 sm:pb-8 mb-8 sm:mb-10 2xl:mb-12 border-b border-slate-200">
+        <div className="flex flex-col md:flex-row md:items-end justify-between pb-6 sm:pb-8 mb-8 sm:mb-12 border-b border-slate-200">
           <div>
             <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-purple-600 mb-2">
               <span className="relative flex h-2 w-2">
@@ -47,7 +47,7 @@ export const LatestHighlights: React.FC = () => {
               </span>
               <span>SECTION 07 // LATEST HIGHLIGHTS</span>
             </div>
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
               Latest from{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 animate-text-gradient bg-[length:200%_auto]">
                 Dovoix.
@@ -60,7 +60,7 @@ export const LatestHighlights: React.FC = () => {
         </div>
 
         {/* 3 Highlight Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 xl:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {highlights.map((item) => (
             <div
               key={item.id}

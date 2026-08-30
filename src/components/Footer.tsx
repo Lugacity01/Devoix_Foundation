@@ -6,13 +6,13 @@ import { Mail, MapPin, ExternalLink, Instagram, Linkedin, Twitter } from 'lucide
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-[#05020B] text-white border-t border-purple-900/30 selection:bg-purple-600 selection:text-white">
-      <div className="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12 py-12 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-8 sm:pb-12 border-b border-purple-900/30">
           
           {/* Brand Info (Span 4) */}
           <div className="lg:col-span-4 flex flex-col items-start">
             <div className="mb-4 sm:mb-6">
-              <Logo variant="light" />
+              <Logo />
             </div>
             <p className="text-xs text-slate-400 leading-relaxed font-normal mb-5 sm:mb-6 max-w-sm">
               Dovoix is a creative firm with two operational arms — FilmHouse (commercial production) and Foundation (social impact). Connecting commercial excellence with community transformation across Africa.
@@ -105,9 +105,9 @@ export const Footer: React.FC = () => {
                   className="group flex items-start gap-2 text-xs font-mono"
                 >
                   <div>
-                    <div className="text-purple-400 font-bold group-hover:text-purple-300 transition-colors flex items-center gap-1.5">
+                    <div className="text-white font-bold group-hover:text-purple-300 transition-colors flex items-center gap-1.5">
                       <span>Dovoix Foundation</span>
-                      <ExternalLink className="w-3 h-3 text-purple-400" />
+                      <ExternalLink className="w-3 h-3 text-violet-400" />
                     </div>
                     <div className="text-slate-400 text-[11px]">foundation.dovoix.com</div>
                   </div>
@@ -150,7 +150,7 @@ export const Footer: React.FC = () => {
           <p>© {new Date().getFullYear()} DOVOIX. All rights reserved.</p>
           <div className="flex items-center gap-4 sm:gap-6">
             <span>Commercial & Impact Synergy</span>
-            <span>Version 1.5 PRD</span>
+            <span>Version 1.4 PRD</span>
           </div>
         </div>
 

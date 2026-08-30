@@ -10,9 +10,9 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'light', className = '' })
   const isLight = variant === 'light';
 
   return (
-    <Link href="/" className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1 ${className}`}>
-      {/* Visual Mark: Monochrome Infinity-inspired vector mark */}
-      <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-zinc-800 via-zinc-950 to-black border border-white/20 shadow-md group-hover:scale-105 transition-transform duration-300">
+    <Link href="/" className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-lg p-1 ${className}`}>
+      {/* Visual Mark: Infinity-inspired vector mark with purple gradient */}
+      <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 via-violet-800 to-slate-950 border border-purple-400/40 shadow-lg shadow-purple-950/50 group-hover:scale-105 transition-transform duration-300">
         <svg
           viewBox="0 0 40 40"
           fill="none"
@@ -36,12 +36,12 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'light', className = '' })
         </svg>
       </div>
 
-      {/* Brand Text: Main Brand Monochrome */}
+      {/* Brand Text */}
       <div className="flex flex-col">
-        <span className={`font-display text-xl font-extrabold tracking-tight ${isLight ? 'text-white' : 'text-black'}`}>
+        <span className={`font-display text-xl font-extrabold tracking-tight ${isLight ? 'text-white' : 'text-slate-900'}`}>
           DOVOIX
         </span>
-        <span className={`text-[9px] font-mono font-bold tracking-[0.25em] uppercase -mt-1 ${isLight ? 'text-zinc-400' : 'text-zinc-500'}`}>
+        <span className={`text-[9px] font-mono font-bold tracking-[0.25em] uppercase -mt-1 ${isLight ? 'text-purple-400' : 'text-purple-600'}`}>
           CREATIVE FIRM
         </span>
       </div>

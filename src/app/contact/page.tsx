@@ -24,10 +24,10 @@ export default function ContactPage() {
 
   return (
     <div className="pt-28 pb-16 sm:pt-32 sm:pb-24 bg-slate-50 min-h-screen selection:bg-purple-600 selection:text-white">
-      <div className="max-w-7xl 2xl:max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="max-w-3xl 2xl:max-w-4xl mb-8 sm:mb-12">
+        <div className="max-w-3xl mb-8 sm:mb-12">
           <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-purple-600 mb-2 block">
             GET IN TOUCH // GENERAL ENQUIRIES
           </span>
@@ -39,11 +39,11 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Column: Direct Contact Details & Channels (Span 5) */}
           <div className="lg:col-span-5 space-y-4 sm:space-y-6">
-            <div className="bg-white p-6 sm:p-7 2xl:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5 sm:space-y-6">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5 sm:space-y-6">
               <h2 className="font-display text-lg sm:text-xl font-bold text-slate-900 pb-3 sm:pb-4 border-b border-slate-100">
                 Direct Channels
               </h2>
