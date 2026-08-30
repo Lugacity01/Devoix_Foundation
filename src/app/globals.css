@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #F8FAFC;
+    background-color: #080312;
+  }
+
+  body {
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #080312;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-plus-jakarta), sans-serif;
+  }
+}
+
+/* Continuous Marquee Keyframes */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Custom Scrollbar - Purple & Black */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D071E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B1B66;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9D4EDD;
+}
