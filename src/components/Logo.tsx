@@ -10,14 +10,14 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'light', className = '' })
   const isLight = variant === 'light';
 
   return (
-    <Link href="/" className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-lg p-1 ${className}`}>
-      {/* Visual Mark: Infinity-inspired dual-loop vector mark in Purple & Black */}
-      <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-purple-950 via-[#120726] to-[#080312] border border-purple-500/40 shadow-md group-hover:scale-105 transition-transform duration-300">
+    <Link href="/" className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1 ${className}`}>
+      {/* Visual Mark: Monochrome Infinity-inspired vector mark */}
+      <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-zinc-800 via-zinc-950 to-black border border-white/20 shadow-md group-hover:scale-105 transition-transform duration-300">
         <svg
           viewBox="0 0 40 40"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-purple-400"
+          className="w-6 h-6 text-white"
         >
           {/* Dual Loop Infinity Symbol Path */}
           <path
@@ -29,20 +29,20 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'light', className = '' })
           />
           <path
             d="M27 14C30.866 14 34 17.134 34 21C34 24.866 30.866 28 27 28"
-            stroke="#C77DFF"
+            stroke="currentColor"
             strokeWidth="3.5"
             strokeLinecap="round"
           />
         </svg>
       </div>
 
-      {/* Brand Text */}
+      {/* Brand Text: Main Brand Monochrome */}
       <div className="flex flex-col">
-        <span className={`font-display text-xl font-bold tracking-tight ${isLight ? 'text-white' : 'text-slate-900'}`}>
+        <span className={`font-display text-xl font-extrabold tracking-tight ${isLight ? 'text-white' : 'text-black'}`}>
           DOVOIX
         </span>
-        <span className={`text-[10px] font-mono font-bold tracking-widest uppercase -mt-1 ${isLight ? 'text-purple-400' : 'text-purple-600'}`}>
-          FOUNDATION
+        <span className={`text-[9px] font-mono font-bold tracking-[0.25em] uppercase -mt-1 ${isLight ? 'text-zinc-400' : 'text-zinc-500'}`}>
+          CREATIVE FIRM
         </span>
       </div>
     </Link>

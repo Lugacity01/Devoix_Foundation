@@ -34,27 +34,27 @@ export const LatestHighlights: React.FC = () => {
   ];
 
   return (
-    <section id="highlights" className="py-16 sm:py-20 lg:py-24 bg-white text-slate-900 relative overflow-hidden border-b border-slate-200 selection:bg-purple-600 selection:text-white">
+    <section id="highlights" className="py-16 sm:py-20 lg:py-24 bg-white text-black relative overflow-hidden border-b border-zinc-200 selection:bg-black selection:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between pb-6 sm:pb-8 mb-8 sm:mb-12 border-b border-slate-200">
+        <div className="flex flex-col md:flex-row md:items-end justify-between pb-6 sm:pb-8 mb-8 sm:mb-12 border-b border-zinc-200">
           <div>
-            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-purple-600 mb-2">
+            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-zinc-800 mb-2">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-600" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-zinc-600 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-black" />
               </span>
               <span>SECTION 07 // LATEST HIGHLIGHTS</span>
             </div>
-            <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl font-extrabold text-black tracking-tight">
               Latest from{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 animate-text-gradient bg-[length:200%_auto]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-800 via-black to-zinc-600 animate-text-gradient bg-[length:200%_auto]">
                 Dovoix.
               </span>
             </h2>
           </div>
-          <p className="text-[11px] sm:text-xs font-mono text-slate-500 mt-2 md:mt-0 uppercase tracking-wider">
+          <p className="text-[11px] sm:text-xs font-mono text-zinc-500 mt-2 md:mt-0 uppercase tracking-wider">
             RECENT ACTIVITY FROM FILMHOUSE & FOUNDATION
           </p>
         </div>
@@ -64,47 +64,47 @@ export const LatestHighlights: React.FC = () => {
           {highlights.map((item) => (
             <div
               key={item.id}
-              className="rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-300 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+              className="rounded-2xl sm:rounded-3xl bg-zinc-50 border border-zinc-200 shadow-sm hover:shadow-xl hover:border-black hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
               <div>
                 {/* Media Image Frame */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100 border-b border-slate-200">
+                <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100 border-b border-zinc-200">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   
                   {/* Source Label Badge */}
                   <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
                     <span
                       className={`px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider border backdrop-blur-md flex items-center gap-1.5 shadow-sm ${
                         item.source === 'FilmHouse'
-                          ? 'bg-purple-900/90 text-purple-200 border-purple-400/40'
-                          : 'bg-indigo-900/90 text-indigo-200 border-indigo-400/40'
+                          ? 'bg-black/90 text-zinc-200 border-zinc-700'
+                          : 'bg-purple-950/90 text-purple-200 border-purple-500/40'
                       }`}
                     >
                       {item.source === 'FilmHouse' ? (
-                        <Film className="w-3 h-3 text-purple-300" />
+                        <Film className="w-3 h-3 text-zinc-300" />
                       ) : (
-                        <HeartHandshake className="w-3 h-3 text-indigo-300" />
+                        <HeartHandshake className="w-3 h-3 text-purple-300" />
                       )}
                       <span>{item.source}</span>
                     </span>
                   </div>
 
-                  <span className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 text-[9px] sm:text-[10px] font-mono text-white bg-slate-950/80 px-2 py-0.5 rounded">
+                  <span className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 text-[9px] sm:text-[10px] font-mono text-white bg-black/80 px-2 py-0.5 rounded">
                     {item.date}
                   </span>
                 </div>
 
                 {/* Content */}
                 <div className="p-5 sm:p-6">
-                  <h3 className="font-display text-base sm:text-lg font-bold text-slate-900 mb-2 leading-snug group-hover:text-purple-600 transition-colors">
+                  <h3 className="font-display text-base sm:text-lg font-bold text-black mb-2 leading-snug group-hover:text-zinc-700 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                  <p className="text-xs text-zinc-600 leading-relaxed font-normal">
                     {item.summary}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ export const LatestHighlights: React.FC = () => {
               <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 sm:pt-2">
                 <a
                   href={item.link}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-purple-600 hover:text-purple-800 uppercase tracking-wider group/link"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-black hover:text-zinc-600 uppercase tracking-wider group/link"
                 >
                   <span>Read Highlight</span>
                   <ArrowUpRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />

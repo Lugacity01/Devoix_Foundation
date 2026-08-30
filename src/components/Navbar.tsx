@@ -30,12 +30,12 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#080312]/95 backdrop-blur-md border-b border-purple-900/40 py-3.5 shadow-lg shadow-black/40'
-          : 'bg-[#080312]/90 backdrop-blur-md border-b border-purple-900/30 py-4'
+          ? 'bg-black/95 backdrop-blur-md border-b border-white/10 py-3.5 shadow-xl shadow-black/50'
+          : 'bg-black/85 backdrop-blur-md border-b border-white/10 py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
+        {/* Main Brand Monochrome Logo */}
         <Logo variant="light" />
 
         {/* Desktop Navigation Links */}
@@ -48,8 +48,8 @@ export const Navbar: React.FC = () => {
                 href={link.href}
                 className={`text-xs font-mono font-bold uppercase tracking-wider transition-colors py-1 ${
                   isActive
-                    ? 'text-purple-400 border-b-2 border-purple-400'
-                    : 'text-slate-300 hover:text-purple-300'
+                    ? 'text-white border-b-2 border-white'
+                    : 'text-zinc-400 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -58,14 +58,14 @@ export const Navbar: React.FC = () => {
           })}
         </nav>
 
-        {/* Desktop Work With Us Button -> Routes to /contact */}
+        {/* Desktop Work With Us Button -> Black & White */}
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xs font-mono font-bold uppercase tracking-wider border border-purple-400/40 transition-all shadow-md shadow-purple-950/40 group"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-zinc-200 text-black text-xs font-mono font-bold uppercase tracking-wider transition-all shadow-md group"
           >
             <span>Work With Us</span>
-            <ArrowRight className="w-3.5 h-3.5 text-white group-hover:translate-x-0.5 transition-transform" />
+            <ArrowRight className="w-3.5 h-3.5 text-black group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
 
@@ -75,7 +75,7 @@ export const Navbar: React.FC = () => {
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-label="Toggle Navigation Menu"
-          className="md:hidden p-2 text-slate-300 hover:text-white hover:bg-purple-900/20 rounded-lg transition-colors border border-purple-500/20"
+          className="md:hidden p-2 text-zinc-300 hover:text-white hover:bg-zinc-900 rounded-lg transition-colors border border-white/10"
         >
           {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {isOpen && (
-        <div className="md:hidden bg-[#080312] border-b border-purple-900/40 px-4 py-6 flex flex-col gap-3">
+        <div className="md:hidden bg-black border-b border-white/10 px-4 py-6 flex flex-col gap-3">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -91,8 +91,8 @@ export const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-xs font-mono font-bold uppercase tracking-wider py-2.5 border-b border-purple-900/20 ${
-                  isActive ? 'text-purple-400 font-extrabold' : 'text-slate-300 hover:text-purple-400'
+                className={`text-xs font-mono font-bold uppercase tracking-wider py-2.5 border-b border-white/5 ${
+                  isActive ? 'text-white font-extrabold' : 'text-zinc-400 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 text-white text-xs font-mono font-bold uppercase tracking-wider border border-purple-400/40"
+              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-black text-xs font-mono font-bold uppercase tracking-wider hover:bg-zinc-200 transition-colors"
             >
               <span>Work With Us</span>
               <ArrowRight className="w-4 h-4" />
