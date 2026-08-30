@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Film, HeartHandshake, MapPin } from 'lucide-react';
+import { ArrowRight, Film, HeartHandshake, MapPin, Sparkles } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -9,7 +9,10 @@ export const AboutSection: React.FC = () => {
         
         {/* Section Header Tag */}
         <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-purple-600 mb-3 sm:mb-4">
-          <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-purple-600" />
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-600" />
+          </span>
           <span>SECTION 01 // WHO WE ARE</span>
         </div>
 
@@ -20,7 +23,7 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-slate-900 tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
               Empowering creators.{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 animate-text-gradient bg-[length:200%_auto]">
                 Elevating brands.
               </span>{' '}
               Transforming communities.
@@ -37,9 +40,9 @@ export const AboutSection: React.FC = () => {
 
             {/* Dual Operational Arms Summary */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 w-full mb-6 sm:mb-8 pt-4 sm:pt-6 border-t border-slate-100">
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-purple-300 hover:shadow-md transition-all group">
                 <div className="flex items-center gap-2 text-purple-700 font-mono text-xs font-bold uppercase tracking-wider mb-1.5 sm:mb-2">
-                  <Film className="w-4 h-4 text-purple-600 shrink-0" />
+                  <Film className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
                   <span>Dovoix FilmHouse</span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -47,9 +50,9 @@ export const AboutSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
                 <div className="flex items-center gap-2 text-indigo-700 font-mono text-xs font-bold uppercase tracking-wider mb-1.5 sm:mb-2">
-                  <HeartHandshake className="w-4 h-4 text-indigo-600 shrink-0" />
+                  <HeartHandshake className="w-4 h-4 text-indigo-600 shrink-0 group-hover:scale-110 transition-transform" />
                   <span>Dovoix Foundation</span>
                 </div>
                 <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -69,18 +72,18 @@ export const AboutSection: React.FC = () => {
                 className="inline-flex items-center gap-1.5 sm:gap-2 text-xs font-mono font-bold text-purple-600 hover:text-purple-800 uppercase tracking-wider group"
               >
                 <span>Read Our Full Story</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
               </a>
             </div>
 
           </div>
 
-          {/* Right Column: Visual Stage */}
+          {/* Right Column: Visual Stage with Non-Stop Gentle Floating Motion */}
           <div className="lg:col-span-5 relative mt-4 lg:mt-0">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <div className="relative mx-auto max-w-md lg:max-w-none animate-float-slow">
               
               {/* Photo Frame */}
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-lg sm:shadow-xl bg-slate-100 aspect-[16/10] sm:aspect-[4/5] group">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-100 aspect-[16/10] sm:aspect-[4/5] group hover:shadow-2xl transition-shadow duration-500">
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
                   alt="Dovoix Leadership & Production Team"
@@ -90,9 +93,10 @@ export const AboutSection: React.FC = () => {
 
                 {/* Overlay Badge */}
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3 sm:p-4 rounded-xl bg-slate-950/90 border border-white/10 backdrop-blur-md">
-                  <p className="text-[10px] sm:text-xs font-mono font-bold text-purple-300 uppercase tracking-wider mb-0.5 sm:mb-1">
-                    BEHIND THE SCENES
-                  </p>
+                  <div className="flex items-center gap-1.5 text-[10px] sm:text-xs font-mono font-bold text-purple-300 uppercase tracking-wider mb-0.5 sm:mb-1">
+                    <Sparkles className="w-3 h-3 text-purple-400" />
+                    <span>BEHIND THE SCENES</span>
+                  </div>
                   <p className="text-[11px] sm:text-xs text-white leading-relaxed">
                     Dovoix founders & production team conducting creative masterclasses on location.
                   </p>
