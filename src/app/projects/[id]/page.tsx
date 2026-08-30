@@ -1,89 +1,78 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useParams, notFound } from 'next/navigation';
+import React from 'react';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { projectsData } from '@/data/projectsData';
-import { LightboxModal } from '@/components/LightboxModal';
-import { MapPin, Calendar, Users, ArrowLeft, Maximize2, CheckCircle2, ChevronRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { MapPin, Calendar, Users, ArrowLeft, CheckCircle2 } from 'lucide-react';
 
-export default function ProjectDetailPage() {
-  const params = useParams();
-  const id = params?.id as string;
-  const project = projectsData.find((p) => p.id === id);
+interface ProjectDetailProps {
+  params: {
+    id: string;
+  };
+}
 
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+export default function ProjectDetailPage({ params }: ProjectDetailProps) {
+  const project = projectsData.find((p) => p.id === params.id);
 
   if (!project) {
-    return (
-      <div className="pt-36 pb-24 max-w-3xl mx-auto px-4 text-center">
-        <h1 className="font-display text-3xl font-bold text-brand-dark mb-4">Project Not Found</h1>
-        <p className="text-slate-600 text-sm mb-6">The requested project record could not be found in the Foundation archive.</p>
-        <Link href="/projects" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-navy text-white text-sm font-semibold">
-          <ArrowLeft className="w-4 h-4" />
-          <span>Return to Projects</span>
-        </Link>
-      </div>
-    );
+    notFound();
   }
 
-  const relatedProjects = projectsData.filter((p) => p.id !== project.id).slice(0, 3);
-
-  const openLightbox = (index: number) => {
-    setCurrentImageIndex(index);
-    setLightboxOpen(true);
-  };
+  const relatedProjects = projectsData.filter((p) => p.id !== project.id && p.category === project.category).slice(0, 2);
 
   return (
-    <div className="pt-32 pb-24 bg-slate-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back Link */}
-        <div className="mb-8">
+    <div className="pt-28 pb-16 sm:pt-32 sm:pb-24 bg-slate-50 min-h-screen selection:bg-purple-600 selection:text-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Back Button */}
+        <div className="mb-6 sm:mb-8">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-brand-teal transition-colors"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-slate-600 hover:text-purple-600 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Back to All Projects</span>
+            <span>Back to Projects Archive</span>
           </Link>
         </div>
 
-        {/* Project Hero Header */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-subtle mb-12">
-          <div className="flex flex-wrap gap-2 mb-4">
-            <span className="px-3 py-1 rounded-full bg-teal-50 text-brand-teal text-xs font-bold uppercase">
+        {/* Hero Header */}
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 mb-8 sm:mb-12">
+          <div className="flex flex-wrap items-center gap-2 mb-4">
+            <span className="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-slate-900 text-white">
               {project.category}
             </span>
-            <span className="px-3 py-1 rounded-full bg-slate-900 text-white text-xs font-bold uppercase">
+            <span className={`px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider ${
+              project.status === 'Active' ? 'bg-purple-600 text-white' : 'bg-slate-700 text-white'
+            }`}>
               {project.status}
             </span>
           </div>
 
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark tracking-tight mb-4 leading-tight">
+          <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
             {project.name}
           </h1>
 
-          <p className="text-lg text-slate-600 font-normal leading-relaxed max-w-3xl mb-8">
-            {project.tagline}
-          </p>
-
-          <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-100 text-xs text-slate-600 font-semibold">
-            <span className="inline-flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-brand-teal" />
-              {project.location}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm font-mono text-slate-600">
+            <span className="inline-flex items-center gap-1.5 font-medium">
+              <MapPin className="w-4 h-4 text-purple-600" />
+              {project.location}, Nigeria
             </span>
             <span>•</span>
-            <span className="inline-flex items-center gap-1.5">
+            <span className="inline-flex items-center gap-1.5 font-medium">
               <Calendar className="w-4 h-4 text-slate-400" />
-              {project.date}
+              Year: {project.year}
+            </span>
+            <span>•</span>
+            <span className="inline-flex items-center gap-1.5 font-semibold text-purple-600">
+              <Users className="w-4 h-4" />
+              {project.livesImpacted}+ Lives Impacted
             </span>
           </div>
         </div>
 
         {/* Cover Image Frame */}
-        <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden shadow-xl mb-12 bg-slate-100 border border-slate-200">
+        <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-8 sm:mb-12 bg-slate-100 border border-slate-200">
           <img
             src={project.coverImage}
             alt={project.name}
@@ -91,155 +80,126 @@ export default function ProjectDetailPage() {
           />
         </div>
 
-        {/* Main Grid: Content + Lead & Metrics Sidebar */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
-          {/* About & Narrative Description */}
+        {/* Content Details Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 sm:mb-16">
+          
+          {/* Main Article Body (Span 8) */}
           <div className="lg:col-span-8 space-y-8">
-            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-subtle">
-              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">
-                About This Project
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200">
+              <h2 className="font-display text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">
+                Project Overview
               </h2>
-              <p className="text-slate-700 text-base leading-relaxed whitespace-pre-line">
-                {project.fullDescription}
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                {project.fullDescription || project.description}
               </p>
             </div>
 
-            {/* Photo Gallery Grid */}
-            {project.galleryImages.length > 0 && (
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-subtle">
-                <h2 className="font-display text-2xl font-bold text-brand-dark mb-6">
-                  Project Gallery
+            {project.impactBreakdown && project.impactBreakdown.length > 0 && (
+              <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200">
+                <h2 className="font-display text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">
+                  Verified Impact Highlights
                 </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                  {project.galleryImages.map((img, idx) => (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => openLightbox(idx)}
-                      className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 border border-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
-                    >
-                      <img
-                        src={img}
-                        alt={`Project media ${idx + 1}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
-                        <Maximize2 className="w-5 h-5" />
+                <ul className="space-y-3">
+                  {project.impactBreakdown.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-slate-600">
+                      <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
+                      <div>
+                        <span className="font-bold text-slate-900">{item.count}</span> — <span>{item.label}</span>
                       </div>
-                    </button>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             )}
 
-            {/* Optional Video Section */}
-            {project.videoUrl && (
-              <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-subtle">
-                <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">
-                  Project Documentary Video
+            {project.galleryImages && project.galleryImages.length > 0 && (
+              <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200">
+                <h2 className="font-display text-xl font-bold text-slate-900 mb-4 pb-3 border-b border-slate-100">
+                  On-The-Field Gallery
                 </h2>
-                <div className="aspect-video w-full rounded-xl overflow-hidden bg-slate-900">
-                  <iframe
-                    src={project.videoUrl}
-                    title="Project Documentary"
-                    className="w-full h-full"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Sidebar Column: Impact Stats & Project Lead */}
-          <div className="lg:col-span-4 space-y-6">
-            {/* Lives Impacted Card */}
-            <div className="bg-gradient-to-br from-brand-navy to-slate-900 text-white p-8 rounded-2xl shadow-lg border border-slate-800">
-              <span className="text-xs font-semibold uppercase tracking-wider text-teal-400 block mb-2">
-                VERIFIED OUTCOME
-              </span>
-              <div className="font-display text-4xl sm:text-5xl font-extrabold text-white mb-2">
-                {project.livesImpacted}+
-              </div>
-              <div className="text-sm font-bold text-teal-300 mb-6">
-                Total Lives Impacted
-              </div>
-
-              {project.impactBreakdown && (
-                <div className="space-y-3 pt-6 border-t border-slate-800">
-                  {project.impactBreakdown.map((item, idx) => (
-                    <div key={idx} className="flex items-center justify-between text-xs">
-                      <span className="text-slate-400">{item.label}</span>
-                      <span className="font-bold text-white">{item.count}</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {project.galleryImages.map((img, idx) => (
+                    <div key={idx} className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate-100 border border-slate-200">
+                      <img src={img} alt={`Field photo ${idx + 1}`} className="w-full h-full object-cover" />
                     </div>
                   ))}
                 </div>
-              )}
-            </div>
+              </div>
+            )}
+          </div>
 
-            {/* Project Lead Card */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-subtle">
-              <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-4">
-                Project Lead
+          {/* Metrics Sidebar (Span 4) */}
+          <div className="lg:col-span-4 space-y-6">
+            <div className="bg-[#080312] text-white p-6 sm:p-8 rounded-2xl border border-purple-900/40">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-purple-300 block mb-2">
+                VERIFIED METRICS
               </span>
-              <div className="flex items-center gap-4">
-                <img
-                  src={project.leadInfo.photo}
-                  alt={project.leadInfo.name}
-                  className="w-14 h-14 rounded-full object-cover border-2 border-brand-teal"
-                />
-                <div>
-                  <h4 className="font-display text-base font-bold text-brand-dark">
-                    {project.leadInfo.name}
-                  </h4>
-                  <p className="text-xs font-medium text-brand-teal">
-                    {project.leadInfo.role}
-                  </p>
+              <div className="font-display text-4xl font-extrabold text-white mb-1">
+                {project.livesImpacted}+
+              </div>
+              <div className="text-xs font-mono text-slate-400 mb-6">
+                Direct Beneficiaries Reached
+              </div>
+
+              <div className="pt-4 border-t border-purple-900/40 space-y-3 text-xs font-mono">
+                <div className="flex justify-between text-slate-300">
+                  <span>Target State:</span>
+                  <span className="font-bold text-white">{project.location}</span>
+                </div>
+                <div className="flex justify-between text-slate-300">
+                  <span>Cycle Year:</span>
+                  <span className="font-bold text-white">{project.year}</span>
+                </div>
+                <div className="flex justify-between text-slate-300">
+                  <span>Operational Model:</span>
+                  <span className="font-bold text-purple-300">Tuition-Free</span>
                 </div>
               </div>
             </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200">
+              <h3 className="font-display text-sm font-bold text-slate-900 mb-2">Want to sponsor or replicate this?</h3>
+              <p className="text-xs text-slate-600 mb-4">Partner with Dovoix Foundation to expand solar hubs and learning cohorts.</p>
+              <Link
+                href="/contact"
+                className="w-full py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2"
+              >
+                <span>Partner With Us</span>
+              </Link>
+            </div>
           </div>
+
         </div>
 
         {/* Related Projects */}
         {relatedProjects.length > 0 && (
-          <div className="pt-12 border-t border-slate-200">
-            <h2 className="font-display text-2xl font-bold text-brand-dark mb-8">
-              Related Foundation Projects
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="pt-8 sm:pt-12 border-t border-slate-200">
+            <h3 className="font-display text-xl font-bold text-slate-900 mb-6">
+              More {project.category} Initiatives
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {relatedProjects.map((rel) => (
-                <div key={rel.id} className="bg-white rounded-2xl p-5 border border-slate-200 shadow-subtle flex flex-col justify-between">
+                <div key={rel.id} className="bg-white rounded-2xl p-5 border border-slate-200 flex flex-col justify-between">
                   <div>
-                    <h3 className="font-display text-base font-bold text-brand-dark mb-2">
-                      {rel.name}
-                    </h3>
-                    <p className="text-xs text-slate-600 line-clamp-2 mb-4">
-                      {rel.description}
-                    </p>
+                    <span className="text-[10px] font-mono font-bold text-purple-600 uppercase mb-1 block">
+                      {rel.location} • {rel.year}
+                    </span>
+                    <h4 className="font-display text-base font-bold text-slate-900 mb-2">{rel.name}</h4>
+                    <p className="text-xs text-slate-600 line-clamp-2 mb-4">{rel.description}</p>
                   </div>
                   <Link
                     href={`/projects/${rel.id}`}
-                    className="inline-flex items-center gap-1 text-xs font-bold text-brand-teal hover:underline"
+                    className="text-xs font-mono font-bold text-purple-600 hover:underline"
                   >
-                    <span>View Project</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
+                    View Project Details →
                   </Link>
                 </div>
               ))}
             </div>
           </div>
         )}
-      </div>
 
-      {/* Gallery Lightbox Modal */}
-      <LightboxModal
-        isOpen={lightboxOpen}
-        images={project.galleryImages}
-        currentIndex={currentImageIndex}
-        onClose={() => setLightboxOpen(false)}
-        onPrev={() => setCurrentImageIndex((prev) => (prev > 0 ? prev - 1 : project.galleryImages.length - 1))}
-        onNext={() => setCurrentImageIndex((prev) => (prev < project.galleryImages.length - 1 ? prev + 1 : 0))}
-      />
+      </div>
     </div>
   );
 }

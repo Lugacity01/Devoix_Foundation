@@ -30,7 +30,7 @@ export const Navbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#080312]/95 backdrop-blur-md border-b border-purple-900/40 py-3.5 shadow-lg shadow-black/40'
+          ? 'bg-[#080312]/95 backdrop-blur-md border-b border-purple-900/40 py-3.5'
           : 'bg-[#080312]/90 backdrop-blur-md border-b border-purple-900/30 py-4'
       }`}
     >
@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xs font-mono font-bold uppercase tracking-wider border border-purple-400/40 transition-all shadow-md shadow-purple-950/40 group"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xs font-mono font-bold uppercase tracking-wider border border-purple-400/40 transition-all group"
           >
             <span>Work With Us</span>
             <ArrowRight className="w-3.5 h-3.5 text-white group-hover:translate-x-0.5 transition-transform" />

@@ -102,7 +102,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
               type="button"
               onClick={() => setActiveTab(idx)}
               className={`px-6 py-4 rounded-2xl font-mono text-xs font-bold transition-all whitespace-nowrap border flex items-center gap-3 ${idx === activeTab
-                  ? 'bg-slate-900 text-teal-300 border-teal-400/80 shadow-lg shadow-teal-500/10'
+                  ? 'bg-slate-900 text-teal-300 border-teal-400/80  /10'
                   : 'bg-slate-950/60 text-slate-400 border-white/10 hover:border-white/20 hover:text-white'
                 }`}
             >
@@ -113,7 +113,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
         </div>
 
         {/* Dynamic Full-Width Exhibition Stage */}
-        <div className="rounded-3xl bg-slate-950/80 border border-white/10 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <div className="rounded-3xl bg-slate-950/80 border border-white/10 overflow-hidden  grid grid-cols-1 lg:grid-cols-12 gap-0">
 
           {/* Left Column: Full-Height Immersive Widescreen Frame (Span 7) */}
           <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto overflow-hidden bg-slate-900">
@@ -136,7 +136,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
             </div>
 
             {/* Bottom Overlay Metric Badge */}
-            <div className="absolute bottom-6 left-6 p-4 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-white/15 flex items-center gap-4 shadow-xl">
+            <div className="absolute bottom-6 left-6 p-4 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-white/15 flex items-center gap-4 ">
               <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold">
                 <Users className="w-5 h-5" />
               </div>
@@ -191,7 +191,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
 
               <Link
                 href={`/projects/${current.id}`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold text-xs shadow-lg transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold text-xs  transition-all"
               >
                 <span>Explore Case Study</span>
                 <ArrowRight className="w-3.5 h-3.5" />

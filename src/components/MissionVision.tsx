@@ -64,7 +64,7 @@ export const MissionVision: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
           
           {/* Mission Card */}
-          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-400 transition-all duration-300 relative overflow-hidden group">
+          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 hover:border-purple-400 transition-all duration-300 relative overflow-hidden group">
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all">
               <Target className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
@@ -83,7 +83,7 @@ export const MissionVision: React.FC = () => {
           </div>
 
           {/* Vision Card */}
-          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-indigo-400 transition-all duration-300 relative overflow-hidden group">
+          <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 hover:border-indigo-400 transition-all duration-300 relative overflow-hidden group">
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 mb-4 sm:mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all">
               <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
@@ -126,7 +126,7 @@ export const MissionVision: React.FC = () => {
               return (
                 <div
                   key={i}
-                  className="relative p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 hover:border-purple-400 shadow-sm hover:shadow-xl transition-all duration-300 group overflow-hidden flex flex-col justify-between"
+                  className="relative p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-slate-200 hover:border-purple-400 transition-all duration-300 group overflow-hidden flex flex-col justify-between"
                 >
                   {/* Scaled Watermark Number */}
                   <div className="absolute top-2 right-4 sm:top-4 sm:right-6 font-display text-5xl sm:text-6xl font-black text-slate-100 group-hover:text-purple-100 transition-colors pointer-events-none select-none">
@@ -135,7 +135,7 @@ export const MissionVision: React.FC = () => {
 
                   <div className="relative z-10">
                     <div className="flex items-center justify-between mb-4 sm:mb-5">
-                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-purple-50 border border-purple-200/80 flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white group-hover:scale-110 transition-all shadow-sm">
+                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-purple-50 border border-purple-200/80 flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white group-hover:scale-110 transition-all">
                         <Icon className="w-5 h-5" />
                       </div>
                       <span className="px-2.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider bg-slate-100 text-slate-700 group-hover:bg-purple-100 group-hover:text-purple-800 transition-colors">

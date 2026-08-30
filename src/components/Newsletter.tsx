@@ -17,7 +17,7 @@ export const Newsletter: React.FC = () => {
   return (
     <section className="py-16 bg-slate-900 text-white border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto p-8 sm:p-12 rounded-3xl bg-slate-800/90 border border-slate-700/80 shadow-2xl text-center">
+        <div className="max-w-3xl mx-auto p-8 sm:p-12 rounded-3xl bg-slate-800/90 border border-slate-700/80  text-center">
           <div className="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-300 border border-teal-500/30 flex items-center justify-center mx-auto mb-6">
             <Mail className="w-6 h-6" />
           </div>
@@ -47,7 +47,7 @@ export const Newsletter: React.FC = () => {
               />
               <button
                 type="submit"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-teal hover:bg-teal-600 text-white text-sm font-semibold shadow transition-all whitespace-nowrap"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-teal hover:bg-teal-600 text-white text-sm font-semibold  transition-all whitespace-nowrap"
               >
                 <span>Subscribe</span>
                 <Send className="w-4 h-4" />

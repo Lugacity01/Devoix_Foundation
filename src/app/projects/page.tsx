@@ -43,7 +43,7 @@ export default function ProjectsPage() {
         </div>
 
         {/* Filter Bar Controls */}
-        <div className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm mb-8 sm:mb-10 space-y-4 sm:space-y-6">
+        <div className="bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 mb-8 sm:mb-10 space-y-4 sm:space-y-6">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 sm:gap-4">
             {/* Search Input */}
             <div className="relative flex-grow max-w-md">
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
                     onClick={() => setSelectedStatus(status)}
                     className={`px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-mono font-semibold transition-all ${
                       selectedStatus === status
-                        ? 'bg-purple-600 text-white shadow-sm'
+                        ? 'bg-purple-600 text-white'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                     }`}
                   >
@@ -100,7 +100,7 @@ export default function ProjectsPage() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-mono font-semibold transition-all ${
                       selectedCategory === cat
-                        ? 'bg-[#120726] text-white shadow-sm'
+                        ? 'bg-[#120726] text-white'
                         : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                     }`}
                   >
@@ -130,7 +130,7 @@ export default function ProjectsPage() {
           )}
         </div>
 
-        {/* Projects Responsive Grid (3-col Desktop, 2-col Tablet, 1-col Mobile) */}
+        {/* Projects Responsive Grid */}
         {filteredProjects.length === 0 ? (
           <div className="text-center py-12 sm:py-16 bg-white rounded-2xl border border-slate-200 p-6 sm:p-8">
             <p className="text-sm sm:text-base font-semibold text-slate-700 mb-1 sm:mb-2">No projects found</p>
@@ -145,7 +145,7 @@ export default function ProjectsPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
-                className="group bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                className="group bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">

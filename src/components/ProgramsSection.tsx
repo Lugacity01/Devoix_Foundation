@@ -51,7 +51,7 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ programs }) =>
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="p-8 rounded-2xl bg-white border border-slate-200 shadow-subtle hover:shadow-elevated transition-all flex flex-col justify-between group"
+                className="p-8 rounded-2xl bg-white border border-slate-200  hover: transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-teal-50 text-brand-teal border border-teal-100 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-navy group-hover:text-white transition-all">
@@ -93,7 +93,7 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ programs }) =>
         </div>
 
         {/* Global Program Enrollment Callout */}
-        <div className="p-8 rounded-2xl bg-gradient-to-r from-brand-navy to-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="p-8 rounded-2xl bg-gradient-to-r from-brand-navy to-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 ">
           <div>
             <h3 className="font-display text-2xl font-bold mb-2">Ready to master a new skill?</h3>
             <p className="text-slate-300 text-sm max-w-xl">
@@ -102,7 +102,7 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ programs }) =>
           </div>
           <Link
             href="/register"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-teal hover:bg-teal-600 text-white font-semibold text-sm shadow-md transition-all whitespace-nowrap"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-teal hover:bg-teal-600 text-white font-semibold text-sm  transition-all whitespace-nowrap"
           >
             <span>Register as a Student</span>
             <ArrowRight className="w-4 h-4" />

@@ -74,7 +74,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           <img
             src={images[currentIndex]}
             alt={`Gallery image ${currentIndex + 1}`}
-            className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl pointer-events-auto"
+            className="max-w-full max-h-[85vh] object-contain rounded-xl  pointer-events-auto"
           />
         </motion.div>
 

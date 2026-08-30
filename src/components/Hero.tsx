@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* Top Brand Tag with Glowing Pulse */}
-            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-purple-300 mb-4 sm:mb-6 border border-purple-500/40 px-3.5 py-1.5 rounded-full bg-purple-950/60 backdrop-blur-md shadow-[0_0_20px_rgba(157,78,221,0.25)]">
+            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-purple-300 mb-4 sm:mb-6 border border-purple-500/40 px-3.5 py-1.5 rounded-full bg-purple-950/60 backdrop-blur-md">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500" />
@@ -45,7 +45,7 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-8 sm:mb-12">
               <a
                 href="#gateway"
-                className="relative group inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs font-mono uppercase tracking-wider border border-purple-400/60 transition-all duration-300 hover:scale-[1.03] shadow-[0_0_25px_rgba(157,78,221,0.35)] text-center overflow-hidden"
+                className="relative group inline-flex items-center justify-center gap-2.5 sm:gap-3 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs font-mono uppercase tracking-wider border border-purple-400/60 transition-all duration-300 hover:scale-[1.03] text-center overflow-hidden"
               >
                 <div className="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
                 <Film className="w-4 h-4 text-white relative z-10" />
@@ -87,15 +87,15 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column: Visual Showcase Stage with Non-Stop Floating Animation (Span 5) */}
+          {/* Right Column: Visual Showcase Stage with Non-Stop Kinetic Floating Animation (Span 5) */}
           <div className="lg:col-span-5 relative mt-6 lg:mt-0">
             <div className="relative mx-auto max-w-md lg:max-w-none animate-float">
               
               {/* Decorative Corner Glow Frames */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 rounded-3xl blur-md opacity-40 group-hover:opacity-80 transition duration-1000 animate-pulse-glow" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 rounded-3xl blur-md opacity-40 group-hover:opacity-80 transition duration-1000 group-hover:duration-200 animate-pulse-glow" />
 
               {/* Main Photo/Reel Frame */}
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-purple-500/40 bg-[#0D071E] aspect-[16/10] sm:aspect-[4/5] group shadow-[0_0_40px_rgba(157,78,221,0.25)]">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-purple-500/40 bg-[#0D071E] aspect-[16/10] sm:aspect-[4/5] group">
                 <img
                   src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80"
                   alt="Dovoix FilmHouse & Foundation Production Stage"
@@ -105,7 +105,7 @@ export const Hero: React.FC = () => {
 
                 {/* Top Overlay Badge */}
                 <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-full bg-[#080312]/90 border border-purple-500/40 text-purple-300 text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 sm:gap-2 shadow-md">
+                  <span className="px-3 py-1 rounded-full bg-[#080312]/90 border border-purple-500/40 text-purple-300 text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 sm:gap-2">
                     <Play className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-purple-400 fill-purple-400 animate-pulse" />
                     SHOWCASE REEL // DOVOIX BRAND
                   </span>

@@ -34,12 +34,12 @@ export const ImpactSummary: React.FC = () => {
           </p>
         </div>
 
-        {/* 5 Impact Statistics Row with Hover Glow Lift */}
+        {/* 5 Impact Statistics Row */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 mb-10 sm:mb-14">
           {impactStats.map((stat, idx) => (
             <div
               key={idx}
-              className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+              className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 hover:border-purple-400 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
             >
               <div className="font-mono text-[9px] sm:text-[10px] font-bold text-purple-600 uppercase tracking-widest mb-2 sm:mb-3">
                 METRIC // 0{idx + 1}
@@ -60,8 +60,8 @@ export const ImpactSummary: React.FC = () => {
           ))}
         </div>
 
-        {/* Supporting Visual & Founder Pull Quote (Dark Contrast Box with Glow) */}
-        <div className="relative rounded-2xl sm:rounded-3xl bg-[#080312] text-white border-2 border-purple-500/40 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 shadow-[0_0_50px_rgba(157,78,221,0.2)] group">
+        {/* Supporting Visual & Founder Pull Quote */}
+        <div className="relative rounded-2xl sm:rounded-3xl bg-[#080312] text-white border-2 border-purple-500/40 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 group">
           
           {/* Left Column: Co-Founder Pull Quote (Span 7) */}
           <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between relative z-10">

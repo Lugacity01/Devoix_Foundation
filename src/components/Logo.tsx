@@ -12,7 +12,7 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'light', className = '' })
   return (
     <Link href="/" className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-lg p-1 ${className}`}>
       {/* Visual Mark: Infinity-inspired vector mark with purple gradient */}
-      <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 via-violet-800 to-slate-950 border border-purple-400/40 shadow-lg shadow-purple-950/50 group-hover:scale-105 transition-transform duration-300">
+      <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 via-violet-800 to-slate-950 border border-purple-400/40 group-hover:scale-105 transition-transform duration-300">
         <svg
           viewBox="0 0 40 40"
           fill="none"

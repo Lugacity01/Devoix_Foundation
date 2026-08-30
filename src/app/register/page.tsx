@@ -53,7 +53,7 @@ export default function StudentRegisterPage() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-white p-6 sm:p-10 lg:p-12 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm text-center space-y-4 sm:space-y-6"
+            className="bg-white p-6 sm:p-10 lg:p-12 rounded-2xl sm:rounded-3xl border border-slate-200 text-center space-y-4 sm:space-y-6"
           >
             <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center mx-auto">
               <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8" />
@@ -86,7 +86,7 @@ export default function StudentRegisterPage() {
         ) : (
           <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
             {/* Section 1: About You */}
-            <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-6">
+            <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-2.5 sm:gap-3 pb-3 sm:pb-4 border-b border-slate-100">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center font-bold text-xs sm:text-sm">
                   1
@@ -178,7 +178,7 @@ export default function StudentRegisterPage() {
             </div>
 
             {/* Section 2: Where You're From */}
-            <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-6">
+            <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-2.5 sm:gap-3 pb-3 sm:pb-4 border-b border-slate-100">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center font-bold text-xs sm:text-sm">
                   2
@@ -225,7 +225,7 @@ export default function StudentRegisterPage() {
             </div>
 
             {/* Section 3: Your Interest */}
-            <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-6">
+            <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-2.5 sm:gap-3 pb-3 sm:pb-4 border-b border-slate-100">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center font-bold text-xs sm:text-sm">
                   3
@@ -268,7 +268,7 @@ export default function StudentRegisterPage() {
             </div>
 
             {/* Section 4: Tell Us More */}
-            <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-4 sm:space-y-6">
+            <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-2.5 sm:gap-3 pb-3 sm:pb-4 border-b border-slate-100">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center font-bold text-xs sm:text-sm">
                   4
@@ -315,7 +315,7 @@ export default function StudentRegisterPage() {
             {/* Form Submit Button */}
             <button
               type="submit"
-              className="w-full py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-mono text-xs font-bold uppercase tracking-wider border border-purple-400/50 shadow-md transition-all flex items-center justify-center gap-2"
+              className="w-full py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-mono text-xs font-bold uppercase tracking-wider border border-purple-400/50 transition-all flex items-center justify-center gap-2"
             >
               <span>Submit Application</span>
               <ArrowRight className="w-4 h-4" />

@@ -40,7 +40,7 @@ export const AboutSection: React.FC = () => {
 
             {/* Dual Operational Arms Summary */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 w-full mb-6 sm:mb-8 pt-4 sm:pt-6 border-t border-slate-100">
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-purple-300 hover:shadow-md transition-all group">
+              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-purple-300 transition-all group">
                 <div className="flex items-center gap-2 text-purple-700 font-mono text-xs font-bold uppercase tracking-wider mb-1.5 sm:mb-2">
                   <Film className="w-4 h-4 text-purple-600 shrink-0 group-hover:scale-110 transition-transform" />
                   <span>Dovoix FilmHouse</span>
@@ -50,7 +50,7 @@ export const AboutSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 hover:shadow-md transition-all group">
+              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition-all group">
                 <div className="flex items-center gap-2 text-indigo-700 font-mono text-xs font-bold uppercase tracking-wider mb-1.5 sm:mb-2">
                   <HeartHandshake className="w-4 h-4 text-indigo-600 shrink-0 group-hover:scale-110 transition-transform" />
                   <span>Dovoix Foundation</span>
@@ -83,7 +83,7 @@ export const AboutSection: React.FC = () => {
             <div className="relative mx-auto max-w-md lg:max-w-none animate-float-slow">
               
               {/* Photo Frame */}
-              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-100 aspect-[16/10] sm:aspect-[4/5] group hover:shadow-2xl transition-shadow duration-500">
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 bg-slate-100 aspect-[16/10] sm:aspect-[4/5] group transition-all duration-500">
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
                   alt="Dovoix Leadership & Production Team"

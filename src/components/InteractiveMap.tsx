@@ -27,9 +27,9 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({ locations }) => 
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-subtle">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 ">
           {/* SVG Map Display Column */}
-          <div className="lg:col-span-7 relative w-full aspect-[4/3] bg-slate-900 rounded-2xl overflow-hidden p-6 flex items-center justify-center border border-slate-800 shadow-inner">
+          <div className="lg:col-span-7 relative w-full aspect-[4/3] bg-slate-900 rounded-2xl overflow-hidden p-6 flex items-center justify-center border border-slate-800 ">
             {/* Nigeria Outline SVG Graphic */}
             <svg
               viewBox="0 0 800 600"
@@ -69,7 +69,7 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({ locations }) => 
                     isSelected ? 'z-30 scale-125' : 'z-20 hover:scale-110'
                   }`}
                 >
-                  <span className={`relative flex h-5 w-5 items-center justify-center rounded-full ${isSelected ? 'bg-brand-teal text-white shadow-lg shadow-teal-500/50' : 'bg-slate-700 text-teal-300'}`}>
+                  <span className={`relative flex h-5 w-5 items-center justify-center rounded-full ${isSelected ? 'bg-brand-teal text-white  /50' : 'bg-slate-700 text-teal-300'}`}>
                     <MapPin className="w-3.5 h-3.5" />
                     {isSelected && (
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75" />
@@ -102,7 +102,7 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({ locations }) => 
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
+                  className="bg-white p-6 rounded-2xl border border-slate-200 "
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 rounded-full bg-teal-50 text-brand-teal text-xs font-semibold uppercase">

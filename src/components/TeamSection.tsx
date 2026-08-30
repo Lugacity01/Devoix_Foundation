@@ -38,19 +38,19 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
           </p>
         </div>
 
-        {/* Executive Profile Cards Grid with Dynamic Purple Hover Glow */}
+        {/* Executive Profile Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {team.map((member) => (
             <div
               key={member.id}
-              className="relative p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#080312]/90 border border-purple-500/30 flex flex-col justify-between hover:border-purple-400/80 hover:shadow-[0_0_30px_rgba(157,78,221,0.25)] hover:-translate-y-1.5 transition-all duration-300 group overflow-hidden"
+              className="relative p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#080312]/90 border border-purple-500/30 flex flex-col justify-between hover:border-purple-400/80 hover:-translate-y-1.5 transition-all duration-300 group overflow-hidden"
             >
               {/* Card Ambient Glow on Hover */}
               <div className="absolute inset-0 bg-gradient-to-b from-purple-600/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
               <div className="relative z-10">
                 {/* Headshot Frame with Parallax Zoom */}
-                <div className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 sm:mb-4 bg-slate-900 border border-purple-500/30 shadow-inner">
+                <div className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 sm:mb-4 bg-slate-900 border border-purple-500/30">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -59,7 +59,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#080312]/90 via-[#080312]/20 to-transparent" />
                   
                   {member.isFounder && (
-                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-[#080312]/95 border border-purple-500/50 text-purple-300 text-[9px] font-mono font-bold uppercase tracking-wider shadow-md backdrop-blur-md flex items-center gap-1">
+                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-[#080312]/95 border border-purple-500/50 text-purple-300 text-[9px] font-mono font-bold uppercase tracking-wider backdrop-blur-md flex items-center gap-1">
                       <Sparkles className="w-2.5 h-2.5 text-purple-400" />
                       CO-FOUNDER
                     </span>

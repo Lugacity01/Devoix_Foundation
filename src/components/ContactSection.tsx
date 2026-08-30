@@ -42,7 +42,7 @@ export const ContactSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Direct Contact Info & Socials (Span 5) */}
-          <div className="lg:col-span-5 p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
+          <div className="lg:col-span-5 p-8 rounded-3xl bg-white border border-slate-200 ">
             <h3 className="font-display text-xl font-bold text-slate-900 mb-6 pb-4 border-b border-slate-100">
               Direct Contact Details
             </h3>
@@ -124,7 +124,7 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Right Column: General Enquiry Form (Span 7) */}
-          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm">
+          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 ">
             
             {submitted ? (
               <div className="py-12 text-center">
@@ -219,7 +219,7 @@ export const ContactSection: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs font-mono uppercase tracking-wider border border-purple-400/50 transition-all shadow-md"
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs font-mono uppercase tracking-wider border border-purple-400/50 transition-all "
                 >
                   <Send className="w-4 h-4" />
                   <span>Submit Message</span>

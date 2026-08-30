@@ -43,7 +43,7 @@ export default function ContactPage() {
           
           {/* Left Column: Direct Contact Details & Channels (Span 5) */}
           <div className="lg:col-span-5 space-y-4 sm:space-y-6">
-            <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm space-y-5 sm:space-y-6">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 space-y-5 sm:space-y-6">
               <h2 className="font-display text-lg sm:text-xl font-bold text-slate-900 pb-3 sm:pb-4 border-b border-slate-100">
                 Direct Channels
               </h2>
@@ -134,7 +134,7 @@ export default function ContactPage() {
 
           {/* Right Column: Enquiry Form (Span 7) */}
           <div className="lg:col-span-7">
-            <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm">
+            <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl border border-slate-200">
               <h2 className="font-display text-xl sm:text-2xl font-bold text-slate-900 mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-slate-100">
                 Send an Enquiry
               </h2>
@@ -227,7 +227,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-mono text-xs font-bold uppercase tracking-wider border border-purple-400/50 shadow-md transition-all flex items-center justify-center gap-2"
+                    className="w-full py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-mono text-xs font-bold uppercase tracking-wider border border-purple-400/50 transition-all flex items-center justify-center gap-2"
                   >
                     <span>Submit Message</span>
                     <Send className="w-4 h-4" />

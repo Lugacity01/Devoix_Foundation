@@ -153,7 +153,7 @@ export const PartnersSection: React.FC = () => {
             return (
               <div
                 key={p.id}
-                className={`relative rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200 p-5 sm:p-6 lg:p-7 flex flex-col justify-between transition-all duration-300 group overflow-hidden ${p.borderColor} hover:shadow-xl hover:-translate-y-1.5 hover:bg-white`}
+                className={`relative rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200 p-5 sm:p-6 lg:p-7 flex flex-col justify-between transition-all duration-300 group overflow-hidden ${p.borderColor} hover:-translate-y-1.5 hover:bg-white`}
               >
                 {/* Background Gradient Spotlight */}
                 <div
@@ -176,14 +176,14 @@ export const PartnersSection: React.FC = () => {
                       {p.num}
                     </span>
 
-                    <span className="px-2 py-0.5 rounded-md text-[8px] sm:text-[9px] font-mono font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-700 group-hover:bg-purple-50 group-hover:border-purple-200 group-hover:text-purple-700 transition-all shadow-2xs">
+                    <span className="px-2 py-0.5 rounded-md text-[8px] sm:text-[9px] font-mono font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-700 group-hover:bg-purple-50 group-hover:border-purple-200 group-hover:text-purple-700 transition-all">
                       {p.badge}
                     </span>
                   </div>
 
                   {/* Icon & Partner Title */}
                   <div className="flex items-center gap-3 sm:gap-3.5 mb-3.5 sm:mb-4">
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center group-hover:scale-110 group-hover:border-purple-300 transition-all shrink-0">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white border border-slate-200 flex items-center justify-center group-hover:scale-110 group-hover:border-purple-300 transition-all shrink-0">
                       <Icon className={`w-5 h-5 sm:w-6 sm:h-6 ${p.iconColor}`} />
                     </div>
                     <div>
@@ -225,7 +225,7 @@ export const PartnersSection: React.FC = () => {
         </div>
 
         {/* Live Velocity Marquee Ribbon */}
-        <div className="relative rounded-xl sm:rounded-2xl bg-slate-900 text-white p-3 sm:p-4 overflow-hidden border border-slate-800 shadow-md mb-8 sm:mb-10">
+        <div className="relative rounded-xl sm:rounded-2xl bg-slate-900 text-white p-3 sm:p-4 overflow-hidden border border-slate-800 mb-8 sm:mb-10">
           <div className="absolute top-0 bottom-0 left-0 w-10 sm:w-16 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
           <div className="absolute top-0 bottom-0 right-0 w-10 sm:w-16 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />
 
@@ -246,7 +246,7 @@ export const PartnersSection: React.FC = () => {
         {/* Strategic Invitation Banner */}
         <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-slate-50 via-purple-50/50 to-slate-50 border border-purple-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
           <div className="flex items-center gap-3.5 sm:gap-4">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-sm shadow-purple-600/30">
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-purple-600 text-white flex items-center justify-center shrink-0">
               <Zap className="w-5 h-5" />
             </div>
             <div>
@@ -261,7 +261,7 @@ export const PartnersSection: React.FC = () => {
 
           <a
             href="/contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-mono text-xs font-bold uppercase tracking-wider border border-purple-400/50 shadow-sm transition-all hover:scale-[1.01] shrink-0 text-center"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-mono text-xs font-bold uppercase tracking-wider border border-purple-400/50 transition-all hover:scale-[1.01] shrink-0 text-center"
           >
             <span>Partner With Dovoix</span>
             <ArrowRight className="w-3.5 h-3.5" />

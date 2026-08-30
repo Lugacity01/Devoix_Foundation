@@ -64,7 +64,7 @@ export const LatestHighlights: React.FC = () => {
           {highlights.map((item) => (
             <div
               key={item.id}
-              className="rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200 shadow-sm hover:shadow-xl hover:border-purple-300 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
+              className="rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200 hover:border-purple-300 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between group"
             >
               <div>
                 {/* Media Image Frame */}
@@ -79,7 +79,7 @@ export const LatestHighlights: React.FC = () => {
                   {/* Source Label Badge */}
                   <div className="absolute top-3.5 left-3.5 flex items-center gap-2">
                     <span
-                      className={`px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider border backdrop-blur-md flex items-center gap-1.5 shadow-sm ${
+                      className={`px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider border backdrop-blur-md flex items-center gap-1.5 ${
                         item.source === 'FilmHouse'
                           ? 'bg-purple-900/90 text-purple-200 border-purple-400/40'
                           : 'bg-indigo-900/90 text-indigo-200 border-indigo-400/40'

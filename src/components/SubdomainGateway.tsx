@@ -35,7 +35,7 @@ export const SubdomainGateway: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           
           {/* Panel 1: Dovoix FilmHouse */}
-          <div className="rounded-2xl sm:rounded-3xl bg-[#0D071E]/90 border-2 border-purple-500/30 overflow-hidden flex flex-col justify-between hover:border-purple-400 hover:shadow-[0_0_40px_rgba(157,78,221,0.3)] hover:-translate-y-1.5 transition-all duration-300 group">
+          <div className="rounded-2xl sm:rounded-3xl bg-[#0D071E]/90 border-2 border-purple-500/30 overflow-hidden flex flex-col justify-between hover:border-purple-400 hover:-translate-y-1.5 transition-all duration-300 group">
             <div className="p-6 sm:p-8 lg:p-9">
               
               {/* Arm Header Badge */}
@@ -78,7 +78,7 @@ export const SubdomainGateway: React.FC = () => {
                 href="https://filmhouse.dovoix.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative overflow-hidden w-full inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs font-mono uppercase tracking-wider border border-purple-400/50 transition-all shadow-[0_0_20px_rgba(157,78,221,0.3)] group-hover:scale-[1.02]"
+                className="relative overflow-hidden w-full inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs font-mono uppercase tracking-wider border border-purple-400/50 transition-all group-hover:scale-[1.02]"
               >
                 <div className="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity" />
                 <span className="relative z-10">Explore FilmHouse</span>
@@ -88,7 +88,7 @@ export const SubdomainGateway: React.FC = () => {
           </div>
 
           {/* Panel 2: Dovoix Foundation */}
-          <div className="rounded-2xl sm:rounded-3xl bg-[#0D071E]/90 border-2 border-violet-500/30 overflow-hidden flex flex-col justify-between hover:border-violet-400 hover:shadow-[0_0_40px_rgba(199,125,255,0.3)] hover:-translate-y-1.5 transition-all duration-300 group">
+          <div className="rounded-2xl sm:rounded-3xl bg-[#0D071E]/90 border-2 border-violet-500/30 overflow-hidden flex flex-col justify-between hover:border-violet-400 hover:-translate-y-1.5 transition-all duration-300 group">
             <div className="p-6 sm:p-8 lg:p-9">
               
               {/* Arm Header Badge */}
@@ -129,7 +129,7 @@ export const SubdomainGateway: React.FC = () => {
             <div className="p-6 sm:p-8 lg:p-9 pt-0">
               <Link
                 href="/projects"
-                className="w-full inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs font-mono uppercase tracking-wider border border-white/20 hover:border-violet-400/50 transition-all shadow-md group-hover:scale-[1.02]"
+                className="w-full inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white/10 hover:bg-white/15 text-white font-bold text-xs font-mono uppercase tracking-wider border border-white/20 hover:border-violet-400/50 transition-all group-hover:scale-[1.02]"
               >
                 <span>Explore Foundation</span>
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-violet-300 group-hover:translate-x-1 transition-transform" />
