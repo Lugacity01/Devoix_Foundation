@@ -9,19 +9,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        dvx: {
+          black: '#000000',
+          charcoal: '#3a3938',
+          ash: '#999998',
+          white: '#ffffff',
+          violet: '#8b5cf6',
+          indigo: '#4f46e5',
+        },
         brand: {
-          dark: '#080312',
-          navy: '#120726',
-          purple: '#9D4EDD',
-          violet: '#C77DFF',
-          teal: '#9D4EDD',
-          emerald: '#C77DFF',
-          accent: '#7B2CBF',
+          dark: '#000000',
+          navy: '#0d0d0d',
+          purple: '#8b5cf6',
+          violet: '#a78bfa',
+          teal: '#8b5cf6',
+          emerald: '#8b5cf6',
+          accent: '#7c3aed',
           light: '#F8FAFC',
-          card: '#0D071E',
-          slate: '#334155',
-          muted: '#94A3B8',
-          border: '#2A1A4A',
+          card: '#141414',
+          slate: '#3a3938',
+          muted: '#999998',
+          border: '#262626',
         }
       },
       fontFamily: {
@@ -38,8 +46,8 @@ const config: Config = {
           '50%': { transform: 'translateY(-16px) scale(1.015)' },
         },
         'pulse-glow': {
-          '0%, 100%': { opacity: '0.35', transform: 'scale(1)' },
-          '50%': { opacity: '0.85', transform: 'scale(1.12)' },
+          '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+          '50%': { opacity: '0.7', transform: 'scale(1.12)' },
         },
         'text-gradient': {
           '0%, 100%': {
@@ -59,14 +67,19 @@ const config: Config = {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' },
         },
+        reveal: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         float: 'float 4s ease-in-out infinite',
         'float-slow': 'float-slow 6s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 3.5s ease-in-out infinite',
-        'text-gradient': 'text-gradient 3s ease infinite',
+        'pulse-glow': 'pulse-glow 4s ease-in-out infinite',
+        'text-gradient': 'text-gradient 4s ease infinite',
         marquee: 'marquee 15s linear infinite',
         shimmer: 'shimmer 2.5s infinite',
+        reveal: 'reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
     },
   },

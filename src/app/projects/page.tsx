@@ -32,13 +32,13 @@ export default function ProjectsPage() {
         {/* Page Header */}
         <div className="max-w-3xl mb-8 sm:mb-12">
           <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-purple-600 mb-2 block">
-            FOUNDATION INITIATIVES ARCHIVE
+            DOVOIX FOUNDATION’S INITIATIVE ARCHIVE
           </span>
           <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-3 sm:mb-4">
             Projects & Community Outreaches
           </h1>
           <p className="text-xs sm:text-sm lg:text-base text-slate-600">
-            A comprehensive record of Dovoix Foundation's social impact projects, rural learning hub installations, and regional educational masterclasses.
+            A growing record of DoVoix Foundation’s work, from equipping underserved communities with digital skills to creating opportunities that help young people learn, earn, and thrive.
           </p>
         </div>
 

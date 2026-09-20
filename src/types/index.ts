@@ -46,6 +46,7 @@ export interface TeamMember {
   name: string;
   title: string;
   bio: string;
+  fullBio?: string[];
   image: string;
   linkedin?: string;
   isFounder: boolean;

@@ -1,109 +1,308 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useRef, useEffect } from 'react';
 import { TeamMember } from '@/types';
-import { Linkedin, UserCheck, Sparkles } from 'lucide-react';
+import { Linkedin, UserCheck, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 interface TeamSectionProps {
   team?: TeamMember[];
 }
 
 export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
-  return (
-    <section id="executives" className="py-16 sm:py-20 lg:py-24 bg-[#0D071E] text-white relative overflow-hidden border-b border-purple-900/30 selection:bg-purple-600 selection:text-white">
-      {/* Background Ambient Purple Breathing Spotlights */}
-      <div className="absolute top-1/3 left-1/3 w-[500px] sm:w-[600px] h-[350px] sm:h-[400px] bg-purple-600/15 rounded-full blur-[140px] pointer-events-none animate-pulse-glow" />
-      <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-violet-600/15 rounded-full blur-[120px] pointer-events-none animate-pulse-glow [animation-delay:3s]" />
-      <div className="absolute inset-0 bg-[radial-gradient(#9d4edd15_1px,transparent_1px)] [background-size:24px_24px] sm:[background-size:32px_32px] pointer-events-none" />
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const mobileTabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  if (!team || team.length === 0) return null;
+
+  const activeMember = team[selectedIndex] || team[0];
+
+  const handlePrev = () => {
+    setSelectedIndex((prev) => (prev === 0 ? team.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setSelectedIndex((prev) => (prev === team.length - 1 ? 0 : prev + 1));
+  };
+
+  // Smoothly scroll active mobile chip into view whenever selectedIndex changes
+  useEffect(() => {
+    const activeEl = mobileTabRefs.current[selectedIndex];
+    if (activeEl) {
+      activeEl.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      });
+    }
+  }, [selectedIndex]);
+
+  return (
+    <section id="board" className="py-16 sm:py-20 lg:py-24 bg-[#000000] text-white relative overflow-hidden border-b border-[#3a3938]/40 selection:bg-white selection:text-black">
+      {/* Background Ambient Spotlights */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] sm:w-[700px] h-[350px] sm:h-[450px] bg-[#999998]/10 rounded-full blur-[160px] pointer-events-none animate-pulse-glow" />
+      <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-[#3a3938]/20 rounded-full blur-[120px] pointer-events-none animate-pulse-glow [animation-delay:3s]" />
+      <div className="absolute inset-0 bg-[radial-gradient(#99999812_1px,transparent_1px)] [background-size:24px_24px] sm:[background-size:32px_32px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-reveal">
         
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between pb-6 sm:pb-8 mb-8 sm:mb-12 border-b border-purple-900/40">
+        {/* Section Header with Carousel Navigation */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-6 sm:pb-8 mb-6 sm:mb-10 border-b border-[#3a3938]/40 gap-4">
           <div>
-            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-purple-300 mb-2">
+            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-white mb-2">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
               </span>
-              <span>SECTION 03 // LEADERSHIP CREDIBILITY</span>
+              <span>SECTION 03 // BOARD & LEADERSHIP</span>
             </div>
             <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl font-extrabold text-white tracking-tight">
-              Our{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-violet-300 to-fuchsia-300 animate-text-gradient bg-[length:200%_auto]">
-                Executives.
+              Meet the{' '}
+              <span className="text-transparent bg-clip-text bg-[linear-gradient(110deg,#ffffff,#999998,#ffffff)] animate-text-gradient bg-[length:200%_auto]">
+                Board Members.
               </span>
             </h2>
           </div>
-          <p className="text-[11px] sm:text-xs font-mono text-slate-400 mt-2 md:mt-0 uppercase tracking-wider">
-            FOUNDERS & OPERATIONAL LEADERS
-          </p>
+
+          {/* Stepper Controls */}
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-mono text-[#999998] tracking-widest hidden sm:inline">
+              0{selectedIndex + 1} / 0{team.length}
+            </span>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={handlePrev}
+                aria-label="Previous Board Member"
+                className="p-2.5 rounded-xl bg-[#141414] hover:bg-[#222222] text-white border border-[#3a3938] transition-all hover:scale-105 active:scale-95"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                onClick={handleNext}
+                aria-label="Next Board Member"
+                className="p-2.5 rounded-xl bg-[#141414] hover:bg-[#222222] text-white border border-[#3a3938] transition-all hover:scale-105 active:scale-95"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Executive Profile Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {team.map((member) => (
-            <div
-              key={member.id}
-              className="relative p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#080312]/90 border border-purple-500/30 flex flex-col justify-between hover:border-purple-400/80 hover:-translate-y-1.5 transition-all duration-300 group overflow-hidden"
-            >
-              {/* Card Ambient Glow on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        {/* Mobile-Only Horizontal Overflow Selector (Directly at top of details) */}
+        <div className="block lg:hidden mb-5">
+          <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#999998] mb-2.5 px-1">
+            <span className="flex items-center gap-1.5 font-semibold text-white">
+              <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+              Board Roster
+            </span>
+            <span className="text-[10px] text-[#999998]">Swipe & Select ↔</span>
+          </div>
 
-              <div className="relative z-10">
-                {/* Headshot Frame with Parallax Zoom */}
-                <div className="relative aspect-square rounded-xl sm:rounded-2xl overflow-hidden mb-3.5 sm:mb-4 bg-slate-900 border border-purple-500/30">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080312]/90 via-[#080312]/20 to-transparent" />
-                  
-                  {member.isFounder && (
-                    <span className="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md bg-[#080312]/95 border border-purple-500/50 text-purple-300 text-[9px] font-mono font-bold uppercase tracking-wider backdrop-blur-md flex items-center gap-1">
-                      <Sparkles className="w-2.5 h-2.5 text-purple-400" />
-                      CO-FOUNDER
-                    </span>
+          <div className="flex items-center gap-3 overflow-x-auto pb-3 pt-1 px-1 no-scrollbar snap-x snap-mandatory scroll-smooth -mx-4 sm:-mx-6 px-4 sm:px-6">
+            {team.map((member, idx) => {
+              const isActive = selectedIndex === idx;
+              return (
+                <button
+                  key={member.id}
+                  ref={(el) => {
+                    mobileTabRefs.current[idx] = el;
+                  }}
+                  type="button"
+                  onClick={() => setSelectedIndex(idx)}
+                  className={`flex-shrink-0 flex items-center gap-2.5 p-2 pr-3.5 rounded-2xl border transition-all duration-300 snap-center ${
+                    isActive
+                      ? 'bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)] scale-[1.03] font-semibold'
+                      : 'bg-[#121212] text-[#999998] border-[#3a3938] hover:border-[#999998] hover:text-white'
+                  }`}
+                >
+                  <div className={`w-10 h-10 rounded-xl overflow-hidden border shrink-0 transition-transform ${
+                    isActive ? 'border-black/30 ring-2 ring-black/10' : 'border-[#3a3938]'
+                  }`}>
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <div className="flex items-center gap-1.5">
+                      <span className={`font-mono text-[9px] ${isActive ? 'text-black/60' : 'text-[#999998]'}`}>
+                        0{idx + 1}
+                      </span>
+                      <div className="text-[12px] font-bold font-display leading-tight truncate max-w-[130px]">
+                        {member.name.split(' ')[0]} {member.name.split(' ')[1] || ''}
+                      </div>
+                    </div>
+                    <div className={`text-[9.5px] font-mono uppercase tracking-wider truncate max-w-[130px] mt-0.5 ${
+                      isActive ? 'text-black/80 font-bold' : 'text-[#999998]'
+                    }`}>
+                      {member.title}
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Interactive Executive Spotlight Studio (Split Layout on Desktop) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          
+          {/* Main Cinematic Spotlight Stage (12 Cols on Mobile, 7 Cols on Desktop) */}
+          <div className="lg:col-span-7 rounded-2xl sm:rounded-3xl bg-[#111111] border border-[#3a3938] p-5 sm:p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl transition-all duration-500">
+            
+            {/* Top Row: Tag, Badge & LinkedIn */}
+            <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 pb-5 sm:pb-6 border-b border-[#3a3938]/60 mb-5 sm:mb-8">
+              <div className="flex items-center gap-2.5">
+                <span className="px-3 py-1 rounded-full bg-white/10 text-white font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider border border-white/20">
+                  {activeMember.title}
+                </span>
+                <span className="text-xs font-mono text-[#999998] flex items-center gap-1">
+                  <UserCheck className="w-3.5 h-3.5 text-white" />
+                  DOVOIX BOARD
+                </span>
+              </div>
+
+              {activeMember.linkedin && (
+                <a
+                  href={activeMember.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${activeMember.name} LinkedIn Profile`}
+                  className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white hover:bg-slate-200 text-black text-xs font-mono font-bold uppercase tracking-wider transition-all hover:scale-105 active:scale-95"
+                >
+                  <Linkedin className="w-3.5 h-3.5 text-black" />
+                  <span>LinkedIn Profile</span>
+                </a>
+              )}
+            </div>
+
+            {/* Middle Row: Photo + Full Narrative Bio */}
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-start mb-6">
+              
+              {/* Member Portrait Frame (Mobile: Centered responsive card / Desktop: md: 5 Cols) */}
+              <div className="md:col-span-5 relative w-full max-w-[280px] sm:max-w-none mx-auto aspect-[4/5] rounded-2xl overflow-hidden border border-[#3a3938] bg-black group shadow-lg">
+                <img
+                  key={activeMember.id}
+                  src={activeMember.image}
+                  alt={activeMember.name}
+                  className="w-full h-full object-cover object-center animate-reveal"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-2.5 left-2.5 right-2.5 font-mono text-[9px] text-white/90 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-center flex items-center justify-between">
+                  <span>0{selectedIndex + 1} / 0{team.length}</span>
+                  <span className="truncate ml-2 text-[#cccccc]">{activeMember.title}</span>
+                </div>
+              </div>
+
+              {/* Member Full Bio & Details (md: 7 Cols) */}
+              <div className="md:col-span-7 flex flex-col justify-center">
+                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-white mb-1.5 leading-tight">
+                  {activeMember.name}
+                </h3>
+                <p className="text-xs font-mono font-semibold text-[#999998] uppercase tracking-wider mb-4">
+                  {activeMember.title}
+                </p>
+
+                {/* Full Multi-Paragraph Narrative with Custom Scroll */}
+                <div className="space-y-3.5 text-xs sm:text-sm text-[#cccccc] font-normal leading-relaxed max-h-[280px] sm:max-h-[340px] overflow-y-auto pr-2">
+                  {activeMember.fullBio && activeMember.fullBio.length > 0 ? (
+                    activeMember.fullBio.map((para, idx) => (
+                      <p key={idx}>{para}</p>
+                    ))
+                  ) : (
+                    <p>{activeMember.bio}</p>
                   )}
                 </div>
-
-                {/* Name & Title */}
-                <h3 className="font-display text-base sm:text-lg font-bold text-white mb-0.5 group-hover:text-purple-300 transition-colors">
-                  {member.name}
-                </h3>
-                <p className="text-[11px] font-mono font-semibold text-purple-300/90 mb-2.5 uppercase tracking-wider">
-                  {member.title}
-                </p>
-
-                {/* Short Bio */}
-                <p className="text-xs text-slate-300 font-normal leading-relaxed mb-4">
-                  {member.bio}
-                </p>
               </div>
 
-              {/* Card Footer / LinkedIn Link */}
-              <div className="relative z-10 pt-3 border-t border-purple-900/40 flex items-center justify-between">
-                <span className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <UserCheck className="w-3 h-3 text-purple-400" />
-                  VERIFIED LEAD
-                </span>
+            </div>
 
-                {member.linkedin && (
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${member.name} LinkedIn Profile`}
-                    className="p-1.5 rounded-lg bg-white/5 hover:bg-purple-500/20 text-slate-300 hover:text-purple-300 border border-purple-500/20 group-hover:border-purple-400/40 group-hover:scale-110 transition-all"
-                  >
-                    <Linkedin className="w-3.5 h-3.5" />
-                  </a>
-                )}
+            {/* Bottom Stepper Indicator */}
+            <div className="relative z-10 pt-4 border-t border-[#3a3938]/60 flex items-center justify-between text-xs font-mono text-[#999998]">
+              <span className="text-[11px] sm:text-xs">Executive Leadership Roster</span>
+              <div className="flex items-center gap-1.5">
+                {team.map((_, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setSelectedIndex(idx)}
+                    aria-label={`Go to board member ${idx + 1}`}
+                    className={`h-1.5 rounded-full transition-all ${
+                      selectedIndex === idx ? 'w-6 bg-white' : 'w-2 bg-[#3a3938] hover:bg-[#999998]'
+                    }`}
+                  />
+                ))}
               </div>
             </div>
-          ))}
+
+          </div>
+
+          {/* Interactive Roster Selector Grid (Desktop Only: 5 Cols) */}
+          <div className="lg:col-span-5 hidden lg:flex lg:flex-col gap-3">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#999998] mb-1 px-1 flex items-center justify-between">
+              <span>SELECT A BOARD MEMBER</span>
+              <span>{team.length} LEADERS</span>
+            </div>
+
+            <div className="space-y-2.5">
+              {team.map((member, idx) => {
+                const isActive = selectedIndex === idx;
+
+                return (
+                  <button
+                    key={member.id}
+                    type="button"
+                    onClick={() => setSelectedIndex(idx)}
+                    className={`w-full text-left p-3 sm:p-3.5 rounded-2xl border transition-all duration-300 flex items-center justify-between gap-3.5 group ${
+                      isActive
+                        ? 'bg-[#1a1a1a] border-white text-white shadow-lg translate-x-1'
+                        : 'bg-[#111111]/80 border-[#3a3938]/60 text-[#999998] hover:border-white/40 hover:bg-[#161616] hover:text-white'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      {/* Avatar Thumbnail */}
+                      <div className={`relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border shrink-0 transition-transform ${
+                        isActive ? 'border-white scale-105' : 'border-[#3a3938] group-hover:border-white/50'
+                      }`}>
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+
+                      <div className="min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="font-mono text-[10px] text-[#999998]">0{idx + 1}</span>
+                          <h4 className={`font-display text-sm font-bold truncate ${
+                            isActive ? 'text-white' : 'text-slate-200 group-hover:text-white'
+                          }`}>
+                            {member.name}
+                          </h4>
+                        </div>
+                        <p className="text-[11px] font-mono text-[#999998] truncate mt-0.5">
+                          {member.title}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="shrink-0">
+                      <span className={`w-2 h-2 rounded-full inline-block transition-all ${
+                        isActive ? 'bg-white ring-4 ring-white/20' : 'bg-transparent'
+                      }`} />
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
   );
 };
+

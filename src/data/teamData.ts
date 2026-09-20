@@ -2,39 +2,90 @@ import { TeamMember } from '@/types';
 
 export const teamData: TeamMember[] = [
   {
-    id: 'ebuka-prince',
-    name: 'Ebuka Prince',
-    title: 'Co-Founder & CEO',
-    bio: 'Visionary creative director leading Dovoix commercial production and social impact strategy across Africa.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-    linkedin: 'https://linkedin.com',
-    isFounder: true
-  },
-  {
-    id: 'jude',
-    name: 'Jude',
-    title: 'Co-Founder & Director of Operations',
-    bio: 'Operations and growth strategist overseeing FilmHouse production workflows and Foundation regional learning hubs.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
-    linkedin: 'https://linkedin.com',
-    isFounder: true
-  },
-  {
-    id: 'kemi-adebayo',
-    name: 'Kemi Adebayo',
-    title: 'Director of Impact & Outreach',
-    bio: 'Social impact strategist committed to designing scalable community initiatives and youth development pathways.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
-    linkedin: 'https://linkedin.com',
+    id: 'peter-stephen',
+    name: 'Peter Stephen Chukwuka',
+    title: 'COO',
+    bio: 'Petroleum Engineering student at the University of Ibadan and purpose-driven young leader coordinating operations, supporting strategic planning, and ensuring effective execution of DoVoix Firm objectives.',
+    fullBio: [
+      'Peter Stephen Chukwuka is a Petroleum Engineering student at the University of Ibadan and a purpose-driven young leader with a strong interest in innovation, creativity, and impact-driven initiatives. He is passionate about contributing to platforms that inspire growth, create opportunities, and foster meaningful experiences for young people and society.',
+      'As the Chief Operating Officer (COO) of DoVoix Firm, Peter plays an active role in coordinating operations, supporting strategic planning, fostering collaboration, and ensuring the effective execution of the Firm’s objectives. His approach is rooted in teamwork, responsibility, adaptability, and a commitment to excellence.',
+      'Through his role at DoVoix Firm, Peter continues to strengthen his leadership and organizational capabilities while contributing to the Firm’s vision of creating meaningful impact through empowerment, creativity, innovation, and socio-entertainment.'
+    ],
+    image: '/assets/team/peter-stephen.jpg',
+    linkedin: 'https://www.linkedin.com/in/peter-stephen-7165552b7?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
     isFounder: false
   },
   {
-    id: 'blessing-okon',
-    name: 'Blessing Okon',
-    title: 'Lead Partnerships Manager',
-    bio: 'Connects Dovoix with corporate sponsors, commercial clients, and community donors to expand operational reach.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80',
-    linkedin: 'https://linkedin.com',
+    id: 'okpalanze-somtochukwu',
+    name: 'Okpalanze Somtochukwu Christian',
+    title: 'Publicity Lead',
+    bio: 'Passionate communicator, creative enthusiast, and emerging leader responsible for driving foundation visibility, managing publicity initiatives, and crafting compelling impact storytelling.',
+    fullBio: [
+      'Okpalanze Somtochukwu Christian is a passionate communicator, creative enthusiast, and emerging leader with a strong interest in leadership, community development, and strategic communication.',
+      'As the Publicity Lead at Dovoix Foundation, he is responsible for driving the foundation’s visibility, managing publicity initiatives, and creating compelling content that communicates our vision and impact effectively.',
+      'He is also passionate about turning ideas into meaningful stories, building communities, and using communication as a tool to inspire action and create positive change. He values creativity, teamwork, continuous learning, and purposeful leadership.'
+    ],
+    image: '/assets/team/okpalanze-somtochukwu.jpg',
+    linkedin: 'https://www.linkedin.com/in/somtochukwu-okpalanze-21231530b?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+    isFounder: false
+  },
+  {
+    id: 'ebenezer-adenola',
+    name: 'Ebenezer Adenola-Adesina',
+    title: 'Media Lead',
+    bio: 'Economics student at University of Ibadan with practical expertise in visual storytelling, videography, editing, digital media production, and youth empowerment initiatives.',
+    fullBio: [
+      'Ebenezer Adenola-Adesina is an Economics student at the University of Ibadan with a growing passion for media, communication, education, and youth development. He combines academic knowledge with practical experience in content creation, videography, editing, writing, and digital media.',
+      'As a media professional, Ebenezer has worked as a videographer and editor, developing skills in visual storytelling, production, and audience engagement. He is also actively involved in student media and youth-focused initiatives, where he contributes to creating meaningful conversations and empowering young people through information and media.',
+      'Beyond academics and media, Ebenezer is passionate about helping young people discover their potential, develop relevant skills, and confidently navigate an evolving digital world. He enjoys writing, playing chess and piano, and exploring innovative ways to communicate ideas.',
+      'He is committed to continuous learning, creativity, excellence, and making a meaningful impact through his work.'
+    ],
+    image: '/assets/team/ebenezer-adenola.jpg',
+    isFounder: false
+  },
+  {
+    id: 'alabi-abdullah',
+    name: 'Alabi Abdullah',
+    title: 'Design Lead',
+    bio: 'Creative Designer, Project Manager, Co-Founder of PassEduAI, and Founder of Abdollar Academy dedicated to empowering young people through design, technology, and leadership.',
+    fullBio: [
+      'Alabi Abdullah is a Creative Designer, Project Manager, Youth Builder, and technology advocate passionate about using creativity, technology, and leadership to create meaningful impact.',
+      'He is the Co Founder of PassEduAI, an education technology platform focused on helping students prepare smarter for examinations, and the Founder of Abdollar Academy, an educational initiative committed to supporting students and helping young people achieve their academic goals.',
+      'Beyond his professional pursuits, Abdullah is actively involved in youth development, community building, and student leadership. He is passionate about creating opportunities for young people, empowering students, and building communities where ideas, talents, and voices can thrive.',
+      'With a strong interest in leadership, innovation, and impact, Abdullah continues to build, learn, and collaborate with people and organizations committed to creating a better future.'
+    ],
+    image: '/assets/team/alabi-abdullah.jpg',
+    linkedin: 'https://www.linkedin.com/in/alabi-abdullah-99748b2b5?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+    isFounder: false
+  },
+  {
+    id: 'sunday-daniel',
+    name: 'Sunday Daniel Asamu',
+    title: 'Board Advisor & Strategic Partner',
+    bio: 'Strategy Advisor bringing systems-thinking, critical analysis, forward planning, and structured problem-solving to position organisations for sustainable growth and long-term impact.',
+    fullBio: [
+      'Sunday Daniel Asamu is a Strategy Advisor passionate about helping organisations think beyond the immediate and build with the future in mind.',
+      'He brings a systems-thinking approach to strategy, combining critical analysis, forward planning, and structured problem-solving to navigate complex challenges and identify opportunities for sustainable growth.',
+      'His work is driven by an understanding of how people, processes, ideas, and resources interact within an organisation.',
+      'He is committed to developing practical and adaptable strategies that create lasting value, foster collaboration, and position organisations for sustainable growth and long-term impact.'
+    ],
+    image: '/assets/team/sunday-daniel.jpg',
+    linkedin: 'https://www.linkedin.com/in/sundayasamu?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+    isFounder: false
+  },
+  {
+    id: 'divine-bassey',
+    name: 'Divine Bassey',
+    title: 'AI Consultant',
+    bio: 'AI Healthcare Systems Builder and Strategist focusing on intelligent workflows, responsible emerging tech adoption, and accessible AI education across Africa.',
+    fullBio: [
+      'Divine Bassey is an AI Healthcare Systems Builder and Strategist passionate about using artificial intelligence, healthcare, and digital transformation to solve practical problems and create meaningful impact.',
+      'His work focuses on developing practical AI strategies, designing intelligent healthcare systems, improving digital workflows, and helping organizations identify meaningful opportunities to integrate emerging technologies into their operations. He is particularly interested in building solutions that are practical, scalable, responsible, and relevant to the realities of emerging markets.',
+      'Beyond building and strategizing, Divine is actively involved in AI education, community building, and technology advocacy. He works to make emerging technologies more accessible and actionable by helping individuals and organizations understand how AI can be applied to real-world challenges rather than simply treated as a trend.',
+      'With a strong interest in healthcare innovation, intelligent systems, and responsible technology adoption, Divine continues to build, learn, and collaborate with people and organizations exploring how technology can improve healthcare, human workflows, and access to opportunity across Nigeria and beyond.'
+    ],
+    image: '/assets/team/divine-bassey.jpg',
+    linkedin: 'https://www.linkedin.com/in/divinebassey05?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
     isFounder: false
   }
 ];
