@@ -8,6 +8,38 @@ interface TeamSectionProps {
   team?: TeamMember[];
 }
 
+const renderBioWithLinks = (text: string) => {
+  const regex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const [_, label, url] = match;
+    parts.push(
+      <a
+        key={match.index}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-white underline underline-offset-4 hover:text-[#999998] font-medium transition-colors inline"
+      >
+        {label}
+      </a>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+};
+
 export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const mobileTabRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -209,10 +241,10 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
                 <div className="space-y-3.5 text-xs sm:text-sm text-[#cccccc] font-normal leading-relaxed max-h-[280px] sm:max-h-[340px] overflow-y-auto pr-2">
                   {activeMember.fullBio && activeMember.fullBio.length > 0 ? (
                     activeMember.fullBio.map((para, idx) => (
-                      <p key={idx}>{para}</p>
+                      <p key={idx}>{renderBioWithLinks(para)}</p>
                     ))
                   ) : (
-                    <p>{activeMember.bio}</p>
+                    <p>{renderBioWithLinks(activeMember.bio || '')}</p>
                   )}
                 </div>
               </div>

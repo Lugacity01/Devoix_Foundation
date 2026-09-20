@@ -47,10 +47,10 @@ export const teamData: TeamMember[] = [
     id: 'alabi-abdullah',
     name: 'Alabi Abdullah',
     title: 'Design Lead',
-    bio: 'Creative Designer, Project Manager, Co-Founder of PassEduAI, and Founder of Abdollar Academy dedicated to empowering young people through design, technology, and leadership.',
+    bio: 'Creative Designer, Project Manager, Co-Founder of [PassEduAI](https://passeduai.com/), and Founder of Abdollar Academy dedicated to empowering young people through design, technology, and leadership.',
     fullBio: [
       'Alabi Abdullah is a Creative Designer, Project Manager, Youth Builder, and technology advocate passionate about using creativity, technology, and leadership to create meaningful impact.',
-      'He is the Co Founder of PassEduAI, an education technology platform focused on helping students prepare smarter for examinations, and the Founder of Abdollar Academy, an educational initiative committed to supporting students and helping young people achieve their academic goals.',
+      'He is the Co Founder of [PassEduAI](https://passeduai.com/), an education technology platform focused on helping students prepare smarter for examinations, and the Founder of Abdollar Academy, an educational initiative committed to supporting students and helping young people achieve their academic goals.',
       'Beyond his professional pursuits, Abdullah is actively involved in youth development, community building, and student leadership. He is passionate about creating opportunities for young people, empowering students, and building communities where ideas, talents, and voices can thrive.',
       'With a strong interest in leadership, innovation, and impact, Abdullah continues to build, learn, and collaborate with people and organizations committed to creating a better future.'
     ],
