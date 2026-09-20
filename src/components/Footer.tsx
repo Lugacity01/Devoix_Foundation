@@ -148,9 +148,12 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-[11px] font-mono text-[#999998] gap-3 sm:gap-4">
           <p>© {new Date().getFullYear()} DOVOIX. All rights reserved.</p>
-          <div className="flex items-center gap-4 sm:gap-6">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4 text-[10px] text-[#999998]/70">
             <span>Commercial & Impact Synergy</span>
-            <span>Version 1.4 PRD</span>
+            <span className="text-[#3a3938]">•</span>
+            <span className="text-[#999998]/40 hover:text-[#999998] transition-colors tracking-tight text-[9.5px]">
+              Crafted by Lugacity Optimal Solutions
+            </span>
           </div>
         </div>
 
