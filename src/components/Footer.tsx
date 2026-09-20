@@ -148,12 +148,16 @@ export const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] sm:text-[11px] font-mono text-[#999998] gap-3 sm:gap-4">
           <p>© {new Date().getFullYear()} DOVOIX. All rights reserved.</p>
-          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4 text-[10px] text-[#999998]/70">
-            <span>Commercial & Impact Synergy</span>
-            <span className="text-[#3a3938]">•</span>
-            <span className="text-[#999998]/40 hover:text-[#999998] transition-colors tracking-tight text-[9.5px]">
+          <div className="flex items-center">
+            <a
+              href="https://www.linkedin.com/company/lugacity-optimal-solutions/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Lugacity Optimal Solutions LinkedIn"
+              className="text-[#999998]/40 hover:text-white transition-colors tracking-tight text-[9.5px] font-mono"
+            >
               Crafted by Lugacity Optimal Solutions
-            </span>
+            </a>
           </div>
         </div>
 
