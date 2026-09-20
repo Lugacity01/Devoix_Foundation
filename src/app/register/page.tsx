@@ -42,7 +42,7 @@ export default function StudentRegisterPage() {
             STUDENT INTAKE REGISTRATION
           </span>
           <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-3 sm:mb-4">
-            Register for Dovoix Foundation Programs
+            Register for DoVoix Foundation Programs
           </h1>
           <p className="text-xs sm:text-sm lg:text-base text-slate-600 max-w-xl mx-auto">
             Take the first step toward acquiring high-demand skills in design, video production, writing, and technology. No tuition fees required.
@@ -64,7 +64,7 @@ export default function StudentRegisterPage() {
             </h2>
 
             <p className="text-slate-600 text-xs sm:text-sm lg:text-base max-w-lg mx-auto leading-relaxed">
-              Thank you for registering your interest with Dovoix Foundation. Your submission has been logged into our intake portal and our admissions team will be in touch via WhatsApp / Email.
+              Thank you for registering your interest with DoVoix Foundation. Your submission has been logged into our intake portal and our admissions team will be in touch via WhatsApp / Email.
             </p>
 
             <div className="pt-4 sm:pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">

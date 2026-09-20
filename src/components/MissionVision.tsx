@@ -42,22 +42,12 @@ export const MissionVision: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-reveal">
         
         {/* Section Tag */}
-        <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-[#000000] mb-3 sm:mb-4">
+        <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-[#000000] mb-8 sm:mb-12">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
           </span>
-          <span>SECTION 02 // MISSION & VISION</span>
-        </div>
-
-        {/* Section Heading */}
-        <div className="max-w-3xl mb-10 sm:mb-14">
-          <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-[#000000] tracking-tight leading-snug sm:leading-tight">
-            Guided by purpose.{' '}
-            <span className="text-transparent bg-clip-text bg-[linear-gradient(110deg,#000000,#3a3938,#000000)] animate-text-gradient bg-[length:200%_auto]">
-              Driven by impact.
-            </span>
-          </h2>
+          <span>MISSION & VISION</span>
         </div>
 
         {/* Mission & Vision Side-by-Side Cards */}
@@ -112,7 +102,7 @@ export const MissionVision: React.FC = () => {
                 <span>OPERATING PRINCIPLES</span>
               </div>
               <h3 className="font-display text-xl sm:text-2xl font-extrabold text-[#000000]">
-                The Four Pillars of Dovoix.
+                The Four Pillars of DoVoix.
               </h3>
             </div>
             <p className="text-[11px] sm:text-xs font-mono text-[#666666] mt-1 sm:mt-0 uppercase tracking-wider">

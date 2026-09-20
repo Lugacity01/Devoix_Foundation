@@ -1,12 +1,12 @@
 # Devoix_Foundation
 
-The official web platform for **Dovoix** — Connecting commercial creative production excellence with community social impact across Africa.
+The official web platform for **DoVoix** — Connecting commercial creative production excellence with community social impact across Africa.
 
 ## 🚀 Overview
 
 - **Main Brand**: `dovoix.com` — Parent brand identity, executive leadership, partners, and combined impact.
-- **Dovoix Foundation**: `foundation.dovoix.com` — Social impact organization showcasing community projects, solar-powered learning hubs, and student intake registration.
-- **Dovoix FilmHouse**: `filmhouse.dovoix.com` — Commercial creative production arm.
+- **DoVoix Foundation**: `foundation.dovoix.com` — Social impact organization showcasing community projects, solar-powered learning hubs, and student intake registration.
+- **DoVoix FilmHouse**: `filmhouse.dovoix.com` — Commercial creative production arm.
 
 ## 🛠 Tech Stack
 

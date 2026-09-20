@@ -38,7 +38,7 @@ export const projectsData: Project[] = [
     name: 'Ogun Rural Community Learning Hub',
     tagline: 'Establishing sustainable community learning hubs powered by clean solar energy.',
     description: 'Construction and outfitting of a community center equipped with laptops, internet access, and learning resources for rural students.',
-    fullDescription: 'Access to continuous electricity and educational resources remains a major hurdle for young learners in rural districts. Dovoix Foundation partnered with local community leaders in Abeokuta to erect a solar-powered learning hub. The hub operates 6 days a week, providing free computer access, digital literacy classes, and homework assistance.',
+    fullDescription: 'Access to continuous electricity and educational resources remains a major hurdle for young learners in rural districts. DoVoix Foundation partnered with local community leaders in Abeokuta to erect a solar-powered learning hub. The hub operates 6 days a week, providing free computer access, digital literacy classes, and homework assistance.',
     location: 'Abeokuta, Ogun State',
     state: 'Ogun',
     status: 'Active',

@@ -159,7 +159,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailProps) {
 
             <div className="bg-white p-6 rounded-2xl border border-slate-200">
               <h3 className="font-display text-sm font-bold text-slate-900 mb-2">Want to sponsor or replicate this?</h3>
-              <p className="text-xs text-slate-600 mb-4">Partner with Dovoix Foundation to expand solar hubs and learning cohorts.</p>
+              <p className="text-xs text-slate-600 mb-4">Partner with DoVoix Foundation to expand solar hubs and learning cohorts.</p>
               <Link
                 href="/contact"
                 className="w-full py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2"

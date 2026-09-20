@@ -78,7 +78,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
           <div>
             <div className="flex items-center gap-3 text-xs font-mono font-bold tracking-[0.3em] uppercase text-teal-400 mb-4">
               <span className="w-2 h-2 rounded-full bg-brand-teal" />
-              <span>FIELD WORK EXHIBITION // TABBED SHOWCASE</span>
+              <span>FIELD WORK EXHIBITION</span>
             </div>
             <h2 className="font-display text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.08]">
               Projects driving real change.
@@ -152,7 +152,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
             <div>
               <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/10">
                 <span className="font-mono text-xs font-bold tracking-[0.3em] text-teal-400">
-                  EXHIBIT // {current.number}
+                  EXHIBIT {current.number}
                 </span>
                 <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
                   <MapPin className="w-3.5 h-3.5 text-teal-300" />
@@ -186,7 +186,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
             {/* Stage Footer */}
             <div className="pt-6 border-t border-white/10 flex items-center justify-between">
               <span className="text-xs font-mono text-slate-400 uppercase tracking-wider">
-                LEAD // {current.lead}
+                LEAD: {current.lead}
               </span>
 
               <Link

@@ -23,7 +23,7 @@ export const Newsletter: React.FC = () => {
           </div>
 
           <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-3">
-            Stay connected with Dovoix Foundation
+            Stay connected with DoVoix Foundation
           </h2>
 
           <p className="text-sm text-slate-300 max-w-xl mx-auto mb-8">
@@ -33,7 +33,7 @@ export const Newsletter: React.FC = () => {
           {submitted ? (
             <div className="p-4 rounded-xl bg-teal-500/20 border border-teal-500/40 text-teal-300 flex items-center justify-center gap-2 text-sm font-semibold">
               <CheckCircle className="w-5 h-5" />
-              <span>Thank you for subscribing! You are now connected with Dovoix Foundation.</span>
+              <span>Thank you for subscribing! You are now connected with DoVoix Foundation.</span>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto">

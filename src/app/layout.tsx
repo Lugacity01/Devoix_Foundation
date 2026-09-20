@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { NewsletterModal } from '@/components/NewsletterModal';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -17,9 +18,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Dovoix Foundation — Building Stronger Communities & Creating Opportunities',
-  description: 'Official website of Dovoix Foundation. Social impact, community development, educational programs, and youth empowerment projects across Nigeria.',
-  keywords: 'Dovoix Foundation, Social Impact, Youth Education, Digital Skills Nigeria, Community Development',
+  title: 'DoVoix Foundation — Building Stronger Communities & Creating Opportunities',
+  description: 'Official website of DoVoix Foundation. Social impact, community development, educational programs, and youth empowerment projects across Nigeria.',
+  keywords: 'DoVoix Foundation, Social Impact, Youth Education, Digital Skills Nigeria, Community Development',
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
@@ -33,6 +38,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <NewsletterModal />
       </body>
     </html>
   );

@@ -43,6 +43,8 @@ const renderBioWithLinks = (text: string) => {
 export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const mobileTabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const mobileScrollContainerRef = useRef<HTMLDivElement | null>(null);
+  const isFirstRender = useRef(true);
 
   if (!team || team.length === 0) return null;
 
@@ -56,14 +58,23 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
     setSelectedIndex((prev) => (prev === team.length - 1 ? 0 : prev + 1));
   };
 
-  // Smoothly scroll active mobile chip into view whenever selectedIndex changes
+  // Safely scroll ONLY the horizontal container internally without shifting the window/viewport
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    const container = mobileScrollContainerRef.current;
     const activeEl = mobileTabRefs.current[selectedIndex];
-    if (activeEl) {
-      activeEl.scrollIntoView({
+    if (container && activeEl) {
+      const scrollLeft =
+        activeEl.offsetLeft -
+        container.offsetLeft -
+        (container.clientWidth - activeEl.clientWidth) / 2;
+      container.scrollTo({
+        left: Math.max(0, scrollLeft),
         behavior: 'smooth',
-        inline: 'center',
-        block: 'nearest',
       });
     }
   }, [selectedIndex]);
@@ -80,13 +91,6 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
         {/* Section Header with Carousel Navigation */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-6 sm:pb-8 mb-6 sm:mb-10 border-b border-[#3a3938]/40 gap-4">
           <div>
-            <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-white mb-2">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
-              </span>
-              <span>SECTION 03 // BOARD & LEADERSHIP</span>
-            </div>
             <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl font-extrabold text-white tracking-tight">
               Meet the{' '}
               <span className="text-transparent bg-clip-text bg-[linear-gradient(110deg,#ffffff,#999998,#ffffff)] animate-text-gradient bg-[length:200%_auto]">
@@ -122,8 +126,8 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
         </div>
 
         {/* Mobile-Only Horizontal Overflow Selector (Directly at top of details) */}
-        <div className="block lg:hidden mb-5">
-          <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#999998] mb-2.5 px-1">
+        <div className="block lg:hidden mb-5 w-full overflow-hidden">
+          <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#999998] mb-2.5 px-0.5">
             <span className="flex items-center gap-1.5 font-semibold text-white">
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
               Board Roster
@@ -131,7 +135,10 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
             <span className="text-[10px] text-[#999998]">Swipe & Select ↔</span>
           </div>
 
-          <div className="flex items-center gap-3 overflow-x-auto pb-3 pt-1 px-1 no-scrollbar snap-x snap-mandatory scroll-smooth -mx-4 sm:-mx-6 px-4 sm:px-6">
+          <div
+            ref={mobileScrollContainerRef}
+            className="flex items-center gap-2.5 overflow-x-auto pb-3 pt-1 px-1 no-scrollbar snap-x snap-mandatory scroll-smooth w-full"
+          >
             {team.map((member, idx) => {
               const isActive = selectedIndex === idx;
               return (
@@ -144,7 +151,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
                   onClick={() => setSelectedIndex(idx)}
                   className={`flex-shrink-0 flex items-center gap-2.5 p-2 pr-3.5 rounded-2xl border transition-all duration-300 snap-center ${
                     isActive
-                      ? 'bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)] scale-[1.03] font-semibold'
+                      ? 'bg-white text-black border-white shadow-[0_0_20px_rgba(255,255,255,0.2)] scale-[1.02] font-semibold'
                       : 'bg-[#121212] text-[#999998] border-[#3a3938] hover:border-[#999998] hover:text-white'
                   }`}
                 >
@@ -157,16 +164,16 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="text-left">
+                  <div className="text-left min-w-0">
                     <div className="flex items-center gap-1.5">
                       <span className={`font-mono text-[9px] ${isActive ? 'text-black/60' : 'text-[#999998]'}`}>
                         0{idx + 1}
                       </span>
-                      <div className="text-[12px] font-bold font-display leading-tight truncate max-w-[130px]">
+                      <div className="text-[12px] font-bold font-display leading-tight truncate max-w-[125px]">
                         {member.name.split(' ')[0]} {member.name.split(' ')[1] || ''}
                       </div>
                     </div>
-                    <div className={`text-[9.5px] font-mono uppercase tracking-wider truncate max-w-[130px] mt-0.5 ${
+                    <div className={`text-[9.5px] font-mono uppercase tracking-wider truncate max-w-[125px] mt-0.5 ${
                       isActive ? 'text-black/80 font-bold' : 'text-[#999998]'
                     }`}>
                       {member.title}
@@ -192,7 +199,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
                 </span>
                 <span className="text-xs font-mono text-[#999998] flex items-center gap-1">
                   <UserCheck className="w-3.5 h-3.5 text-white" />
-                  DOVOIX BOARD
+                  DoVoix BOARD
                 </span>
               </div>
 

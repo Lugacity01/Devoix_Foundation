@@ -32,7 +32,7 @@ export default function ProjectsPage() {
         {/* Page Header */}
         <div className="max-w-3xl mb-8 sm:mb-12">
           <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-purple-600 mb-2 block">
-            DOVOIX FOUNDATION’S INITIATIVE ARCHIVE
+            DoVoix FOUNDATION’S INITIATIVE ARCHIVE
           </span>
           <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-3 sm:mb-4">
             Projects & Community Outreaches

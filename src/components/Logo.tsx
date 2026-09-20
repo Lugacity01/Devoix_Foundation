@@ -10,41 +10,15 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'light', className = '' })
   const isLight = variant === 'light';
 
   return (
-    <Link href="/" className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg p-1 ${className}`}>
-      {/* Visual Mark: Infinity-inspired vector mark with black & charcoal gradient */}
-      <div className="relative w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-[#3a3938] via-[#1f1f1f] to-black border border-[#3a3938] group-hover:scale-105 transition-transform duration-300">
-        <svg
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 text-white"
-        >
-          {/* Dual Loop Infinity Symbol Path */}
-          <path
-            d="M13 14C9.13401 14 6 17.134 6 21C6 24.866 9.13401 28 13 28C17.5 28 22.5 14 27 14C30.866 14 34 17.134 34 21C34 24.866 30.866 28 27 28C22.5 28 17.5 14 13 14Z"
-            stroke="currentColor"
-            strokeWidth="3.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M27 14C30.866 14 34 17.134 34 21C34 24.866 30.866 28 27 28"
-            stroke="currentColor"
-            strokeWidth="3.5"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
-
-      {/* Brand Text */}
-      <div className="flex flex-col">
-        <span className={`font-display text-xl font-extrabold tracking-tight ${isLight ? 'text-white' : 'text-[#000000]'}`}>
-          DOVOIX
-        </span>
-        <span className="text-[9px] font-mono font-bold tracking-[0.25em] uppercase -mt-1 text-[#999998]">
-          CREATIVE FIRM
-        </span>
-      </div>
+    <Link
+      href="/"
+      className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg transition-transform hover:opacity-95 ${className}`}
+    >
+      <img
+        src={isLight ? '/assets/logo/black_bg_logo.PNG' : '/assets/logo/white_bg_logo.PNG'}
+        alt="DoVoix Foundation"
+        className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+      />
     </Link>
   );
 };

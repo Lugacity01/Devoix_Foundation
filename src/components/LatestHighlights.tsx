@@ -20,7 +20,7 @@ export const LatestHighlights: React.FC = () => {
       summary: 'Produced a multi-city broadcast commercial and digital video series showcasing tech entrepreneurs across Nigeria and Ghana.',
       image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80',
       date: 'Apr 2026',
-      link: 'https://filmhouse.dovoix.com',
+      link: '/filmhouse',
     },
     {
       id: 'female-storytellers-enugu',
@@ -45,12 +45,12 @@ export const LatestHighlights: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
               </span>
-              <span>SECTION 07 // LATEST HIGHLIGHTS</span>
+              <span>LATEST HIGHLIGHTS</span>
             </div>
             <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl font-extrabold text-[#000000] tracking-tight">
               Latest from{' '}
               <span className="text-transparent bg-clip-text bg-[linear-gradient(110deg,#000000,#3a3938,#000000)] animate-text-gradient bg-[length:200%_auto]">
-                Dovoix.
+                DoVoix.
               </span>
             </h2>
           </div>

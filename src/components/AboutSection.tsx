@@ -6,13 +6,13 @@ export const AboutSection: React.FC = () => {
     <section id="about" className="py-16 sm:py-20 lg:py-24 bg-white text-slate-900 relative overflow-hidden border-b border-[#e5e5e5] selection:bg-black selection:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-reveal">
         
-        {/* Section Header Tag */}
+        {/* Section Tag */}
         <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-[#000000] mb-3 sm:mb-4">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-black" />
           </span>
-          <span>SECTION 01 // WHO WE ARE</span>
+          <span>WHO WE ARE</span>
         </div>
 
         {/* Split Layout: Text on Left, Visual on Right */}
@@ -35,15 +35,15 @@ export const AboutSection: React.FC = () => {
               <p>
                 Founded on{' '}
                 <span className="bg-[#000000] text-white px-2 py-0.5 rounded-md font-mono text-[11px] sm:text-xs font-semibold inline-block">
-                  6 December 2025 in Nigeria, DoVoix
+                  6th December 2025 in Oyo State, Nigeria.
                 </span>{' '}
-                started as an idea to combine creativity, storytelling, and social impact in one ecosystem. What began with a passion for film and media has grown into an organisation built around two things we deeply believe in: telling stories that matter and creating opportunities that matter.
+                DoVoix started as an idea to combine creativity, storytelling, and social impact in one ecosystem. What began with a passion for film and media has grown into an organisation built around two things we deeply believe in: telling stories that matter and creating opportunities that matter.
               </p>
               <p>
                 We created DoVoix because we saw the power of storytelling to shape how people see brands, communities, and themselves. At the same time, we wanted to use that same creative power to give underserved young people access to opportunities, particularly in digital skills and creative education.
               </p>
               <p>
-                Today, we are building DoVoix into a socio-entertainment organisation where creativity meets purpose — a space for creators to grow, brands to tell meaningful stories, and communities to experience tangible impact. Through our work, we are building an ecosystem that connects media, talent, storytelling, and humanitarian service.
+                Today, we are building DoVoix into a socio-entertainment organisation where creativity meets purpose; a space for creators to grow, brands to tell meaningful stories, and communities to experience tangible impact. Through our work, we are building an ecosystem that connects media, talent, storytelling, and humanitarian service.
               </p>
               <p className="text-[#666666] text-xs sm:text-sm italic">
                 "We are still growing, but the vision remains clear: to build a lasting platform that uses creativity as a tool for expression, opportunity, and social change."
@@ -54,13 +54,13 @@ export const AboutSection: React.FC = () => {
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-4 border-t border-[#e5e5e5] w-full">
               <div className="flex items-center gap-2 text-xs font-mono text-[#666666]">
                 <MapPin className="w-4 h-4 text-[#000000] shrink-0" />
-                <span>Headquartered in Lagos, Nigeria • Founded Dec 6, 2025</span>
+                <span>Headquartered in Ibadan, Nigeria.</span>
               </div>
               <a
                 href="#mission"
                 className="inline-flex items-center gap-1.5 sm:gap-2 text-xs font-mono font-bold text-[#000000] hover:text-[#999998] uppercase tracking-wider group"
               >
-                <span>Read Our Full Story</span>
+                <span>ABOUT US</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
               </a>
             </div>
@@ -75,7 +75,7 @@ export const AboutSection: React.FC = () => {
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-[#e5e5e5] bg-[#141414] aspect-[16/10] sm:aspect-[4/5] group transition-all duration-500">
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-                  alt="Dovoix Leadership & Production Team"
+                  alt="DoVoix Leadership & Production Team"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -87,7 +87,7 @@ export const AboutSection: React.FC = () => {
                     <span>BEHIND THE SCENES</span>
                   </div>
                   <p className="text-[11px] sm:text-xs text-white leading-relaxed">
-                    Dovoix founders & production team conducting creative masterclasses on location.
+                    DoVoix founders & production team conducting creative masterclasses on location.
                   </p>
                 </div>
               </div>

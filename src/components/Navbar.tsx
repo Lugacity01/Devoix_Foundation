@@ -23,16 +23,16 @@ export const Navbar: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'Projects', href: '/projects' },
     { name: 'Register', href: '/register' },
+    { name: 'FAQ', href: '/#faq' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? 'bg-[#000000]/95 backdrop-blur-md border-b border-[#3a3938]/60 py-3.5'
           : 'bg-[#000000]/90 backdrop-blur-md border-b border-[#3a3938]/40 py-4'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
@@ -46,11 +46,16 @@ export const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-xs font-mono font-bold uppercase tracking-wider transition-colors py-1 ${
-                  isActive
+                onClick={(e) => {
+                  if (link.href === '/' && pathname === '/') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+                className={`text-xs font-mono font-bold uppercase tracking-wider transition-colors py-1 ${isActive
                     ? 'text-white border-b-2 border-white'
                     : 'text-[#999998] hover:text-white'
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
@@ -90,10 +95,15 @@ export const Navbar: React.FC = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`text-xs font-mono font-bold uppercase tracking-wider py-2.5 border-b border-[#3a3938]/40 ${
-                  isActive ? 'text-white font-extrabold' : 'text-[#999998] hover:text-white'
-                }`}
+                onClick={(e) => {
+                  setIsOpen(false);
+                  if (link.href === '/' && pathname === '/') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+                className={`text-xs font-mono font-bold uppercase tracking-wider py-2.5 border-b border-[#3a3938]/40 ${isActive ? 'text-white font-extrabold' : 'text-[#999998] hover:text-white'
+                  }`}
               >
                 {link.name}
               </Link>

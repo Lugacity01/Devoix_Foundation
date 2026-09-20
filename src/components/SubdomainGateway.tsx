@@ -18,7 +18,7 @@ export const SubdomainGateway: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
             </span>
-            <span>SECTION 06 // SUBDOMAIN GATEWAY</span>
+            <span>SUBDOMAIN GATEWAY</span>
           </div>
           <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-white tracking-tight">
             Explore Our{' '}
@@ -34,22 +34,24 @@ export const SubdomainGateway: React.FC = () => {
         {/* Side-by-Side Gateway Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           
-          {/* Panel 1: Dovoix FilmHouse */}
+          {/* Panel 1: DoVoix FilmHouse */}
           <div className="rounded-2xl sm:rounded-3xl bg-[#141414] border-2 border-[#3a3938] overflow-hidden flex flex-col justify-between hover:border-white/50 hover:-translate-y-1.5 transition-all duration-300 group">
-            <div className="p-6 sm:p-8 lg:p-9">
+            <div className="p-5 sm:p-8 lg:p-9">
               
               {/* Arm Header Badge */}
-              <div className="flex items-center justify-between mb-4 sm:mb-6 pb-3.5 sm:pb-4 border-b border-[#3a3938]/40">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#262626] border border-[#3a3938] flex items-center justify-center text-white font-bold shrink-0 group-hover:scale-110 transition-transform">
-                    <Film className="w-5 h-5 sm:w-5 sm:h-5" />
+              <div className="flex items-center justify-between gap-2 sm:gap-4 mb-4 sm:mb-6 pb-3.5 sm:pb-4 border-b border-[#3a3938]/40">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#262626] border border-[#3a3938] flex items-center justify-center text-white font-bold shrink-0 group-hover:scale-110 transition-transform">
+                    <Film className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <h3 className="font-display text-lg sm:text-xl font-extrabold text-white group-hover:text-[#999998] transition-colors">Dovoix FilmHouse</h3>
-                    <span className="text-[11px] sm:text-xs font-mono text-[#999998]">filmhouse.dovoix.com</span>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-[15px] sm:text-lg lg:text-xl font-extrabold text-white group-hover:text-[#999998] transition-colors whitespace-nowrap">
+                      DoVoix FilmHouse
+                    </h3>
+                    <span className="text-[10px] sm:text-xs font-mono text-[#999998] block">filmhouse.dovoix.com</span>
                   </div>
                 </div>
-                <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md bg-[#262626] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider border border-[#3a3938]">
+                <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-md bg-[#262626] text-white font-mono text-[8.5px] sm:text-[10px] font-bold uppercase tracking-wider border border-[#3a3938] shrink-0">
                   COMMERCIAL ARM
                 </span>
               </div>
@@ -58,7 +60,7 @@ export const SubdomainGateway: React.FC = () => {
               <div className="relative aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6 bg-[#000000] border border-[#3a3938]">
                 <img
                   src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80"
-                  alt="Dovoix FilmHouse Commercial Production"
+                  alt="DoVoix FilmHouse Commercial Production"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
@@ -73,35 +75,35 @@ export const SubdomainGateway: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="p-6 sm:p-8 lg:p-9 pt-0">
-              <a
-                href="https://filmhouse.dovoix.com"
-                target="_blank"
-                rel="noopener noreferrer"
+            <div className="p-5 sm:p-8 lg:p-9 pt-0">
+              <Link
+                href="/filmhouse"
                 className="relative overflow-hidden w-full inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-slate-100 text-black font-bold text-xs font-mono uppercase tracking-wider border border-white/20 transition-all group-hover:scale-[1.02]"
               >
                 <span className="relative z-10">Explore FilmHouse</span>
-                <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black relative z-10 group-hover:translate-x-1 transition-transform" />
-              </a>
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black relative z-10 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
 
-          {/* Panel 2: Dovoix Foundation */}
+          {/* Panel 2: DoVoix Foundation */}
           <div className="rounded-2xl sm:rounded-3xl bg-[#141414] border-2 border-[#3a3938] overflow-hidden flex flex-col justify-between hover:border-white/50 hover:-translate-y-1.5 transition-all duration-300 group">
-            <div className="p-6 sm:p-8 lg:p-9">
+            <div className="p-5 sm:p-8 lg:p-9">
               
               {/* Arm Header Badge */}
-              <div className="flex items-center justify-between mb-4 sm:mb-6 pb-3.5 sm:pb-4 border-b border-[#3a3938]/40">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#262626] border border-[#3a3938] flex items-center justify-center text-white font-bold shrink-0 group-hover:scale-110 transition-transform">
-                    <HeartHandshake className="w-5 h-5 sm:w-5 sm:h-5" />
+              <div className="flex items-center justify-between gap-2 sm:gap-4 mb-4 sm:mb-6 pb-3.5 sm:pb-4 border-b border-[#3a3938]/40">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#262626] border border-[#3a3938] flex items-center justify-center text-white font-bold shrink-0 group-hover:scale-110 transition-transform">
+                    <HeartHandshake className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <div>
-                    <h3 className="font-display text-lg sm:text-xl font-extrabold text-white group-hover:text-[#999998] transition-colors">Dovoix Foundation</h3>
-                    <span className="text-[11px] sm:text-xs font-mono text-[#999998]">foundation.dovoix.com</span>
+                  <div className="min-w-0">
+                    <h3 className="font-display text-[15px] sm:text-lg lg:text-xl font-extrabold text-white group-hover:text-[#999998] transition-colors whitespace-nowrap">
+                      DoVoix Foundation
+                    </h3>
+                    <span className="text-[10px] sm:text-xs font-mono text-[#999998] block">foundation.dovoix.com</span>
                   </div>
                 </div>
-                <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md bg-[#262626] text-white font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-wider border border-[#3a3938]">
+                <span className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-md bg-[#262626] text-white font-mono text-[8.5px] sm:text-[10px] font-bold uppercase tracking-wider border border-[#3a3938] shrink-0">
                   SOCIAL IMPACT ARM
                 </span>
               </div>
@@ -110,7 +112,7 @@ export const SubdomainGateway: React.FC = () => {
               <div className="relative aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6 bg-[#000000] border border-[#3a3938]">
                 <img
                   src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
-                  alt="Dovoix Foundation Masterclasses & Solar Hubs"
+                  alt="DoVoix Foundation Masterclasses & Solar Hubs"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
