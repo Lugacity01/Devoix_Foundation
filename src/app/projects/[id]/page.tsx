@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { projectsData } from '@/data/projectsData';
 import { MapPin, Calendar, Users, ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { SupportBACCard } from '@/components/SupportBACCard';
 
 interface ProjectDetailProps {
   params: {
@@ -167,20 +168,15 @@ export default function ProjectDetailPage({ params }: ProjectDetailProps) {
               </div>
             </div>
 
-            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200 shadow-sm">
-              <h3 className="font-display text-base font-bold text-slate-900 mb-2">Want to sponsor the next one?</h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
-                Your support can help us reach more students, provide access to practical skills, and create opportunities that can change the trajectory of a young person’s life.
-              </p>
-              <Link
-                href="/contact"
-                className="w-full py-3 rounded-xl bg-black hover:bg-slate-800 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-md"
-              >
-                <span>Partner with us</span>
-              </Link>
-            </div>
+            {/* Interactive Support BAC 2.0 Sidebar Widget */}
+            <SupportBACCard variant="sidebar" />
           </div>
 
+        </div>
+
+        {/* Full-Width Interactive BAC 2.0 Support Banner */}
+        <div className="mb-12 sm:mb-16">
+          <SupportBACCard />
         </div>
 
         {/* Related Projects */}
