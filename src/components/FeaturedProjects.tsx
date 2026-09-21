@@ -60,6 +60,28 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
       tagline: 'One-month skills development programme in writing and graphic design.',
       description: 'Beginning on 3 June 2026, held sessions twice weekly for a total of 8 sessions throughout the month, training 20+ students with 3 facilitators in content writing and graphic design.',
       highlights: ['20+ Students Trained', '8 Sessions Held', '4 Weeks of Training', '3 Facilitators']
+    },
+    {
+      id: 'bag-a-child-street-edition-3',
+      number: '04',
+      shortTitle: 'LAGOS STREET (3.0)',
+      name: 'Bag A Child Initiative 3.0: Street Edition',
+      category: 'Community Empowerment & Digital Skills',
+      status: 'Upcoming',
+      location: 'Streets of Lagos, Nigeria',
+      date: '2029',
+      livesImpacted: 1000,
+      lead: 'DoVoix Foundation Community Unit',
+      image: '/assets/foundation_picture.JPEG',
+      tagline: 'Skills development mission beyond school walls and into the streets of Lagos.',
+      description: 'The six-month programme is designed to equip 1,000 young people with three practical creative and digital skills through 30 facilitators and 100 volunteers across 6 structured training sessions.',
+      highlights: [
+        'Target Reach: 1,000 Youths',
+        'Duration: 6 Months',
+        '30 Facilitators & 100 Volunteers',
+        '3 Creative Skills Introduced',
+        '6 Structured Training Sessions'
+      ]
     }
   ];
 

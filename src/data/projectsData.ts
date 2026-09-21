@@ -270,5 +270,38 @@ export const projectsData: Project[] = [
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
     ],
     isFeatured: false
+  },
+  {
+    id: 'bag-a-child-street-edition-3',
+    name: 'Bag A Child Initiative 3.0: Street Edition',
+    tagline: 'Taking skills development beyond school walls and into the streets of Lagos.',
+    description: 'A six-month programme designed to equip 1,000 young people with three practical creative and digital skills they can use to create opportunities, generate income, and thrive.',
+    fullDescription: 'Bag A Child Initiative 3.0: Street Edition takes DoVoix Foundation’s skills development mission beyond the walls of schools and into the streets of Lagos.\n\nThe six-month programme is designed to equip 1,000 young people with three practical creative and digital skills they can use to create opportunities, generate income, and thrive in an increasingly digital economy.\n\nThe programme will bring together 30 facilitators and 100 volunteers to deliver six structured training sessions across the six-month period, creating accessible learning opportunities for young people from different backgrounds.\n\nBy taking the programme directly to the streets, the Street Edition aims to reach young people who may not have access to conventional training opportunities and give them practical skills they can build on.',
+    location: 'Streets of Lagos, Nigeria',
+    state: 'Lagos',
+    status: 'Upcoming',
+    category: 'Community',
+    date: '2029',
+    year: 2029,
+    livesImpacted: 1000,
+    impactBreakdown: [
+      { label: 'Target Reach', count: '1,000 youths' },
+      { label: 'Duration', count: '6 months' },
+      { label: 'Facilitators', count: '30' },
+      { label: 'Creative Skills', count: '3' },
+      { label: 'Volunteers', count: '100' },
+      { label: 'Sessions', count: '6' }
+    ],
+    coverImage: '/assets/foundation_picture.JPEG',
+    galleryImages: [
+      '/assets/foundation_picture.JPEG',
+      '/assets/behind_scene.JPEG'
+    ],
+    leadInfo: {
+      name: 'DoVoix Foundation Team',
+      role: 'Community Outreach Unit, DoVoix',
+      photo: '/assets/team/donald-mojekwu.jpg'
+    },
+    isFeatured: true
   }
 ];

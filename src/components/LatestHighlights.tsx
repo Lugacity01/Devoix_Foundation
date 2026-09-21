@@ -28,13 +28,13 @@ export const LatestHighlights: React.FC = () => {
       link: '/filmhouse',
     },
     {
-      id: 'female-storytellers-enugu',
+      id: 'bag-a-child-street-edition-3',
       source: 'Foundation',
-      title: 'Female Storytellers & Digital Journalism Residency Cohort 2',
-      summary: 'Graduated 180 young female writers producing investigative anthologies highlighting Eastern Nigerian community development.',
-      image: '/assets/behind_scene.JPEG',
-      date: 'Mar 2026',
-      link: '/projects/creative-writing-enugu',
+      title: 'Bag A Child Initiative 3.0: Street Edition (Lagos)',
+      summary: 'Equipping 1,000 young people across the streets of Lagos with 3 practical creative and digital skills over 6 months.',
+      image: '/assets/foundation_picture.JPEG',
+      date: '2029',
+      link: '/projects/bag-a-child-street-edition-3',
     },
   ];
 
