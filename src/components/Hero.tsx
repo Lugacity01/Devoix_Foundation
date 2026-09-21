@@ -112,33 +112,6 @@ export const Hero: React.FC = () => {
               </a>
             </FadeUpText>
 
-            {/* High-Level Dual-Arm Badge Strip */}
-            <FadeUpText delay={0.7} className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 pt-5 sm:pt-8 border-t border-[#3a3938]/40 w-full">
-              <Card3DTilt maxTilt={5} scale={1.01} className="w-full">
-                <Link href="/filmhouse" className="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#141414]/80 border border-[#3a3938]/60 hover:border-white/40 hover:bg-[#1a1a1a] transition-all group w-full">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#262626] border border-[#3a3938] flex items-center justify-center text-white font-bold shrink-0 group-hover:scale-105 transition-transform">
-                    <Film className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-mono text-xs font-bold text-white uppercase tracking-wider group-hover:text-[#999998] transition-colors">FilmHouse</div>
-                    <div className="text-[11px] text-[#999998] font-medium">Commercial Creative Arm</div>
-                  </div>
-                </Link>
-              </Card3DTilt>
-
-              <Card3DTilt maxTilt={5} scale={1.01} className="w-full">
-                <a href="#gateway" className="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-[#141414]/80 border border-[#3a3938]/60 hover:border-white/40 hover:bg-[#1a1a1a] transition-all group w-full">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#262626] border border-[#3a3938] flex items-center justify-center text-white font-bold shrink-0 group-hover:scale-105 transition-transform">
-                    <HeartHandshake className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-mono text-xs font-bold text-white uppercase tracking-wider group-hover:text-[#999998] transition-colors">Foundation</div>
-                    <div className="text-[11px] text-[#999998] font-medium">Social Impact Arm</div>
-                  </div>
-                </a>
-              </Card3DTilt>
-            </FadeUpText>
-
           </div>
 
           {/* Desktop-Only Visual Showcase Stage (Right Column) */}
