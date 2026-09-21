@@ -66,11 +66,13 @@ export default function ContactPage() {
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h3 className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400">WhatsApp Channel</h3>
-                  <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-xs sm:text-sm font-semibold text-slate-900 hover:text-purple-600 transition-colors">
-                    Chat on WhatsApp
+                  <h3 className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400">Phone & WhatsApp</h3>
+                  <a href="tel:+2348125615709" className="text-xs sm:text-sm font-semibold text-slate-900 hover:text-purple-600 transition-colors block">
+                    +234 (0) 812 561 5709
                   </a>
-                  <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 font-mono">Mon - Fri (9:00 AM - 5:00 PM WAT)</p>
+                  <a href="https://wa.me/2348125615709" target="_blank" rel="noopener noreferrer" className="text-[11px] sm:text-xs text-purple-600 hover:underline mt-0.5 font-mono inline-block">
+                    Chat on WhatsApp →
+                  </a>
                 </div>
               </div>
 

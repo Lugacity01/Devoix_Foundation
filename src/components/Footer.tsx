@@ -139,14 +139,22 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="space-y-2.5 sm:space-y-3 text-xs font-mono text-[#999998]">
               <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-white" />
-                <a href="mailto:dovoixfirm@gmail.com" className="hover:text-white transition-colors">
+                <Mail className="w-3.5 h-3.5 text-white shrink-0" />
+                <a href="mailto:dovoixfirm@gmail.com" className="hover:text-white transition-colors truncate">
                   dovoixfirm@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-white" />
-                <span>Ibadan, Nigeria</span>
+                <svg className="w-3.5 h-3.5 fill-current text-white shrink-0" viewBox="0 0 24 24">
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z" />
+                </svg>
+                <a href="tel:+2348125615709" className="hover:text-white transition-colors">
+                  +234 (0) 812 561 5709
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-white shrink-0" />
+                <span>Headquarters: Ibadan, Nigeria</span>
               </div>
               <div className="pt-1 sm:pt-2">
                 <Link

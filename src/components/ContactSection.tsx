@@ -65,9 +65,12 @@ export const ContactSection: React.FC = () => {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">PHONE / WHATSAPP</div>
-                  <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-slate-900 hover:text-purple-600 transition-colors">
-                    Chat on WhatsApp
+                  <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">PHONE & WHATSAPP</div>
+                  <a href="tel:+2348125615709" className="text-sm font-semibold text-slate-900 hover:text-purple-600 transition-colors block">
+                    +234 (0) 812 561 5709
+                  </a>
+                  <a href="https://wa.me/2348125615709" target="_blank" rel="noopener noreferrer" className="text-xs text-purple-600 hover:underline mt-0.5 font-mono inline-block">
+                    Chat on WhatsApp →
                   </a>
                 </div>
               </div>
