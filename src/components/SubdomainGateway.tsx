@@ -137,7 +137,7 @@ export const SubdomainGateway: React.FC = () => {
                 {/* Media Visual Stage */}
                 <div className="relative aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6 bg-[#000000] border border-[#3a3938]">
                   <img
-                    src="/assets/foundation_picture.JPEG"
+                    src="/assets/foundation_project.jpeg"
                     alt="DoVoix Foundation Masterclasses & Solar Hubs"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
