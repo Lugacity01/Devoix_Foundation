@@ -154,6 +154,11 @@ export const projectsData: Project[] = [
     galleryImages: [
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
     ],
+    leadInfo: {
+      name: 'Team UNN Leads',
+      role: 'Campus Chapter Lead, DoVoix',
+      photo: '/assets/team/donald-mojekwu.jpg'
+    },
     isFeatured: false
   },
   {
@@ -177,6 +182,11 @@ export const projectsData: Project[] = [
     galleryImages: [
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
     ],
+    leadInfo: {
+      name: 'Team ESUT Leads',
+      role: 'Campus Chapter Lead, DoVoix',
+      photo: '/assets/team/donald-mojekwu.jpg'
+    },
     isFeatured: false
   },
   {
@@ -200,6 +210,11 @@ export const projectsData: Project[] = [
     galleryImages: [
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
     ],
+    leadInfo: {
+      name: 'Team UB Leads',
+      role: 'Campus Chapter Lead, DoVoix',
+      photo: '/assets/team/donald-mojekwu.jpg'
+    },
     isFeatured: false
   },
   {
@@ -223,6 +238,11 @@ export const projectsData: Project[] = [
     galleryImages: [
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
     ],
+    leadInfo: {
+      name: 'Team LUTH Leads',
+      role: 'Campus Chapter Lead, DoVoix',
+      photo: '/assets/team/donald-mojekwu.jpg'
+    },
     isFeatured: false
   },
   {
@@ -246,6 +266,11 @@ export const projectsData: Project[] = [
     galleryImages: [
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
     ],
+    leadInfo: {
+      name: 'Team UNILAG Leads',
+      role: 'Campus Chapter Lead, DoVoix',
+      photo: '/assets/team/donald-mojekwu.jpg'
+    },
     isFeatured: false
   },
   {
@@ -269,6 +294,11 @@ export const projectsData: Project[] = [
     galleryImages: [
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
     ],
+    leadInfo: {
+      name: 'Team ABU ZARIA Leads',
+      role: 'Campus Chapter Lead, DoVoix',
+      photo: '/assets/team/donald-mojekwu.jpg'
+    },
     isFeatured: false
   },
   {
