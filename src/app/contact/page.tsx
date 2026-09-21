@@ -137,12 +137,12 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Student Registration Callout */}
+            {/* Campus Registration Callout */}
             <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-purple-50/70 border border-purple-200">
-              <h3 className="font-display text-sm sm:text-base font-bold text-slate-900 mb-1">Looking to register as a student?</h3>
-              <p className="text-xs text-slate-600 mb-3 sm:mb-4">Please use our dedicated student intake form instead of general enquiries.</p>
+              <h3 className="font-display text-sm sm:text-base font-bold text-slate-900 mb-1">Looking for campus registration?</h3>
+              <p className="text-xs text-slate-600 mb-3 sm:mb-4">Enroll directly under your university campus chapter (UI, UNILAG, UNILORIN, UNIPORT, LUTH, UNN, UB, ESUT, ABU ZARIA).</p>
               <Link href="/register" className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-purple-700 hover:underline">
-                <span>Go to Student Registration →</span>
+                <span>Go to Campus Registration →</span>
               </Link>
             </div>
           </div>

@@ -8,22 +8,35 @@ import { StudentRegistrationInput } from '@/types';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function StudentRegisterPage() {
+export default function CampusRegisterPage() {
   const [formData, setFormData] = useState<StudentRegistrationInput>({
     fullName: '',
     email: '',
     phone: '',
     age: '',
     gender: 'Male',
-    stateOfResidence: 'Lagos',
+    campus: 'UI',
+    stateOfResidence: 'Oyo',
     lga: '',
-    programOfInterest: 'Technology',
-    projectCohort: 'Cohort 2026-A',
+    programOfInterest: 'Graphic Design & Digital Branding',
+    projectCohort: 'Cohort 2026-B (October/November)',
     howHeard: 'Social Media',
     personalStatement: '',
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  const registeredCampuses = [
+    { code: 'UI', name: 'University of Ibadan', state: 'Oyo State' },
+    { code: 'UNILAG', name: 'University of Lagos', state: 'Lagos State' },
+    { code: 'UNILORIN', name: 'University of Ilorin', state: 'Kwara State' },
+    { code: 'UNIPORT', name: 'University of Port Harcourt', state: 'Rivers State' },
+    { code: 'LUTH', name: 'Lagos University Teaching Hospital', state: 'Lagos State' },
+    { code: 'UNN', name: 'University of Nigeria, Nsukka', state: 'Enugu State' },
+    { code: 'UB', name: 'University of Benin', state: 'Edo State' },
+    { code: 'ESUT', name: 'Enugu State University of Science & Tech', state: 'Enugu State' },
+    { code: 'ABU ZARIA', name: 'Ahmadu Bello University, Zaria', state: 'Kaduna State' },
+  ];
 
   const selectedStateObj = NIGERIAN_STATES.find((s) => s.name === formData.stateOfResidence);
 
@@ -34,19 +47,50 @@ export default function StudentRegisterPage() {
 
   return (
     <div className="pt-28 pb-16 sm:pt-32 sm:pb-24 bg-slate-50 min-h-screen selection:bg-purple-600 selection:text-white">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-purple-600 mb-2 block">
-            STUDENT INTAKE REGISTRATION
+            CAMPUS REGISTRATION
           </span>
           <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-3 sm:mb-4">
             Register for DoVoix Foundation Programs
           </h1>
-          <p className="text-xs sm:text-sm lg:text-base text-slate-600 max-w-xl mx-auto">
-            Take the first step toward acquiring high-demand skills in design, video production, writing, and technology. No tuition fees required.
+          <p className="text-xs sm:text-sm lg:text-base text-slate-600 max-w-xl mx-auto mb-6">
+            Join your university campus chapter. Equipping young people across Nigeria with high-income creative, digital, and media skills.
           </p>
+
+          {/* Registered Campus Badges */}
+          <div className="bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-sm max-w-3xl mx-auto text-left">
+            <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+              <span className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-500">
+                REGISTERED CAMPUS CHAPTERS ({registeredCampuses.length})
+              </span>
+              <span className="text-[10px] sm:text-xs font-mono text-purple-600 font-semibold">
+                Interstate Network
+              </span>
+            </div>
+            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-2.5">
+              {registeredCampuses.map((c) => (
+                <button
+                  key={c.code}
+                  type="button"
+                  onClick={() => setFormData({ ...formData, campus: c.code })}
+                  className={`p-2 sm:p-2.5 rounded-xl border text-center transition-all ${
+                    formData.campus === c.code
+                      ? 'bg-purple-600 text-white border-purple-600 shadow-sm'
+                      : 'bg-slate-50 hover:bg-slate-100 text-slate-800 border-slate-200'
+                  }`}
+                >
+                  <div className="font-display font-black text-xs sm:text-sm">{c.code}</div>
+                  <div className={`text-[9px] truncate font-mono ${formData.campus === c.code ? 'text-purple-100' : 'text-slate-500'}`}>
+                    {c.state}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {submitted ? (
@@ -177,16 +221,34 @@ export default function StudentRegisterPage() {
               </div>
             </div>
 
-            {/* Section 2: Where You're From */}
+            {/* Section 2: Campus & Location */}
             <div className="bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-2.5 sm:gap-3 pb-3 sm:pb-4 border-b border-slate-100">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center font-bold text-xs sm:text-sm">
                   2
                 </div>
-                <h3 className="font-display text-base sm:text-lg font-bold text-slate-900">Where You're From</h3>
+                <h3 className="font-display text-base sm:text-lg font-bold text-slate-900">Campus & Location</h3>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                  <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 sm:mb-2">
+                    Registered Campus Chapter <span className="text-purple-600">*</span>
+                  </label>
+                  <select
+                    value={formData.campus}
+                    onChange={(e) => setFormData({ ...formData, campus: e.target.value })}
+                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600 font-medium"
+                  >
+                    {registeredCampuses.map((c) => (
+                      <option key={c.code} value={c.code}>
+                        {c.code} — {c.name} ({c.state})
+                      </option>
+                    ))}
+                    <option value="Other">Other Campus / Secondary School</option>
+                  </select>
+                </div>
+
                 <div>
                   <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 sm:mb-2">
                     State of Residence <span className="text-purple-600">*</span>
@@ -204,7 +266,7 @@ export default function StudentRegisterPage() {
                   </select>
                 </div>
 
-                <div>
+                <div className="sm:col-span-2">
                   <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-700 mb-1.5 sm:mb-2">
                     Local Government Area (Optional)
                   </label>

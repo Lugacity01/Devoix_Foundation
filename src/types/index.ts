@@ -72,6 +72,7 @@ export interface StudentRegistrationInput {
   phone: string;
   age: string;
   gender: string;
+  campus?: string;
   stateOfResidence: string;
   lga?: string;
   programOfInterest: string;

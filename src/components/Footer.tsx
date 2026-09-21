@@ -79,7 +79,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link href="/register" className="text-[#999998] hover:text-white transition-colors">
-                  STUDENT REGISTRATION
+                  CAMPUS REGISTRATION
                 </Link>
               </li>
               <li>
