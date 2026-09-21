@@ -258,12 +258,12 @@ export const projectsData: Project[] = [
     state: 'Kaduna',
     status: 'Upcoming',
     category: 'Interstate',
-    date: 'Upcoming 2026',
+    date: 'November 2026',
     year: 2026,
     livesImpacted: 0,
     impactBreakdown: [
       { label: 'Status', count: 'Upcoming' },
-      { label: 'Regional Hub', count: 'Northern Nigeria' }
+      { label: 'Scheduled Timeline', count: 'November 2026' }
     ],
     coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
     galleryImages: [
