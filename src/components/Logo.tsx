@@ -17,7 +17,11 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'light', className = '' })
       <img
         src={isLight ? '/assets/logo/black_bg_logo.PNG' : '/assets/logo/white_bg_logo.PNG'}
         alt="DoVoix Foundation"
-        className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+        className={`h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${
+          isLight
+            ? 'mix-blend-screen filter contrast-200 brightness-110 drop-shadow-[0_0_12px_rgba(255,255,255,0.08)]'
+            : 'mix-blend-multiply filter contrast-150'
+        }`}
       />
     </Link>
   );
