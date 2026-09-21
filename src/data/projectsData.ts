@@ -132,5 +132,143 @@ export const projectsData: Project[] = [
       photo: '/assets/team/ebenezer-adenola.jpg'
     },
     isFeatured: false
+  },
+  {
+    id: 'bag-a-child-unn',
+    name: 'Bag A Child 2.0: Interstate Edition (Team UNN)',
+    tagline: 'Youth digital skills and creative outreach in Enugu State.',
+    description: 'Upcoming Bag A Child 2.0 edition led by Team UNN, equipping secondary school students with digital and creative skills.',
+    fullDescription: 'Bag A Child 2.0: Interstate Edition (Team UNN) is an upcoming youth empowerment programme bringing practical creative and digital training to secondary school students in Enugu State.',
+    location: 'University of Nigeria, Nsukka, Enugu State, Nigeria',
+    state: 'Enugu',
+    status: 'Upcoming',
+    category: 'Interstate',
+    date: 'October 2026',
+    year: 2026,
+    livesImpacted: 0,
+    impactBreakdown: [
+      { label: 'Status', count: 'Upcoming' },
+      { label: 'Scheduled Timeline', count: 'October 2026' }
+    ],
+    coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
+    galleryImages: [
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
+    ],
+    isFeatured: false
+  },
+  {
+    id: 'bag-a-child-esut',
+    name: 'Bag A Child 2.0: Interstate Edition (Team ESUT)',
+    tagline: 'Practical creative and digital skills outreach in Enugu State.',
+    description: 'Upcoming Bag A Child 2.0 edition led by Team ESUT, bringing digital empowerment and mentorship to students.',
+    fullDescription: 'Bag A Child 2.0: Interstate Edition (Team ESUT) is an upcoming youth empowerment programme designed to introduce students in Enugu State to monetizable digital toolkits and creative skills.',
+    location: 'Enugu State University of Science and Technology, Enugu State, Nigeria',
+    state: 'Enugu',
+    status: 'Upcoming',
+    category: 'Interstate',
+    date: 'October 2026',
+    year: 2026,
+    livesImpacted: 0,
+    impactBreakdown: [
+      { label: 'Status', count: 'Upcoming' },
+      { label: 'Scheduled Timeline', count: 'October 2026' }
+    ],
+    coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
+    galleryImages: [
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
+    ],
+    isFeatured: false
+  },
+  {
+    id: 'bag-a-child-ub',
+    name: 'Bag A Child 2.0: Interstate Edition (Team UB)',
+    tagline: 'Hands-on creative empowerment and digital skills outreach in Edo State.',
+    description: 'Upcoming Bag A Child 2.0 edition led by Team UB, delivering foundational digital skills and creative pathways.',
+    fullDescription: 'Bag A Child 2.0: Interstate Edition (Team UB) is an upcoming outreach initiative expanding DoVoix Foundation’s creative mentorship to secondary school students in Edo State.',
+    location: 'University of Benin, Edo State, Nigeria',
+    state: 'Edo',
+    status: 'Upcoming',
+    category: 'Interstate',
+    date: 'October 2026',
+    year: 2026,
+    livesImpacted: 0,
+    impactBreakdown: [
+      { label: 'Status', count: 'Upcoming' },
+      { label: 'Scheduled Timeline', count: 'October 2026' }
+    ],
+    coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
+    galleryImages: [
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
+    ],
+    isFeatured: false
+  },
+  {
+    id: 'bag-a-child-luth',
+    name: 'Bag A Child 2.0: Interstate Edition (Team LUTH)',
+    tagline: 'Digital skills and practical creative training outreach in Lagos State.',
+    description: 'Upcoming Bag A Child 2.0 edition led by Team LUTH, introducing students to high-impact digital and creative competencies.',
+    fullDescription: 'Bag A Child 2.0: Interstate Edition (Team LUTH) will equip secondary school students in Lagos State with essential digital design and creative capabilities.',
+    location: 'Lagos University Teaching Hospital / CMUL, Lagos State, Nigeria',
+    state: 'Lagos',
+    status: 'Upcoming',
+    category: 'Interstate',
+    date: 'October 2026',
+    year: 2026,
+    livesImpacted: 0,
+    impactBreakdown: [
+      { label: 'Status', count: 'Upcoming' },
+      { label: 'Scheduled Timeline', count: 'October 2026' }
+    ],
+    coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
+    galleryImages: [
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
+    ],
+    isFeatured: false
+  },
+  {
+    id: 'bag-a-child-unilag',
+    name: 'Bag A Child 2.0: Interstate Edition (Team UNILAG)',
+    tagline: 'Youth digital skills and creative entrepreneurship outreach in Lagos State.',
+    description: 'Upcoming Bag A Child 2.0 edition led by Team UNILAG, expanding practical digital skills and design toolkits to young learners.',
+    fullDescription: 'Bag A Child 2.0: Interstate Edition (Team UNILAG) is an upcoming outreach expanding creative technology, design, and monetizable skills for young learners in Lagos State.',
+    location: 'University of Lagos, Akoka, Lagos State, Nigeria',
+    state: 'Lagos',
+    status: 'Upcoming',
+    category: 'Interstate',
+    date: 'October 2026',
+    year: 2026,
+    livesImpacted: 0,
+    impactBreakdown: [
+      { label: 'Status', count: 'Upcoming' },
+      { label: 'Scheduled Timeline', count: 'October 2026' }
+    ],
+    coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
+    galleryImages: [
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
+    ],
+    isFeatured: false
+  },
+  {
+    id: 'bag-a-child-abuzaria',
+    name: 'Bag A Child 2.0: Interstate Edition (Team ABU ZARIA)',
+    tagline: 'Digital empowerment and creative skills outreach in Kaduna State.',
+    description: 'Upcoming Bag A Child 2.0 edition led by Team ABU ZARIA, extending DoVoix Foundation’s interstate reach to Northern Nigeria.',
+    fullDescription: 'Bag A Child 2.0: Interstate Edition (Team ABU ZARIA) is an upcoming project expanding DoVoix Foundation’s grassroots youth empowerment mission into Kaduna State and Northern Nigeria.',
+    location: 'Ahmadu Bello University, Zaria, Kaduna State, Nigeria',
+    state: 'Kaduna',
+    status: 'Upcoming',
+    category: 'Interstate',
+    date: 'Upcoming 2026',
+    year: 2026,
+    livesImpacted: 0,
+    impactBreakdown: [
+      { label: 'Status', count: 'Upcoming' },
+      { label: 'Regional Hub', count: 'Northern Nigeria' }
+    ],
+    coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
+    galleryImages: [
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg'
+    ],
+    isFeatured: false
   }
 ];
