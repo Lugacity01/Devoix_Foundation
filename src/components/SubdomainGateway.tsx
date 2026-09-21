@@ -82,7 +82,7 @@ export const SubdomainGateway: React.FC = () => {
                 {/* Media Visual Stage */}
                 <div className="relative aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6 bg-[#000000] border border-[#3a3938]">
                   <img
-                    src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80"
+                    src="/assets/FilmHouse_picture.JPEG"
                     alt="DoVoix FilmHouse Commercial Production"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
@@ -137,7 +137,7 @@ export const SubdomainGateway: React.FC = () => {
                 {/* Media Visual Stage */}
                 <div className="relative aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden mb-4 sm:mb-6 bg-[#000000] border border-[#3a3938]">
                   <img
-                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+                    src="/assets/foundation_picture.JPEG"
                     alt="DoVoix Foundation Masterclasses & Solar Hubs"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />

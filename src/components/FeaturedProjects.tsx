@@ -14,52 +14,52 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
 
   const exhibitionProjects = [
     {
-      id: 'solar-learning-hub-ogun',
+      id: 'bag-a-child-initiative-1',
       number: '01',
-      shortTitle: 'SOLAR LEARNING HUB',
-      name: 'Solar-Powered Community Learning Hub',
-      category: 'Infrastructure & Tech',
-      status: 'Active',
-      location: 'Abeokuta, Ogun State',
-      date: 'Jan 2024 - Present',
-      livesImpacted: 450,
-      lead: 'Ebuka Prince',
-      image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=80',
-      tagline: 'Tuition-free digital access powered by clean solar energy.',
-      description: 'Established a 24-station solar learning center equipped with high-speed satellite internet, providing rural youth with daily access to web development, graphic design, and video editing tools.',
-      highlights: ['24 Solar Panels Installed', '450+ Active Students', 'Satellite Internet Connection']
-    },
-    {
-      id: 'digital-literacy-lagos',
-      number: '02',
-      shortTitle: 'DIGITAL LITERACY BOOTCAMP',
-      name: 'Youth Digital Literacy & Design Bootcamp',
-      category: 'Education & Masterclasses',
+      shortTitle: 'OYO STATE (1.0)',
+      name: 'Bag A Child Initiative 1.0',
+      category: 'Youth Empowerment & Skills',
       status: 'Completed',
-      location: 'Ikeja, Lagos State',
-      date: 'Oct 2023 - Dec 2023',
-      livesImpacted: 320,
-      lead: 'Jude',
-      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1600&q=80',
-      tagline: 'Intensive 8-week bootcamp in UI/UX design and frontend coding.',
-      description: 'Graduated 320 high school graduates with certified credentials in UI/UX design, HTML/CSS, and modern web development tools, pairing top performers with remote apprenticeships.',
-      highlights: ['320 Certified Graduates', '8-Week Intensive Track', '100% Tuition-Free']
+      location: 'Abadina College, UI, Oyo State',
+      date: 'January 2026',
+      livesImpacted: 30,
+      lead: 'Donald Mojekwu',
+      image: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
+      tagline: 'Flagship youth empowerment project introducing creative & digital skills.',
+      description: 'The two-month initiative introduced secondary school students to practical creative and digital skills, including graphic design, photography, and videography, mentoring 30+ students at Abadina College.',
+      highlights: ['30+ Students Reached', '5 Dedicated Volunteers', '3 Creative Skills Introduced', '2-Month Training Programme', '1 School Reached']
     },
     {
-      id: 'creative-writing-enugu',
+      id: 'bag-a-child-kwara',
+      number: '02',
+      shortTitle: 'TEAM UNILORIN (2.0)',
+      name: 'Bag A Child 2.0: Team UNILORIN',
+      category: 'Graphic Design & Digital Skills',
+      status: 'Completed',
+      location: 'Government Day Sec School, UNILORIN, Kwara State',
+      date: 'May 2026',
+      livesImpacted: 30,
+      lead: 'Peter Stephen',
+      image: '/assets/bag_a_child/kwara/cover_page_unilorin.jpeg',
+      tagline: 'One-month graphic design outreach introducing digital & monetizable skills.',
+      description: 'On 20th May 2026, Team UNILORIN carried out a one-month outreach at Government Day Sec School, training 30+ students in practical graphic design fundamentals across 4 weeks with 3 facilitators.',
+      highlights: ['30+ Students Trained', '4 Weeks of Training', '3 Facilitators']
+    },
+    {
+      id: 'bag-a-child-rivers-uniport',
       number: '03',
-      shortTitle: 'FEMALE STORYTELLERS RESIDENCY',
-      name: 'Female Storytellers & Journalism Residency',
-      category: 'Writing & Media',
-      status: 'Active',
-      location: 'Enugu, Enugu State',
-      date: 'Feb 2024 - Present',
-      livesImpacted: 180,
-      lead: 'Ebuka Prince',
-      image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=80',
-      tagline: 'Amplifying female voices through digital journalism.',
-      description: 'Mentoring young female writers and reporters to produce investigative journalism, digital anthologies, and community stories highlighting local development across Eastern Nigeria.',
-      highlights: ['180 Female Writers', '12 Published Anthologies', 'Media Mentorship']
+      shortTitle: 'TEAM UNIPORT (2.0)',
+      name: 'Bag A Child 2.0: Team UNIPORT',
+      category: 'Content Writing & Graphic Design',
+      status: 'Completed',
+      location: 'Olobo Premier school, Port Harcourt, Rivers State',
+      date: 'June 2026',
+      livesImpacted: 20,
+      lead: 'Oluwaseun Akindilureni',
+      image: '/assets/bag_a_child/uniport/cover_page_uniport.jpeg',
+      tagline: 'One-month skills development programme in writing and graphic design.',
+      description: 'Beginning on 3 June 2026, held sessions twice weekly for a total of 8 sessions throughout the month, training 20+ students with 3 facilitators in content writing and graphic design.',
+      highlights: ['20+ Students Trained', '8 Sessions Held', '4 Weeks of Training', '3 Facilitators']
     }
   ];
 
@@ -102,7 +102,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
               type="button"
               onClick={() => setActiveTab(idx)}
               className={`px-6 py-4 rounded-2xl font-mono text-xs font-bold transition-all whitespace-nowrap border flex items-center gap-3 ${idx === activeTab
-                  ? 'bg-slate-900 text-teal-300 border-teal-400/80  /10'
+                  ? 'bg-slate-900 text-teal-300 border-teal-400/80'
                   : 'bg-slate-950/60 text-slate-400 border-white/10 hover:border-white/20 hover:text-white'
                 }`}
             >
@@ -113,7 +113,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
         </div>
 
         {/* Dynamic Full-Width Exhibition Stage */}
-        <div className="rounded-3xl bg-slate-950/80 border border-white/10 overflow-hidden  grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <div className="rounded-3xl bg-slate-950/80 border border-white/10 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
 
           {/* Left Column: Full-Height Immersive Widescreen Frame (Span 7) */}
           <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto overflow-hidden bg-slate-900">
@@ -136,7 +136,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
             </div>
 
             {/* Bottom Overlay Metric Badge */}
-            <div className="absolute bottom-6 left-6 p-4 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-white/15 flex items-center gap-4 ">
+            <div className="absolute bottom-6 left-6 p-4 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-white/15 flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center font-bold">
                 <Users className="w-5 h-5" />
               </div>
@@ -191,7 +191,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
 
               <Link
                 href={`/projects/${current.id}`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold text-xs  transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-brand-teal to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white font-bold text-xs transition-all"
               >
                 <span>Explore Case Study</span>
                 <ArrowRight className="w-3.5 h-3.5" />

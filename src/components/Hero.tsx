@@ -13,7 +13,7 @@ const ShowcaseReelCard: React.FC = () => (
     {/* Main Photo/Reel Frame */}
     <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#3a3938] bg-[#141414] aspect-[16/10] sm:aspect-[4/5] group shadow-2xl">
       <img
-        src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80"
+        src="/assets/FilmHouse_picture.JPEG"
         alt="DoVoix FilmHouse & Foundation Production Stage"
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
       />

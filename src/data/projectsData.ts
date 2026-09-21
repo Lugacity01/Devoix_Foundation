@@ -2,96 +2,104 @@ import { Project } from '@/types';
 
 export const projectsData: Project[] = [
   {
-    id: 'digital-skills-youth-lagos',
-    name: 'Digital Skills & Tech Literacy Outreach',
-    tagline: 'Equipping youth in underserved communities with modern digital skills.',
-    description: 'A 6-week intensive bootcamp providing hands-on training in web fundamentals, UI design, and problem-solving to high school graduates.',
-    fullDescription: 'The Digital Skills & Tech Literacy Outreach was initiated to bridge the technology gap for young people living in communities with limited access to digital infrastructure. Over 300 students participated in intensive hands-on workshops, receiving direct mentorship from software engineers and product designers. Each student completed a personal project focused on solving a local community problem using digital tools.',
-    location: 'Ikeja, Lagos State',
-    state: 'Lagos',
+    id: 'bag-a-child-initiative-1',
+    name: 'Bag A Child Initiative 1.0',
+    tagline: 'The first edition of DoVoix Foundation’s flagship youth empowerment project.',
+    description: 'A two-month initiative introducing secondary school students at Abadina College to practical creative and digital skills, including graphic design, photography, and videography.',
+    fullDescription: 'Bag A Child Initiative 1.0 was the first edition of DoVoix Foundation’s flagship youth empowerment project.\n\nThe two-month initiative introduced secondary school students to practical creative and digital skills, including graphic design, photography, and videography. Beyond the classroom, participants received mentorship and exposure to real-world experiences designed to help them develop their skills and see new possibilities for their future.\n\nWhat started with over 30 students at Abadina College became the foundation for something bigger. The experience shaped the model for Bag A Child Initiative 2.0, which later expanded the programme beyond Oyo State and into other parts of Nigeria.',
+    location: 'Abadina College, University of Ibadan, Oyo State',
+    state: 'Oyo',
     status: 'Completed',
     category: 'Education',
-    date: 'March 2026',
+    date: 'January 2026',
     year: 2026,
-    livesImpacted: 340,
+    livesImpacted: 30,
     impactBreakdown: [
-      { label: 'Students Trained', count: '300+' },
-      { label: 'Mentors Engaged', count: 18 },
-      { label: 'Community Hubs Supported', count: 4 }
+      { label: 'Students Reached', count: '30+' },
+      { label: 'Volunteers', count: '5' },
+      { label: 'Creative Skills Introduced', count: '3' },
+      { label: 'Training Programme', count: '2-Month' },
+      { label: 'School Reached', count: '1' }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80',
+    coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.15.jpeg',
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.16.jpeg',
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.17.jpeg',
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.18.jpeg'
     ],
     leadInfo: {
-      name: 'Adewale Okins',
-      role: 'Head of Tech & Education',
-      photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'
+      name: 'Donald Mojekwu',
+      role: 'Founder & CEO, DoVoix',
+      photo: '/assets/team/donald-mojekwu.jpg'
     },
     isFeatured: true
   },
   {
-    id: 'community-learning-hubs-ogun',
-    name: 'Ogun Rural Community Learning Hub',
-    tagline: 'Establishing sustainable community learning hubs powered by clean solar energy.',
-    description: 'Construction and outfitting of a community center equipped with laptops, internet access, and learning resources for rural students.',
-    fullDescription: 'Access to continuous electricity and educational resources remains a major hurdle for young learners in rural districts. DoVoix Foundation partnered with local community leaders in Abeokuta to erect a solar-powered learning hub. The hub operates 6 days a week, providing free computer access, digital literacy classes, and homework assistance.',
-    location: 'Abeokuta, Ogun State',
-    state: 'Ogun',
-    status: 'Active',
-    category: 'Community',
-    date: 'January 2026 - Present',
-    year: 2026,
-    livesImpacted: 450,
-    impactBreakdown: [
-      { label: 'Daily Learners', count: '120+' },
-      { label: 'Solar Capacity', count: '5kW' },
-      { label: 'Local Facilitators', count: 6 }
-    ],
-    coverImage: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=800&q=80'
-    ],
-    leadInfo: {
-      name: 'Chioma Nnamdi',
-      role: 'Community Outreach Director',
-      photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'
-    },
-    isFeatured: true
-  },
-  {
-    id: 'women-creative-writing-enugu',
-    name: 'Women in Creative Storytelling Workshop',
-    tagline: 'Empowering young women to master professional writing, journalism, and story craft.',
-    description: 'A 4-week narrative writing residency designed to help young female writers publish their stories and build professional writing careers.',
-    fullDescription: 'The Women in Creative Storytelling project brought together 80 aspiring writers across Eastern Nigeria. Facilitated by published authors and journalists, the workshop covered non-fiction essay writing, investigative journalism, digital publishing, and content strategy. An anthology of student work was published at the end of the cohort.',
-    location: 'Enugu, Enugu State',
-    state: 'Enugu',
+    id: 'bag-a-child-kwara',
+    name: 'Bag A Child 2.0: Interstate Edition (Team UNILORIN)',
+    tagline: 'One-month graphic design outreach introducing digital and monetizable creative skills.',
+    description: 'On 20th May 2026, Team UNILORIN carried out a one-month outreach at Government Day Sec School, UNILORIN, Kwara State, training 30+ students in graphic design.',
+    fullDescription: 'On 20th May 2026, Team UNILORIN carried out a one-month outreach designed to introduce students to graphic design as a digital and potentially monetizable skill.\n\nOver the course of one month, 30+ students participated in hands-on graphic design training, learning the fundamentals of creating digital designs and developing a skill they could continue to build and potentially monetize beyond the programme.\n\nThe project expanded DoVoix Foundation’s reach to the University of Ilorin community while strengthening our commitment to equipping young people with practical skills that can create opportunities.\n\nBeyond learning the technical skill, the project encouraged students to see creativity not just as an interest, but as a potential pathway to opportunity, self-development, and financial independence.',
+    location: 'Government Day Sec School, UNILORIN, Kwara State, Nigeria',
+    state: 'Kwara',
     status: 'Completed',
-    category: 'Outreach',
-    date: 'February 2026',
+    category: 'Interstate',
+    date: 'May 2026',
     year: 2026,
-    livesImpacted: 220,
+    livesImpacted: 30,
     impactBreakdown: [
-      { label: 'Female Writers Graduated', count: 80 },
-      { label: 'Published Stories', count: 24 },
-      { label: 'Partner Publications', count: 5 }
+      { label: 'Students Trained', count: '30+' },
+      { label: 'Weeks of Training', count: '4' },
+      { label: 'Facilitators', count: '3' }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80',
+    coverImage: '/assets/bag_a_child/kwara/cover_page_unilorin.jpeg',
     galleryImages: [
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80'
+      '/assets/bag_a_child/kwara/cover_page_unilorin.jpeg',
+      '/assets/bag_a_child/kwara/WhatsApp%20Image%202026-09-20%20at%2021.58.15.jpeg',
+      '/assets/bag_a_child/kwara/WhatsApp%20Image%202026-09-20%20at%2021.58.16.jpeg',
+      '/assets/bag_a_child/kwara/WhatsApp%20Image%202026-09-20%20at%2021.58.17.jpeg',
+      '/assets/bag_a_child/kwara/WhatsApp%20Image%202026-09-20%20at%2021.58.18.jpeg',
+      '/assets/bag_a_child/kwara/WhatsApp%20Image%202026-09-20%20at%2021.58.19.jpeg'
     ],
     leadInfo: {
-      name: 'Grace Chukwu',
-      role: 'Lead Writing Mentor',
-      photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80'
+      name: 'Peter Stephen',
+      role: 'Chief Operating Officer, DoVoix',
+      photo: '/assets/team/peter-stephen.jpg'
+    },
+    isFeatured: true
+  },
+  {
+    id: 'bag-a-child-rivers-uniport',
+    name: 'Bag A Child 2.0: Interstate Edition (Team UNIPORT)',
+    tagline: 'One-month skills development programme in content writing and graphic design.',
+    description: 'Beginning on 3 June 2026, the programme held sessions twice a week, with a total of 8 training sessions throughout the month, training 20+ students in content writing and graphic design.',
+    fullDescription: 'The University of Port Harcourt Project was a one-month skills development programme created to equip students with practical digital and creative skills they could apply beyond the classroom.\n\nBeginning on 3 June 2026, the programme held sessions twice a week, with a total of 8 training sessions throughout the month. Over 20 students participated, learning two complementary skills: content writing and graphic design.\n\nWith three facilitators leading the sessions, participants were introduced to the fundamentals of creating written and visual content, while exploring how these skills can be developed into practical opportunities in the digital space.',
+    location: 'Olobo Premier school, Port Harcourt, Rivers State, Nigeria',
+    state: 'Rivers',
+    status: 'Completed',
+    category: 'Interstate',
+    date: 'June 2026',
+    year: 2026,
+    livesImpacted: 20,
+    impactBreakdown: [
+      { label: 'Students Trained', count: '20+' },
+      { label: 'Sessions Held', count: '8' },
+      { label: 'Weeks of Training', count: '4' },
+      { label: 'Facilitators', count: '3' }
+    ],
+    coverImage: '/assets/bag_a_child/uniport/cover_page_uniport.jpeg',
+    galleryImages: [
+      '/assets/bag_a_child/uniport/cover_page_uniport.jpeg',
+      '/assets/bag_a_child/uniport/WhatsApp%20Image%202026-09-20%20at%2022.09.24.jpeg',
+      '/assets/bag_a_child/uniport/WhatsApp%20Image%202026-09-20%20at%2022.09.25.jpeg',
+      '/assets/bag_a_child/uniport/WhatsApp%20Image%202026-09-20%20at%2022.09.26.jpeg'
+    ],
+    leadInfo: {
+      name: 'Oluwaseun Akindilureni',
+      role: 'Lead Project Manager, DoVoix',
+      photo: '/assets/team/oluwaseun-akindilureni.jpg'
     },
     isFeatured: true
   },
@@ -113,15 +121,15 @@ export const projectsData: Project[] = [
       { label: 'States Involved', count: 3 },
       { label: 'Documentaries Planned', count: 10 }
     ],
-    coverImage: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80',
+    coverImage: '/assets/behind_scene.JPEG',
     galleryImages: [
-      'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1518173946687-a4c8a383592e?auto=format&fit=crop&w=800&q=80'
+      '/assets/behind_scene.JPEG',
+      '/assets/FilmHouse_picture.JPEG'
     ],
     leadInfo: {
-      name: 'Michael Danjuma',
-      role: 'Head of Media & Film Outreach',
-      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80'
+      name: 'Ebenezer Adenola-Adesina',
+      role: 'Media & Production Lead, DoVoix',
+      photo: '/assets/team/ebenezer-adenola.jpg'
     },
     isFeatured: false
   }

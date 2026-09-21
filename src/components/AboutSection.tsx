@@ -85,8 +85,8 @@ export const AboutSection: React.FC = () => {
               {/* Photo Frame */}
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-[#e5e5e5] bg-[#141414] aspect-[16/10] sm:aspect-[4/5] group transition-all duration-500 shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
-                  alt="DoVoix Leadership & Production Team"
+                  src="/assets/behind_scene.JPEG"
+                  alt="DoVoix Leadership & Production Team Behind The Scenes"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

@@ -205,6 +205,25 @@ export default function ProjectsPage() {
             ))}
           </div>
         )}
+
+        {/* Sponsor Callout Banner */}
+        <div className="mt-14 sm:mt-16 rounded-2xl sm:rounded-3xl bg-black text-white p-6 sm:p-10 border border-[#3a3938] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+          <div className="max-w-2xl text-center md:text-left">
+            <h3 className="font-display text-xl sm:text-2xl font-extrabold text-white mb-2">
+              Want to sponsor the next one?
+            </h3>
+            <p className="text-xs sm:text-sm text-[#cccccc] leading-relaxed">
+              Your support can help us reach more students, provide access to practical skills, and create opportunities that can change the trajectory of a young person’s life.
+            </p>
+          </div>
+          <Link
+            href="/contact"
+            className="shrink-0 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-white hover:bg-slate-200 text-black font-mono font-bold text-xs uppercase tracking-wider transition-all hover:scale-105 shadow-md text-center"
+          >
+            <span>Partner with us</span>
+          </Link>
+        </div>
+
       </div>
     </div>
   );

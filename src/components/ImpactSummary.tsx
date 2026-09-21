@@ -124,7 +124,7 @@ export const ImpactSummary: React.FC = () => {
             {/* Right Column: Community & Storytelling Visual (Span 5) */}
             <div className="lg:col-span-5 relative min-h-[260px] sm:min-h-[320px] lg:min-h-[auto] bg-[#141414] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80"
+                src="/assets/foundation_picture.JPEG"
                 alt="DoVoix Community and Creative Journey"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
               />
