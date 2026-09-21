@@ -72,11 +72,21 @@ export default function ProjectDetailPage({ params }: ProjectDetailProps) {
         </div>
 
         {/* Cover Image Frame */}
-        <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden mb-8 sm:mb-12 bg-slate-100 border border-slate-200">
+        <div className="relative aspect-[21/9] min-h-[300px] sm:min-h-[420px] w-full rounded-3xl overflow-hidden mb-8 sm:mb-12 bg-slate-950 border border-slate-200 flex items-center justify-center p-4 sm:p-6">
+          {/* Ambient Glow Backdrop */}
+          <img
+            src={project.coverImage}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none"
+          />
+          <div className="absolute inset-0 bg-slate-950/40 pointer-events-none" />
+          
+          {/* Complete Uncropped Image */}
           <img
             src={project.coverImage}
             alt={project.name}
-            className="w-full h-full object-cover"
+            className="relative max-h-full max-w-full object-contain rounded-xl z-10 shadow-2xl"
           />
         </div>
 

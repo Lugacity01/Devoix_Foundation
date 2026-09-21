@@ -148,11 +148,21 @@ export default function ProjectsPage() {
                 className="group bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-200 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-slate-950 flex items-center justify-center p-2">
+                    {/* Ambient Glow Backdrop */}
+                    <img
+                      src={project.coverImage}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-110 pointer-events-none"
+                    />
+                    <div className="absolute inset-0 bg-slate-950/30 pointer-events-none" />
+                    
+                    {/* Uncropped Artwork/Poster */}
                     <img
                       src={project.coverImage}
                       alt={project.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="relative max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 z-10 rounded-lg"
                     />
                     <div className="absolute top-3 left-3 flex gap-2">
                       <span className="px-2.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider bg-slate-900/90 text-white backdrop-blur-md">

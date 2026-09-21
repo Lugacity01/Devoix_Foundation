@@ -116,13 +116,23 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
         <div className="rounded-3xl bg-slate-950/80 border border-white/10 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
 
           {/* Left Column: Full-Height Immersive Widescreen Frame (Span 7) */}
-          <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto overflow-hidden bg-slate-900">
+          <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto min-h-[380px] lg:min-h-[480px] overflow-hidden bg-[#040711] flex items-center justify-center p-4 sm:p-6">
+            {/* Ambient Blurred Backdrop */}
+            <img
+              src={current.image}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none"
+            />
+            <div className="absolute inset-0 bg-slate-950/40 pointer-events-none" />
+            
+            {/* Sharp Foreground Image (Preserves Full Poster & Photos) */}
             <img
               src={current.image}
               alt={current.name}
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              className="relative max-h-full max-w-full object-contain rounded-xl shadow-2xl z-10 transition-transform duration-700 hover:scale-[1.02]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30 pointer-events-none z-10" />
 
             {/* Top Overlay Badges */}
             <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
