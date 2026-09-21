@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle, Sparkles } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface FAQItem {
   id: number;
@@ -170,6 +171,7 @@ export const FAQSection: React.FC = () => {
       {/* Background Glows */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-[#999998]/5 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute bottom-0 right-10 w-[400px] h-[300px] bg-[#3a3938]/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#99999812_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-reveal">
         
@@ -181,7 +183,7 @@ export const FAQSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Category Tabs: Horizontal overflow scroll on mobile, centered flex-wrap on desktop */}
+        {/* Category Tabs */}
         <div className="flex items-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar scroll-smooth px-1 py-1 pb-2 sm:pb-0 sm:flex-wrap sm:justify-center mb-8 sm:mb-10 w-full">
           {categories.map((cat) => (
             <button
@@ -192,7 +194,7 @@ export const FAQSection: React.FC = () => {
               }}
               className={`px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 border shrink-0 whitespace-nowrap ${
                 activeCategory === cat
-                  ? 'bg-white text-black border-white shadow-lg scale-105'
+                  ? 'bg-white text-black border-white shadow-lg scale-105 font-bold'
                   : 'bg-[#141414] text-[#999998] border-[#3a3938] hover:text-white hover:border-white/40'
               }`}
             >
@@ -201,7 +203,7 @@ export const FAQSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Accordion List */}
+        {/* Accordion List with Framer Motion */}
         <div className="space-y-3 sm:space-y-4">
           {filteredFaqs.map((faq, index) => {
             const isOpen = openIndex === index;
@@ -213,7 +215,7 @@ export const FAQSection: React.FC = () => {
                 className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                   isOpen
                     ? 'bg-[#141414] border-white/50 shadow-xl'
-                    : 'bg-[#141414]/60 border-[#3a3938]/80 hover:border-[#3a3938]'
+                    : 'bg-[#141414]/70 border-[#3a3938]/80 hover:border-[#999998]'
                 }`}
               >
                 <button
@@ -223,7 +225,9 @@ export const FAQSection: React.FC = () => {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#262626] border border-[#3a3938] text-[10px] sm:text-xs font-mono font-bold text-[#999998] flex items-center justify-center shrink-0">
+                    <span className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg border text-[10px] sm:text-xs font-mono font-bold flex items-center justify-center shrink-0 transition-colors ${
+                      isOpen ? 'bg-white text-black border-white' : 'bg-[#262626] border-[#3a3938] text-[#999998]'
+                    }`}>
                       {displayNum}
                     </span>
                     <span className="font-display text-sm sm:text-base lg:text-lg font-bold text-white tracking-tight">
@@ -232,37 +236,50 @@ export const FAQSection: React.FC = () => {
                   </div>
                   
                   <div
-                    className={`w-8 h-8 rounded-full bg-[#262626] border border-[#3a3938] flex items-center justify-center shrink-0 text-white transition-transform duration-300 ${
-                      isOpen ? 'rotate-180 bg-white text-black' : ''
+                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
+                      isOpen
+                        ? 'rotate-180 bg-white text-black border-white shadow-md'
+                        : 'bg-[#262626] border-[#3a3938] text-white hover:bg-[#333333]'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 border-t border-[#3a3938]/30">
-                    <div className="text-xs sm:text-sm text-[#999998] font-normal leading-relaxed pl-10 sm:pl-12 space-y-3 pt-3">
-                      {faq.answer.map((para, pIdx) => (
-                        <p key={pIdx}>{para}</p>
-                      ))}
-
-                      {faq.bullets && faq.bullets.length > 0 && (
-                        <ul className="space-y-1.5 my-2 pl-4 list-disc marker:text-white">
-                          {faq.bullets.map((bullet, bIdx) => (
-                            <li key={bIdx} className="text-white/90">
-                              {bullet}
-                            </li>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 border-t border-[#3a3938]/30">
+                        <div className="text-xs sm:text-sm text-[#cccccc] font-normal leading-relaxed pl-10 sm:pl-12 space-y-3 pt-3">
+                          {faq.answer.map((para, pIdx) => (
+                            <p key={pIdx}>{para}</p>
                           ))}
-                        </ul>
-                      )}
 
-                      {faq.closingText && (
-                        <p className="pt-1">{faq.closingText}</p>
-                      )}
-                    </div>
-                  </div>
-                )}
+                          {faq.bullets && faq.bullets.length > 0 && (
+                            <ul className="space-y-1.5 my-2 pl-4 list-disc marker:text-white">
+                              {faq.bullets.map((bullet, bIdx) => (
+                                <li key={bIdx} className="text-white">
+                                  {bullet}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+
+                          {faq.closingText && (
+                            <p className="pt-1 text-[#999998]">{faq.closingText}</p>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}

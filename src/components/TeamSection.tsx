@@ -2,7 +2,10 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { TeamMember } from '@/types';
-import { Linkedin, UserCheck, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Linkedin, UserCheck, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { Card3DTilt } from '@/components/Card3DTilt';
+import { AnimatedWords } from '@/components/AnimatedText';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface TeamSectionProps {
   team?: TeamMember[];
@@ -86,16 +89,26 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
       <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-[#3a3938]/20 rounded-full blur-[120px] pointer-events-none animate-pulse-glow [animation-delay:3s]" />
       <div className="absolute inset-0 bg-[radial-gradient(#99999812_1px,transparent_1px)] [background-size:24px_24px] sm:[background-size:32px_32px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-reveal">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Carousel Navigation */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-6 sm:pb-8 mb-6 sm:mb-10 border-b border-[#3a3938]/40 gap-4">
           <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#141414] border border-[#3a3938] text-[#999998] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider mb-2 sm:mb-3">
+              <Sparkles className="w-3 h-3 text-white animate-pulse" />
+              <span>EXECUTIVE GOVERNANCE</span>
+            </div>
             <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl font-extrabold text-white tracking-tight">
-              Meet the{' '}
-              <span className="text-transparent bg-clip-text bg-[linear-gradient(110deg,#ffffff,#999998,#ffffff)] animate-text-gradient bg-[length:200%_auto]">
+              <AnimatedWords text="Meet the" delay={0.1} />{' '}
+              <motion.span
+                initial={{ opacity: 0, filter: 'blur(3px)' }}
+                whileInView={{ opacity: 1, filter: 'blur(0px)' }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-transparent bg-clip-text bg-[linear-gradient(110deg,#ffffff,#999998,#ffffff)] animate-text-gradient bg-[length:200%_auto] inline-block"
+              >
                 Board Members.
-              </span>
+              </motion.span>
             </h2>
           </div>
 
@@ -125,7 +138,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
           </div>
         </div>
 
-        {/* Mobile-Only Horizontal Overflow Selector (Directly at top of details) */}
+        {/* Mobile-Only Horizontal Overflow Selector */}
         <div className="block lg:hidden mb-5 w-full overflow-hidden">
           <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#999998] mb-2.5 px-0.5">
             <span className="flex items-center gap-1.5 font-semibold text-white">
@@ -188,7 +201,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
         {/* Interactive Executive Spotlight Studio (Split Layout on Desktop) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
-          {/* Main Cinematic Spotlight Stage (12 Cols on Mobile, 7 Cols on Desktop) */}
+          {/* Main Cinematic Spotlight Stage */}
           <div className="lg:col-span-7 rounded-2xl sm:rounded-3xl bg-[#111111] border border-[#3a3938] p-5 sm:p-8 lg:p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl transition-all duration-500">
             
             {/* Top Row: Tag, Badge & LinkedIn */}
@@ -217,43 +230,55 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
               )}
             </div>
 
-            {/* Middle Row: Photo + Full Narrative Bio */}
+            {/* Middle Row: Photo + Full Narrative Bio with Smooth AnimatePresence */}
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-start mb-6">
               
-              {/* Member Portrait Frame (Mobile: Centered responsive card / Desktop: md: 5 Cols) */}
-              <div className="md:col-span-5 relative w-full max-w-[280px] sm:max-w-none mx-auto aspect-[4/5] rounded-2xl overflow-hidden border border-[#3a3938] bg-black group shadow-lg">
-                <img
-                  key={activeMember.id}
-                  src={activeMember.image}
-                  alt={activeMember.name}
-                  className="w-full h-full object-cover object-center animate-reveal"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-2.5 left-2.5 right-2.5 font-mono text-[9px] text-white/90 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-center flex items-center justify-between">
-                  <span>0{selectedIndex + 1} / 0{team.length}</span>
-                  <span className="truncate ml-2 text-[#cccccc]">{activeMember.title}</span>
-                </div>
+              {/* Member Portrait Frame with 3D Tilt */}
+              <div className="md:col-span-5 relative w-full max-w-[280px] sm:max-w-none mx-auto">
+                <Card3DTilt maxTilt={8} scale={1.03} glareOpacity={0.25} className="aspect-[4/5] rounded-2xl overflow-hidden border border-[#3a3938] bg-black group shadow-lg">
+                  <img
+                    key={activeMember.id}
+                    src={activeMember.image}
+                    alt={activeMember.name}
+                    className="w-full h-full object-cover object-center"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-2.5 left-2.5 right-2.5 font-mono text-[9px] text-white/90 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 text-center flex items-center justify-between">
+                    <span>0{selectedIndex + 1} / 0{team.length}</span>
+                    <span className="truncate ml-2 text-[#cccccc]">{activeMember.title}</span>
+                  </div>
+                </Card3DTilt>
               </div>
 
-              {/* Member Full Bio & Details (md: 7 Cols) */}
+              {/* Member Full Bio & Details with Transition */}
               <div className="md:col-span-7 flex flex-col justify-center">
-                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-white mb-1.5 leading-tight">
-                  {activeMember.name}
-                </h3>
-                <p className="text-xs font-mono font-semibold text-[#999998] uppercase tracking-wider mb-4">
-                  {activeMember.title}
-                </p>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeMember.id}
+                    initial={{ opacity: 0, y: 12, filter: 'blur(3px)' }}
+                    animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                    exit={{ opacity: 0, y: -12, filter: 'blur(3px)' }}
+                    transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-white mb-1.5 leading-tight">
+                      {activeMember.name}
+                    </h3>
+                    <p className="text-xs font-mono font-semibold text-[#999998] uppercase tracking-wider mb-4">
+                      {activeMember.title}
+                    </p>
 
-                {/* Full Multi-Paragraph Narrative with Custom Scroll */}
-                <div className="space-y-3.5 text-xs sm:text-sm text-[#cccccc] font-normal leading-relaxed max-h-[280px] sm:max-h-[340px] overflow-y-auto pr-2">
-                  {activeMember.fullBio && activeMember.fullBio.length > 0 ? (
-                    activeMember.fullBio.map((para, idx) => (
-                      <p key={idx}>{renderBioWithLinks(para)}</p>
-                    ))
-                  ) : (
-                    <p>{renderBioWithLinks(activeMember.bio || '')}</p>
-                  )}
-                </div>
+                    {/* Full Multi-Paragraph Narrative with Custom Scroll */}
+                    <div className="space-y-3.5 text-xs sm:text-sm text-[#cccccc] font-normal leading-relaxed max-h-[280px] sm:max-h-[340px] overflow-y-auto pr-2">
+                      {activeMember.fullBio && activeMember.fullBio.length > 0 ? (
+                        activeMember.fullBio.map((para, idx) => (
+                          <p key={idx}>{renderBioWithLinks(para)}</p>
+                        ))
+                      ) : (
+                        <p>{renderBioWithLinks(activeMember.bio || '')}</p>
+                      )}
+                    </div>
+                  </motion.div>
+                </AnimatePresence>
               </div>
 
             </div>
@@ -344,4 +369,3 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
     </section>
   );
 };
-

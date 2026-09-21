@@ -1,4 +1,7 @@
+'use client';
+
 import React from 'react';
+import { Card3DTilt } from '@/components/Card3DTilt';
 
 export const PartnersSection: React.FC = () => {
   const partnerLogos = [
@@ -71,24 +74,24 @@ export const PartnersSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Continuous Moving Partner Logos Carousel */}
-        <div className="relative w-full overflow-hidden py-3 sm:py-4">
+        {/* Continuous Moving Partner Logos Carousel with Pause on Hover */}
+        <div className="relative w-full overflow-hidden py-3 sm:py-4 group/marquee">
           
           {/* Gradient Fade Edges */}
           <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-28 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
           <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-28 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
 
-          {/* Marquee Track */}
-          <div className="flex items-center gap-4 sm:gap-6 w-max animate-marquee">
+          {/* Marquee Track with hover pause */}
+          <div className="flex items-center gap-4 sm:gap-6 w-max animate-marquee group-hover/marquee:[animation-play-state:paused]">
             {marqueeItems.map((logo, index) => (
               <div
                 key={`${logo.id}-${index}`}
-                className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-2xl bg-[#fafafa] border border-[#e5e5e5] hover:border-black/30 hover:bg-white flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-md group"
+                className="flex-shrink-0 h-24 sm:h-28 px-6 sm:px-8 rounded-2xl bg-[#fafafa] border border-[#e5e5e5] hover:border-black/40 hover:bg-white hover:scale-105 flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-lg group cursor-pointer"
               >
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className="max-h-14 sm:max-h-16 max-w-[150px] sm:max-w-[190px] object-contain transition-all duration-300 group-hover:scale-105"
+                  className="max-h-14 sm:max-h-16 max-w-[150px] sm:max-w-[190px] object-contain transition-all duration-300 group-hover:scale-110"
                 />
               </div>
             ))}
@@ -100,5 +103,3 @@ export const PartnersSection: React.FC = () => {
     </section>
   );
 };
-
-
