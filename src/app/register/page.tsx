@@ -14,9 +14,11 @@ export default function CampusRegisterPage() {
     leadPhone: '',
     leadRole: 'Team Lead',
     campus: 'UI',
-    institutionName: '',
+    institutionName: 'University of Ibadan',
     state: 'Oyo',
     lga: '',
+    institutionType: 'University',
+    howHeard: 'Social Media',
     totalMembers: '10',
     activeMembers: '10',
     teamLeadsDetails: '',
@@ -165,11 +167,182 @@ export default function CampusRegisterPage() {
             {/* Form Component */}
             <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
               
-              {/* Section 1: Lead Representative Info */}
+              {/* Section 1: Campus & Location */}
               <div className="rounded-2xl sm:rounded-3xl bg-[#0c051f]/80 backdrop-blur-xl border border-purple-900/40 p-5 sm:p-8 space-y-4 sm:space-y-6 shadow-xl">
                 <div className="flex items-center gap-2.5 sm:gap-3 pb-3 sm:pb-4 border-b border-white/10">
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/40 flex items-center justify-center font-bold text-xs sm:text-sm">
                     1
+                  </div>
+                  <h3 className="font-display text-base sm:text-lg font-bold text-white">Campus & Location</h3>
+                </div>
+
+                {/* Registered Campus Quick Select */}
+                <div>
+                  <div className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">
+                    Select Campus Chapter ({registeredCampuses.length})
+                  </div>
+                  <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-2 sm:gap-2.5 mb-4">
+                    {registeredCampuses.map((c) => (
+                      <button
+                        key={c.code}
+                        type="button"
+                        onClick={() =>
+                          setFormData({
+                            ...formData,
+                            campus: c.code,
+                            institutionName: c.name,
+                            state: c.state.replace(' State', ''),
+                          })
+                        }
+                        className={`p-2 sm:p-2.5 rounded-xl border text-center transition-all ${
+                          formData.campus === c.code
+                            ? 'bg-purple-600 text-white border-purple-400 shadow-lg shadow-purple-600/30 scale-[1.02]'
+                            : 'bg-white/[0.04] hover:bg-white/[0.08] text-slate-200 border-white/10 hover:border-purple-500/40'
+                        }`}
+                      >
+                        <div className="font-display font-black text-xs sm:text-sm">{c.code}</div>
+                        <div className={`text-[9px] truncate font-mono ${formData.campus === c.code ? 'text-purple-100' : 'text-slate-400'}`}>
+                          {c.state}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-4 sm:space-y-6">
+                  {/* Q1: Name of Institution */}
+                  <div>
+                    <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-1.5 sm:mb-2">
+                      1. What is the name of your institution? <span className="text-purple-400">*</span>
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                      <select
+                        value={formData.campus}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          const found = registeredCampuses.find((c) => c.code === val);
+                          setFormData({
+                            ...formData,
+                            campus: val,
+                            institutionName: found ? found.name : formData.institutionName,
+                            state: found ? found.state.replace(' State', '') : formData.state,
+                          });
+                        }}
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-[#080214] border border-purple-900/40 hover:border-purple-600/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white text-xs sm:text-sm font-medium transition-all font-sans"
+                      >
+                        {registeredCampuses.map((c) => (
+                          <option key={c.code} value={c.code} className="bg-[#0c051f] text-white">
+                            {c.code} — {c.name} ({c.state})
+                          </option>
+                        ))}
+                        <option value="Other" className="bg-[#0c051f] text-white">Other Institution / School</option>
+                      </select>
+
+                      {formData.campus === 'Other' && (
+                        <input
+                          type="text"
+                          required
+                          value={formData.institutionName}
+                          onChange={(e) => setFormData({ ...formData, institutionName: e.target.value })}
+                          placeholder="e.g. Federal University of Technology, Akure"
+                          className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/50 border border-purple-900/40 hover:border-purple-600/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white text-xs sm:text-sm placeholder:text-slate-500 transition-all font-sans"
+                        />
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Q2: State of Institution */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                    <div>
+                      <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-1.5 sm:mb-2">
+                        2. What state is your institution located in? <span className="text-purple-400">*</span>
+                      </label>
+                      <select
+                        value={formData.state}
+                        onChange={(e) => setFormData({ ...formData, state: e.target.value, lga: '' })}
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-[#080214] border border-purple-900/40 hover:border-purple-600/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white text-xs sm:text-sm font-sans"
+                      >
+                        {NIGERIAN_STATES.map((s) => (
+                          <option key={s.name} value={s.name} className="bg-[#0c051f] text-white">
+                            {s.name} State
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-1.5 sm:mb-2">
+                        Local Government Area (Optional)
+                      </label>
+                      <select
+                        value={formData.lga}
+                        onChange={(e) => setFormData({ ...formData, lga: e.target.value })}
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-[#080214] border border-purple-900/40 hover:border-purple-600/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white text-xs sm:text-sm font-sans"
+                      >
+                        <option value="" className="bg-[#0c051f] text-slate-400">Select LGA (Optional)</option>
+                        {selectedStateObj?.lgas.map((lga) => (
+                          <option key={lga} value={lga} className="bg-[#0c051f] text-white">
+                            {lga}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Q3: Institution Type */}
+                  <div>
+                    <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-2">
+                      3. What is your institution type? <span className="text-purple-400">*</span>
+                    </label>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                      {['University', 'Polytechnic', 'College of Education', 'Other'].map((typeOption) => (
+                        <button
+                          key={typeOption}
+                          type="button"
+                          onClick={() => setFormData({ ...formData, institutionType: typeOption })}
+                          className={`p-3 rounded-xl border text-center transition-all font-sans text-xs font-semibold ${
+                            formData.institutionType === typeOption
+                              ? 'bg-purple-600 text-white border-purple-400 shadow-md shadow-purple-600/30'
+                              : 'bg-black/50 text-slate-300 border-purple-900/40 hover:border-purple-600/50'
+                          }`}
+                        >
+                          {typeOption}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Q4: How did you hear about DoVoix Foundation? */}
+                  <div>
+                    <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-2">
+                      4. How did you hear about DoVoix Foundation? <span className="text-purple-400">*</span>
+                    </label>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5">
+                      {['Social Media', 'Friend', 'Campus Community', 'DoVoix Event', 'Other'].map((hearOption) => (
+                        <button
+                          key={hearOption}
+                          type="button"
+                          onClick={() => setFormData({ ...formData, howHeard: hearOption })}
+                          className={`p-2.5 rounded-xl border text-center transition-all font-sans text-xs font-semibold ${
+                            formData.howHeard === hearOption
+                              ? 'bg-purple-600 text-white border-purple-400 shadow-md shadow-purple-600/30'
+                              : 'bg-black/50 text-slate-300 border-purple-900/40 hover:border-purple-600/50'
+                          }`}
+                        >
+                          {hearOption}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* Section 2: Representative & Contact Information */}
+              <div className="rounded-2xl sm:rounded-3xl bg-[#0c051f]/80 backdrop-blur-xl border border-purple-900/40 p-5 sm:p-8 space-y-4 sm:space-y-6 shadow-xl">
+                <div className="flex items-center gap-2.5 sm:gap-3 pb-3 sm:pb-4 border-b border-white/10">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/40 flex items-center justify-center font-bold text-xs sm:text-sm">
+                    2
                   </div>
                   <h3 className="font-display text-base sm:text-lg font-bold text-white">
                     Representative & Contact Information
@@ -233,113 +406,6 @@ export default function CampusRegisterPage() {
                       <option value="Deputy Representative" className="bg-[#0c051f] text-white">Deputy Representative</option>
                       <option value="General Coordinator" className="bg-[#0c051f] text-white">General Coordinator</option>
                       <option value="Other" className="bg-[#0c051f] text-white">Other</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              {/* Section 2: Campus & Location */}
-              <div className="rounded-2xl sm:rounded-3xl bg-[#0c051f]/80 backdrop-blur-xl border border-purple-900/40 p-5 sm:p-8 space-y-4 sm:space-y-6 shadow-xl">
-                <div className="flex items-center gap-2.5 sm:gap-3 pb-3 sm:pb-4 border-b border-white/10">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-purple-500/20 text-purple-300 border border-purple-500/40 flex items-center justify-center font-bold text-xs sm:text-sm">
-                    2
-                  </div>
-                  <h3 className="font-display text-base sm:text-lg font-bold text-white">Campus & Location</h3>
-                </div>
-
-                {/* Registered Campus Quick Select */}
-                <div>
-                  <div className="text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-400 mb-2">
-                    Select Campus Chapter ({registeredCampuses.length})
-                  </div>
-                  <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-2 sm:gap-2.5 mb-4">
-                    {registeredCampuses.map((c) => (
-                      <button
-                        key={c.code}
-                        type="button"
-                        onClick={() => setFormData({ ...formData, campus: c.code })}
-                        className={`p-2 sm:p-2.5 rounded-xl border text-center transition-all ${
-                          formData.campus === c.code
-                            ? 'bg-purple-600 text-white border-purple-400 shadow-lg shadow-purple-600/30 scale-[1.02]'
-                            : 'bg-white/[0.04] hover:bg-white/[0.08] text-slate-200 border-white/10 hover:border-purple-500/40'
-                        }`}
-                      >
-                        <div className="font-display font-black text-xs sm:text-sm">{c.code}</div>
-                        <div className={`text-[9px] truncate font-mono ${formData.campus === c.code ? 'text-purple-100' : 'text-slate-400'}`}>
-                          {c.state}
-                        </div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                  <div>
-                    <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-1.5 sm:mb-2">
-                      Institution Campus <span className="text-purple-400">*</span>
-                    </label>
-                    <select
-                      value={formData.campus}
-                      onChange={(e) => setFormData({ ...formData, campus: e.target.value })}
-                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-[#080214] border border-purple-900/40 hover:border-purple-600/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white text-xs sm:text-sm font-medium transition-all font-sans"
-                    >
-                      {registeredCampuses.map((c) => (
-                        <option key={c.code} value={c.code} className="bg-[#0c051f] text-white">
-                          {c.code} — {c.name} ({c.state})
-                        </option>
-                      ))}
-                      <option value="Other" className="bg-[#0c051f] text-white">Other Campus / Secondary School</option>
-                    </select>
-                  </div>
-
-                  {formData.campus === 'Other' && (
-                    <div className="sm:col-span-2">
-                      <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-1.5 sm:mb-2">
-                        Enter Institution / School Name <span className="text-purple-400">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.institutionName}
-                        onChange={(e) => setFormData({ ...formData, institutionName: e.target.value })}
-                        placeholder="e.g. Federal University of Technology, Akure"
-                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/50 border border-purple-900/40 hover:border-purple-600/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white text-xs sm:text-sm placeholder:text-slate-500 transition-all font-sans"
-                      />
-                    </div>
-                  )}
-
-                  <div>
-                    <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-1.5 sm:mb-2">
-                      State of Institution <span className="text-purple-400">*</span>
-                    </label>
-                    <select
-                      value={formData.state}
-                      onChange={(e) => setFormData({ ...formData, state: e.target.value, lga: '' })}
-                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-[#080214] border border-purple-900/40 hover:border-purple-600/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white text-xs sm:text-sm font-sans"
-                    >
-                      {NIGERIAN_STATES.map((s) => (
-                        <option key={s.name} value={s.name} className="bg-[#0c051f] text-white">
-                          {s.name} State
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-slate-300 mb-1.5 sm:mb-2">
-                      Local Government Area (Optional)
-                    </label>
-                    <select
-                      value={formData.lga}
-                      onChange={(e) => setFormData({ ...formData, lga: e.target.value })}
-                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-[#080214] border border-purple-900/40 hover:border-purple-600/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 text-white text-xs sm:text-sm font-sans"
-                    >
-                      <option value="" className="bg-[#0c051f] text-slate-400">Select LGA (Optional)</option>
-                      {selectedStateObj?.lgas.map((lga) => (
-                        <option key={lga} value={lga} className="bg-[#0c051f] text-white">
-                          {lga}
-                        </option>
-                      ))}
                     </select>
                   </div>
                 </div>

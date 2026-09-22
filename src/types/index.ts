@@ -90,6 +90,8 @@ export interface CampusChapterRegistrationInput {
   institutionName?: string;
   state: string;
   lga?: string;
+  institutionType?: string;
+  howHeard?: string;
   totalMembers: string;
   activeMembers: string;
   teamLeadsDetails: string;

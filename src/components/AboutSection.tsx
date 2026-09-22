@@ -25,8 +25,8 @@ export const AboutSection: React.FC = () => {
           
           {/* Left Column: Human Narrative */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-[#000000] tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
-              <AnimatedWords text="DoVoix was born from a" delay={0.1} />{' '}
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#000000] tracking-tight leading-snug sm:leading-tight mb-4 sm:mb-6">
+              <AnimatedWords text="DoVoix was born from a simple belief:" delay={0.1} />{' '}
               <motion.span
                 initial={{ opacity: 0, filter: 'blur(3px)' }}
                 whileInView={{ opacity: 1, filter: 'blur(0px)' }}
@@ -34,7 +34,7 @@ export const AboutSection: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-transparent bg-clip-text bg-[linear-gradient(110deg,#000000,#3a3938,#000000)] animate-text-gradient bg-[length:200%_auto] inline-block"
               >
-                simple belief.
+                every story deserves a voice and every voice has the power to create impact.
               </motion.span>
             </h2>
 

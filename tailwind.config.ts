@@ -33,8 +33,10 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
-        display: ['var(--font-plus-jakarta)', 'sans-serif'],
+        sans: ['var(--font-poppins)', 'sans-serif'],
+        display: ['var(--font-league-spartan)', 'var(--font-poppins)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        spartan: ['var(--font-league-spartan)', 'sans-serif'],
       },
       keyframes: {
         float: {

@@ -21,7 +21,7 @@
   }
 
   body {
-    font-family: var(--font-inter), sans-serif;
+    font-family: var(--font-poppins), sans-serif;
     -webkit-font-smoothing: antialiased;
     background-color: var(--dvx-black);
     overflow-x: hidden;
@@ -34,7 +34,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-plus-jakarta), sans-serif;
+    font-family: var(--font-league-spartan), var(--font-poppins), sans-serif;
   }
 }
 

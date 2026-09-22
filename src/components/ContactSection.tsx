@@ -21,12 +21,12 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 bg-slate-50 text-slate-900 relative overflow-hidden border-b border-slate-200 selection:bg-purple-600 selection:text-white">
+    <section id="contact" className="py-20 sm:py-28 bg-slate-50 text-slate-900 relative overflow-hidden border-b border-slate-200 selection:bg-black selection:text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#000000] text-white text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-4 shadow-md">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-black text-white text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-4 shadow-md">
             <Mail className="w-4 h-4 text-white" />
             <span>GENERAL ENQUIRIES</span>
           </div>
@@ -42,41 +42,41 @@ export const ContactSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Direct Contact Info & Socials (Span 5) */}
-          <div className="lg:col-span-5 p-8 rounded-3xl bg-white border border-slate-200 ">
+          <div className="lg:col-span-5 p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
             <h3 className="font-display text-xl font-bold text-slate-900 mb-6 pb-4 border-b border-slate-100">
               Direct Contact Details
             </h3>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-900 border border-slate-200 flex items-center justify-center shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">EMAIL US</div>
-                  <a href="mailto:dovoixfirm@gmail.com" className="text-sm font-semibold text-slate-900 hover:text-purple-600 transition-colors">
+                  <a href="mailto:dovoixfirm@gmail.com" className="text-sm font-semibold text-slate-900 hover:text-black transition-colors">
                     dovoixfirm@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-900 border border-slate-200 flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">PHONE & WHATSAPP</div>
-                  <a href="tel:+2348125615709" className="text-sm font-semibold text-slate-900 hover:text-purple-600 transition-colors block">
+                  <a href="tel:+2348125615709" className="text-xs sm:text-sm font-semibold text-slate-900 hover:text-black transition-colors block">
                     +234 (0) 812 561 5709
                   </a>
-                  <a href="https://wa.me/2348125615709" target="_blank" rel="noopener noreferrer" className="text-xs text-purple-600 hover:underline mt-0.5 font-mono inline-block">
+                  <a href="https://wa.me/2348125615709" target="_blank" rel="noopener noreferrer" className="text-xs text-black font-bold hover:underline mt-0.5 font-mono inline-block">
                     Chat on WhatsApp →
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-600 shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-900 border border-slate-200 flex items-center justify-center shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -99,7 +99,7 @@ export const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="DoVoix Instagram"
-                  className="p-3 rounded-xl bg-slate-50 hover:bg-purple-50 text-slate-600 hover:text-purple-600 border border-slate-200 transition-colors"
+                  className="p-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-900 border border-slate-200 transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
@@ -108,7 +108,7 @@ export const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="DoVoix LinkedIn"
-                  className="p-3 rounded-xl bg-slate-50 hover:bg-purple-50 text-slate-600 hover:text-purple-600 border border-slate-200 transition-colors"
+                  className="p-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-900 border border-slate-200 transition-colors"
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
@@ -117,7 +117,7 @@ export const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="DoVoix TikTok"
-                  className="p-3 rounded-xl bg-slate-50 hover:bg-purple-50 text-slate-600 hover:text-purple-600 border border-slate-200 transition-colors"
+                  className="p-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-900 border border-slate-200 transition-colors"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.86 4.43V10.7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.04-2.13z"/>
@@ -128,7 +128,7 @@ export const ContactSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="DoVoix WhatsApp"
-                  className="p-3 rounded-xl bg-slate-50 hover:bg-purple-50 text-slate-600 hover:text-purple-600 border border-slate-200 transition-colors"
+                  className="p-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-900 border border-slate-200 transition-colors"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.456 5.71 1.457h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -140,11 +140,11 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Right Column: General Enquiry Form (Span 7) */}
-          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 ">
+          <div className="lg:col-span-7 p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-sm">
             
             {submitted ? (
               <div className="py-12 text-center">
-                <div className="w-16 h-16 rounded-full bg-purple-50 text-purple-600 border border-purple-200 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-slate-100 text-slate-900 border border-slate-200 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="font-display text-2xl font-bold text-slate-900 mb-2">
@@ -159,7 +159,7 @@ export const ContactSection: React.FC = () => {
                     setSubmitted(false);
                     setFormData({ fullName: '', email: '', subject: 'Partnership', message: '' });
                   }}
-                  className="px-6 py-2.5 rounded-xl bg-slate-100 text-slate-700 text-xs font-mono font-bold uppercase tracking-wider border border-slate-200 hover:bg-slate-200"
+                  className="px-6 py-2.5 rounded-xl bg-black text-white font-bold text-xs font-mono uppercase tracking-wider hover:bg-slate-800"
                 >
                   Send Another Message
                 </button>
@@ -181,7 +181,7 @@ export const ContactSection: React.FC = () => {
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors"
                   />
                 </div>
 
@@ -196,7 +196,7 @@ export const ContactSection: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="name@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors"
                   />
                 </div>
 
@@ -209,7 +209,7 @@ export const ContactSection: React.FC = () => {
                     id="subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors"
                   >
                     <option value="Partnership">Partnership</option>
                     <option value="Press">Press / Media</option>
@@ -229,15 +229,15 @@ export const ContactSection: React.FC = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="How can DoVoix collaborate with you?"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-purple-600 focus:ring-1 focus:ring-purple-600 transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold text-xs font-mono uppercase tracking-wider border border-purple-400/50 transition-all "
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-black hover:bg-slate-800 text-white font-bold text-xs font-mono uppercase tracking-wider border border-black transition-all shadow-md"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4 text-white" />
                   <span>Submit Message</span>
                 </button>
               </form>
