@@ -55,10 +55,10 @@ export const PartnersSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-[#000000] mb-3">
-            <span className="relative flex h-2 w-2">
+          <div className="inline-flex items-center gap-3.5 text-base sm:text-lg lg:text-xl font-mono font-extrabold tracking-[0.25em] uppercase text-[#000000] mb-3 sm:mb-4">
+            <span className="relative flex h-3.5 w-3.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#000000]" />
             </span>
             <span>OUR PARTNERS</span>
           </div>

@@ -18,18 +18,18 @@ export const ImpactSummary: React.FC = () => {
 
   return (
     <section id="impact" className="py-16 sm:py-20 lg:py-24 bg-[#fafafa] text-slate-900 relative overflow-hidden border-b border-[#e5e5e5] selection:bg-black selection:text-white">
-      
+
       {/* Background Micro Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#0000000d_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="pb-6 sm:pb-8 mb-8 sm:mb-12 border-b border-[#e5e5e5]">
-          <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-[#000000] mb-2">
-            <span className="relative flex h-2 w-2">
+          <div className="flex items-center gap-3.5 text-base sm:text-lg lg:text-xl font-mono font-extrabold tracking-[0.25em] uppercase text-[#000000] mb-3 sm:mb-4">
+            <span className="relative flex h-3.5 w-3.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#000000]" />
             </span>
             <span>COMBINED IMPACT SUMMARY</span>
           </div>
@@ -58,9 +58,8 @@ export const ImpactSummary: React.FC = () => {
               maxTilt={8}
               scale={1.03}
               glareOpacity={0.15}
-              className={`h-full ${
-                idx === 4 ? 'col-span-2 sm:col-span-1 max-w-xs sm:max-w-none mx-auto sm:mx-0 w-full' : ''
-              }`}
+              className={`h-full ${idx === 4 ? 'col-span-2 sm:col-span-1 max-w-xs sm:max-w-none mx-auto sm:mx-0 w-full' : ''
+                }`}
             >
               <div className="p-5 sm:p-6 rounded-2xl bg-white border border-[#e5e5e5] hover:border-black/50 transition-all duration-300 flex flex-col items-center text-center justify-between group h-full shadow-sm hover:shadow-md">
                 <div className="font-display text-2xl sm:text-3xl lg:text-3xl xl:text-4xl font-black text-[#000000] group-hover:text-[#3a3938] group-hover:scale-105 transition-all mb-1.5 sm:mb-2 origin-center text-center">
@@ -82,7 +81,7 @@ export const ImpactSummary: React.FC = () => {
         {/* Supporting Visual & Founder Pull Quote with 3D Tilt */}
         <Card3DTilt maxTilt={4} scale={1.01} glareOpacity={0.15}>
           <div className="relative rounded-2xl sm:rounded-3xl bg-[#000000] text-white border-2 border-[#3a3938] overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0 group shadow-2xl">
-            
+
             {/* Left Column: Co-Founder Pull Quote (Span 7) */}
             <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between relative z-10">
               <Quote className="w-6 h-6 sm:w-7 sm:h-7 text-white/40 mb-3 sm:mb-4 group-hover:text-white/70 transition-colors" />
@@ -116,7 +115,7 @@ export const ImpactSummary: React.FC = () => {
                 />
                 <div>
                   <div className="font-display text-xs sm:text-sm font-bold text-white">Donald Mojekwu</div>
-                  <div className="text-[11px] font-mono text-[#999998]">Co-Founder & CEO, DoVoix</div>
+                  <div className="text-[11px] font-mono text-[#999998]">Founder & CEO, DoVoix</div>
                 </div>
               </div>
             </div>
@@ -124,15 +123,14 @@ export const ImpactSummary: React.FC = () => {
             {/* Right Column: Community & Storytelling Visual (Span 5) */}
             <div className="lg:col-span-5 relative min-h-[260px] sm:min-h-[320px] lg:min-h-[auto] bg-[#141414] overflow-hidden">
               <img
-                src="/assets/foundation_picture.JPEG"
-                alt="DoVoix Community and Creative Journey"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                src="/assets/founder_and_friend.jpeg"
+                alt="DoVoix Founder and Friends Journey"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
               <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 p-4 sm:p-5 rounded-xl bg-black/90 border border-[#3a3938] backdrop-blur-md">
                 <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono font-bold text-white uppercase tracking-wider mb-1">
                   <Sparkles className="w-3.5 h-3.5 text-white animate-pulse" />
-                  <span>DECEMBER 6, 2025 · THE JOURNEY</span>
+                  <span>NOVEMBER 6, 2025 · THE JOURNEY</span>
                 </div>
                 <div className="text-xs sm:text-sm text-white font-bold mb-0.5">
                   From a One-Man Vision to a Thriving Community

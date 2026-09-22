@@ -2,45 +2,135 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Film, HeartHandshake, Play, Sparkles } from 'lucide-react';
+import { ArrowRight, Film, HeartHandshake, Sparkles } from 'lucide-react';
 import { ThreeInfinityScene } from '@/components/ThreeInfinityScene';
 import { Card3DTilt } from '@/components/Card3DTilt';
 import { AnimatedWords, FadeUpText } from '@/components/AnimatedText';
 import { motion } from 'framer-motion';
 
 const ShowcaseReelCard: React.FC = () => (
-  <Card3DTilt maxTilt={9} scale={1.02} glareOpacity={0.2} className="relative mx-auto max-w-lg lg:max-w-none">
-    {/* Main Photo/Reel Frame */}
-    <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#3a3938] bg-[#141414] aspect-[16/10] sm:aspect-[4/5] group shadow-2xl">
-      <img
-        src="/assets/FilmHouse_picture.JPEG"
-        alt="DoVoix FilmHouse & Foundation Production Stage"
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-      />
+  <div className="relative mx-auto max-w-lg lg:max-w-none">
+    {/* Background Aura Glow Mesh (Layer 1 - Behind) */}
+    <motion.div
+      animate={{
+        scale: [1, 1.18, 1],
+        opacity: [0.35, 0.6, 0.35],
+        rotate: [0, 180, 360],
+      }}
+      transition={{
+        duration: 14,
+        repeat: Infinity,
+        ease: 'linear',
+      }}
+      className="absolute -inset-8 sm:-inset-12 bg-gradient-to-tr from-[#8b5cf6]/25 via-white/10 to-[#3a3938]/40 rounded-[3rem] blur-3xl pointer-events-none -z-30"
+    />
 
-      {/* Top Overlay Badge */}
-      <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between">
-        <span className="px-3 py-1 rounded-full bg-[#000000]/90 border border-[#3a3938] text-white text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider flex items-center gap-1.5 sm:gap-2">
-          <Play className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
-          SHOWCASE REEL
-        </span>
-        <span className="px-2 py-0.5 rounded-md bg-white text-black text-[9px] font-mono font-bold">
-          4K LIVE
-        </span>
-      </div>
+    {/* Offset Angled Glass Backplate Frame (Layer 2 - Before Background) */}
+    <motion.div
+      animate={{
+        rotate: [-3, -1.5, -3],
+        y: [5, -5, 5],
+      }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      }}
+      className="absolute -inset-3 sm:-inset-4 rounded-3xl bg-gradient-to-br from-white/15 via-[#1a1a1a]/70 to-[#0a0a0a]/90 border border-white/15 backdrop-blur-md -z-20 shadow-2xl"
+    />
 
-      {/* Bottom Overlay Info Card */}
-      <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#000000]/95 border border-[#3a3938] backdrop-blur-md">
-        <div className="flex items-center gap-1.5 text-[10px] sm:text-xs font-mono font-bold text-[#999998] uppercase tracking-wider mb-0.5 sm:mb-1">
-          <Sparkles className="w-3 h-3 text-white animate-pulse" />
-          <span>COMMERCIAL & COMMUNITY SYNERGY</span>
+    {/* Secondary Offset Frame (Layer 3 - Mid-Background Frame) */}
+    <motion.div
+      animate={{
+        rotate: [2.5, 1, 2.5],
+        y: [-4, 6, -4],
+      }}
+      transition={{
+        duration: 7.5,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      }}
+      className="absolute -inset-1.5 sm:-inset-2 rounded-3xl border border-white/10 bg-[#141414]/50 -z-10"
+    />
+
+    {/* Main Card with Floating Levitation Loop & 3D Tilt */}
+    <motion.div
+      animate={{
+        y: [-8, 8, -8],
+        rotate: [-0.5, 0.5, -0.5],
+      }}
+      transition={{
+        duration: 6.5,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      }}
+    >
+      <Card3DTilt maxTilt={8} scale={1.01} glareOpacity={0.25} className="relative">
+        {/* Main Photo/Reel Frame */}
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-[#3a3938] bg-[#141414] aspect-[16/10] sm:aspect-[4/5] group shadow-2xl">
+          
+          {/* Continuous Ken Burns Zoom & Gentle Pan Image */}
+          <motion.img
+            src="/assets/FilmHouse_picture.JPEG"
+            alt="DoVoix FilmHouse & Foundation Production Stage"
+            animate={{
+              scale: [1.02, 1.10, 1.05, 1.02],
+              x: [0, -6, 5, 0],
+              y: [0, -5, 4, 0],
+            }}
+            transition={{
+              duration: 16,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+            className="w-full h-full object-cover select-none"
+          />
+
+          {/* Continuous Repeating Light Sheen / Glass Sweep */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none -skew-x-12 z-10"
+            animate={{
+              x: ['-200%', '200%'],
+            }}
+            transition={{
+              duration: 3.8,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              repeatDelay: 3.2,
+            }}
+          />
+
+          {/* Top Cinema Viewfinder HUD Overlay */}
+          <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between z-20 pointer-events-none">
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-[10px] sm:text-[11px] font-mono text-white tracking-widest uppercase">
+              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              <span>PRODUCTION SET</span>
+            </div>
+            <div className="px-2 py-0.5 rounded bg-black/60 backdrop-blur-md border border-white/10 text-[9px] sm:text-[10px] font-mono text-[#999998] tracking-wider">
+              24 FPS • 4K
+            </div>
+          </div>
+
+          {/* Subtle Viewfinder Corner Reticles */}
+          <div className="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-white/40 pointer-events-none z-10" />
+          <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-white/40 pointer-events-none z-10" />
+          <div className="absolute bottom-16 sm:bottom-20 left-2 w-3 h-3 border-b-2 border-l-2 border-white/40 pointer-events-none z-10" />
+          <div className="absolute bottom-16 sm:bottom-20 right-2 w-3 h-3 border-b-2 border-r-2 border-white/40 pointer-events-none z-10" />
+
+          {/* Bottom Overlay Info Card */}
+          <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#000000]/95 border border-[#3a3938] backdrop-blur-md z-20 shadow-xl">
+            <div className="flex items-center gap-1.5 text-[10px] sm:text-xs font-mono font-bold text-[#999998] uppercase tracking-wider mb-0.5 sm:mb-1">
+              <Sparkles className="w-3 h-3 text-white animate-pulse" />
+              <span>COMMERCIAL & COMMUNITY SYNERGY</span>
+            </div>
+            <p className="text-[11px] sm:text-xs font-semibold text-white leading-relaxed">
+              Bridging commercial film production excellence with tuition-free youth skills development.
+            </p>
+          </div>
         </div>
-        <p className="text-[11px] sm:text-xs font-semibold text-white leading-relaxed">
-          Bridging commercial film production excellence with tuition-free youth skills development.
-        </p>
-      </div>
-    </div>
-  </Card3DTilt>
+      </Card3DTilt>
+    </motion.div>
+  </div>
 );
 
 export const Hero: React.FC = () => {
@@ -103,13 +193,13 @@ export const Hero: React.FC = () => {
                 <ArrowRight className="w-3.5 h-3.5 text-black group-hover:translate-x-1.5 transition-transform duration-300 relative z-10" />
               </Link>
 
-              <a
-                href="#gateway"
+              <Link
+                href="/projects"
                 className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl bg-[#141414] hover:bg-[#1f1f1f] text-white font-bold text-xs font-mono uppercase tracking-wider border border-[#3a3938] hover:border-white/50 transition-all hover:scale-[1.02] active:scale-95 text-center"
               >
                 <HeartHandshake className="w-4 h-4 text-white" />
                 <span>Explore Foundation</span>
-              </a>
+              </Link>
             </FadeUpText>
 
           </div>

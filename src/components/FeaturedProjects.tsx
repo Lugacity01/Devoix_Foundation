@@ -68,7 +68,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
       name: 'Bag A Child Initiative 3.0: Street Edition',
       category: 'Community Empowerment & Digital Skills',
       status: 'Upcoming',
-      location: 'Streets of Lagos, Nigeria',
+      location: 'Lagos, Nigeria',
       date: '2029',
       livesImpacted: 1000,
       lead: 'DoVoix Foundation Community Unit',
@@ -137,8 +137,8 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
         {/* Dynamic Full-Width Exhibition Stage */}
         <div className="rounded-3xl bg-slate-950/80 border border-white/10 overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-0">
 
-          {/* Left Column: Full-Height Immersive Widescreen Frame (Span 7) */}
-          <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto min-h-[380px] lg:min-h-[480px] overflow-hidden bg-[#040711] flex items-center justify-center p-4 sm:p-6">
+          {/* Left Column: Full-Height Immersive Widescreen Frame (Span 7) - Mobile Responsive */}
+          <div className="lg:col-span-7 relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto min-h-[260px] sm:min-h-[380px] lg:min-h-[480px] overflow-hidden bg-[#040711] flex items-center justify-center p-3 sm:p-6">
             {/* Ambient Blurred Backdrop */}
             <img
               src={current.image}
@@ -152,7 +152,7 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = () => {
             <img
               src={current.image}
               alt={current.name}
-              className="relative max-h-full max-w-full object-contain rounded-xl shadow-2xl z-10 transition-transform duration-700 hover:scale-[1.02]"
+              className="relative w-full h-full max-h-[240px] sm:max-h-[360px] lg:max-h-full max-w-full object-contain rounded-xl shadow-2xl z-10 transition-transform duration-700 hover:scale-[1.02]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/30 pointer-events-none z-10" />
 

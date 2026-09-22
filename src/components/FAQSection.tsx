@@ -167,18 +167,18 @@ export const FAQSection: React.FC = () => {
 
   return (
     <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-[#0a0a0a] text-white relative overflow-hidden border-b border-[#3a3938]/40 selection:bg-white selection:text-black">
-      
+
       {/* Background Glows */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[350px] bg-[#999998]/5 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute bottom-0 right-10 w-[400px] h-[300px] bg-[#3a3938]/15 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(#99999812_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 animate-reveal">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#141414] border border-[#3a3938] text-white text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider">
-            <HelpCircle className="w-3.5 h-3.5 text-white" />
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#141414] border border-[#3a3938] text-white text-sm sm:text-base font-mono font-extrabold uppercase tracking-wider shadow-md">
+            <HelpCircle className="w-4 h-4 text-white" />
             <span>FREQUENTLY ASKED QUESTIONS</span>
           </div>
         </div>
@@ -192,11 +192,10 @@ export const FAQSection: React.FC = () => {
                 setActiveCategory(cat);
                 setOpenIndex(null);
               }}
-              className={`px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 border shrink-0 whitespace-nowrap ${
-                activeCategory === cat
+              className={`px-4 py-2 rounded-xl text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 border shrink-0 whitespace-nowrap ${activeCategory === cat
                   ? 'bg-white text-black border-white shadow-lg scale-105 font-bold'
                   : 'bg-[#141414] text-[#999998] border-[#3a3938] hover:text-white hover:border-white/40'
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -212,11 +211,10 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={faq.id}
-                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                  isOpen
+                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${isOpen
                     ? 'bg-[#141414] border-white/50 shadow-xl'
                     : 'bg-[#141414]/70 border-[#3a3938]/80 hover:border-[#999998]'
-                }`}
+                  }`}
               >
                 <button
                   type="button"
@@ -225,22 +223,20 @@ export const FAQSection: React.FC = () => {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                    <span className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg border text-[10px] sm:text-xs font-mono font-bold flex items-center justify-center shrink-0 transition-colors ${
-                      isOpen ? 'bg-white text-black border-white' : 'bg-[#262626] border-[#3a3938] text-[#999998]'
-                    }`}>
+                    <span className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg border text-[10px] sm:text-xs font-mono font-bold flex items-center justify-center shrink-0 transition-colors ${isOpen ? 'bg-white text-black border-white' : 'bg-[#262626] border-[#3a3938] text-[#999998]'
+                      }`}>
                       {displayNum}
                     </span>
                     <span className="font-display text-sm sm:text-base lg:text-lg font-bold text-white tracking-tight">
                       {faq.question}
                     </span>
                   </div>
-                  
+
                   <div
-                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${
-                      isOpen
+                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 ${isOpen
                         ? 'rotate-180 bg-white text-black border-white shadow-md'
                         : 'bg-[#262626] border-[#3a3938] text-white hover:bg-[#333333]'
-                    }`}
+                      }`}
                   >
                     <ChevronDown className="w-4 h-4" />
                   </div>

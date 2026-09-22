@@ -23,10 +23,10 @@ export const projectsData: Project[] = [
     ],
     coverImage: '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
     galleryImages: [
-      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.14.jpeg',
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.15.jpeg',
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.16.jpeg',
-      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.17.jpeg',
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-22%20at%2004.58.13.jpeg',
+      '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-22%20at%2004.58.14.jpeg',
       '/assets/bag_a_child/Oyo/WhatsApp%20Image%202026-09-20%20at%2021.37.18.jpeg'
     ],
     leadInfo: {
@@ -104,36 +104,6 @@ export const projectsData: Project[] = [
     isFeatured: true
   },
   {
-    id: 'interstate-video-documentary-abuja',
-    name: 'Interstate Youth Video Production Masterclass',
-    tagline: 'Hands-on filmmaking and video production training for young media creators.',
-    description: 'Multi-state residential masterclass training youth in camera operations, lighting, sound engineering, and video editing.',
-    fullDescription: 'Video production offers immense economic opportunities for creative youth. This interstate initiative invited 100 participants from FCT Abuja, Niger, and Nasarawa states for an immersive 10-day hands-on video workshop. Participants produced short documentaries spotlighting local social issues.',
-    location: 'FCT Abuja & Nasarawa State',
-    state: 'FCT Abuja',
-    status: 'Upcoming',
-    category: 'Interstate',
-    date: 'September 2026',
-    year: 2026,
-    livesImpacted: 190,
-    impactBreakdown: [
-      { label: 'Expected Trainees', count: 100 },
-      { label: 'States Involved', count: 3 },
-      { label: 'Documentaries Planned', count: 10 }
-    ],
-    coverImage: '/assets/behind_scene.JPEG',
-    galleryImages: [
-      '/assets/behind_scene.JPEG',
-      '/assets/FilmHouse_picture.JPEG'
-    ],
-    leadInfo: {
-      name: 'Ebenezer Adenola-Adesina',
-      role: 'Media & Production Lead, DoVoix',
-      photo: '/assets/team/ebenezer-adenola.jpg'
-    },
-    isFeatured: false
-  },
-  {
     id: 'bag-a-child-unn',
     name: 'Bag A Child 2.0: Interstate Edition (Team UNN)',
     tagline: 'Youth digital skills and creative outreach in Enugu State.',
@@ -192,11 +162,11 @@ export const projectsData: Project[] = [
   {
     id: 'bag-a-child-ub',
     name: 'Bag A Child 2.0: Interstate Edition (Team UB)',
-    tagline: 'Hands-on creative empowerment and digital skills outreach in Edo State.',
-    description: 'Upcoming Bag A Child 2.0 edition led by Team UB, delivering foundational digital skills and creative pathways.',
-    fullDescription: 'Bag A Child 2.0: Interstate Edition (Team UB) is an upcoming outreach initiative expanding DoVoix Foundation’s creative mentorship to secondary school students in Edo State.',
-    location: 'University of Benin, Edo State, Nigeria',
-    state: 'Edo',
+    tagline: 'Hands-on creative empowerment and digital skills outreach in Buea, Cameroon.',
+    description: 'Upcoming Bag A Child 2.0 edition led by Team UB, delivering foundational digital skills and creative pathways in Cameroon.',
+    fullDescription: 'Bag A Child 2.0: Interstate Edition (Team UB) is an upcoming outreach initiative expanding DoVoix Foundation’s creative mentorship to secondary school students at University of Buea, Cameroon.',
+    location: 'University of Buea, South West Region, Cameroon',
+    state: 'Buea, Cameroon',
     status: 'Upcoming',
     category: 'Interstate',
     date: 'October 2026',
@@ -307,7 +277,7 @@ export const projectsData: Project[] = [
     tagline: 'Taking skills development beyond school walls and into the streets of Lagos.',
     description: 'A six-month programme designed to equip 1,000 young people with three practical creative and digital skills they can use to create opportunities, generate income, and thrive.',
     fullDescription: 'Bag A Child Initiative 3.0: Street Edition takes DoVoix Foundation’s skills development mission beyond the walls of schools and into the streets of Lagos.\n\nThe six-month programme is designed to equip 1,000 young people with three practical creative and digital skills they can use to create opportunities, generate income, and thrive in an increasingly digital economy.\n\nThe programme will bring together 30 facilitators and 100 volunteers to deliver six structured training sessions across the six-month period, creating accessible learning opportunities for young people from different backgrounds.\n\nBy taking the programme directly to the streets, the Street Edition aims to reach young people who may not have access to conventional training opportunities and give them practical skills they can build on.',
-    location: 'Streets of Lagos, Nigeria',
+    location: 'Lagos, Nigeria',
     state: 'Lagos',
     status: 'Upcoming',
     category: 'Community',
@@ -323,10 +293,7 @@ export const projectsData: Project[] = [
       { label: 'Sessions', count: '6' }
     ],
     coverImage: '/assets/foundation_picture.JPEG',
-    galleryImages: [
-      '/assets/foundation_picture.JPEG',
-      '/assets/behind_scene.JPEG'
-    ],
+    galleryImages: [],
     leadInfo: {
       name: 'DoVoix Foundation Team',
       role: 'Community Outreach Unit, DoVoix',

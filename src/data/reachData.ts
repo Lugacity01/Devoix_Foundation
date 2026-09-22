@@ -37,9 +37,9 @@ export const reachData: ReachLocation[] = [
     state: 'FCT Abuja',
     coordinates: { x: 45, y: 48 },
     activeProjects: 1,
-    completedProjects: 1,
-    livesImpacted: 190,
-    featuredProjectName: 'Interstate Youth Video Production Masterclass'
+    completedProjects: 0,
+    livesImpacted: 100,
+    featuredProjectName: 'Creative Digital Pathways'
   },
   {
     id: 'reach-kano',

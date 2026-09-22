@@ -26,8 +26,8 @@ export const ContactSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-700 text-xs font-mono font-bold uppercase tracking-wider mb-4">
-            <Mail className="w-3.5 h-3.5 text-purple-600" />
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#000000] text-white text-xs sm:text-sm font-mono font-bold uppercase tracking-wider mb-4 shadow-md">
+            <Mail className="w-4 h-4 text-white" />
             <span>GENERAL ENQUIRIES</span>
           </div>
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -95,7 +95,7 @@ export const ContactSection: React.FC = () => {
               </div>
               <div className="flex items-center gap-3 flex-wrap">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/dovoix_?stkn=MXByOWR2azZxbHlvdQ%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="DoVoix Instagram"
@@ -104,7 +104,7 @@ export const ContactSection: React.FC = () => {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/dovoix-foundation/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="DoVoix LinkedIn"
@@ -113,7 +113,7 @@ export const ContactSection: React.FC = () => {
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://tiktok.com"
+                  href="https://www.tiktok.com/@dovoix.foundation?_r=1&_t=ZS-99w6osswkSt"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="DoVoix TikTok"
@@ -124,7 +124,7 @@ export const ContactSection: React.FC = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://whatsapp.com"
+                  href="https://wa.me/2348125615709"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="DoVoix WhatsApp"

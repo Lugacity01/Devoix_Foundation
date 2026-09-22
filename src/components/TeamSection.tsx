@@ -94,8 +94,8 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ team = [] }) => {
         {/* Section Header with Carousel Navigation */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-6 sm:pb-8 mb-6 sm:mb-10 border-b border-[#3a3938]/40 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#141414] border border-[#3a3938] text-[#999998] text-[10px] sm:text-xs font-mono font-bold uppercase tracking-wider mb-2 sm:mb-3">
-              <Sparkles className="w-3 h-3 text-white animate-pulse" />
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#141414] border border-[#3a3938] text-white text-sm sm:text-base font-mono font-extrabold uppercase tracking-wider mb-3 sm:mb-4 shadow-md">
+              <Sparkles className="w-4 h-4 text-white animate-pulse" />
               <span>EXECUTIVE GOVERNANCE</span>
             </div>
             <h2 className="font-display text-2xl sm:text-4xl lg:text-4xl font-extrabold text-white tracking-tight">

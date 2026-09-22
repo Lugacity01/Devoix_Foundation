@@ -33,7 +33,7 @@ export const SupportBACCard: React.FC<SupportBACCardProps> = ({ variant = 'banne
         </div>
 
         <h3 className="font-display text-base font-bold text-white mb-2">
-          Sponsor Bag A Child 2.0
+          Sponsor DoVoix Foundation
         </h3>
         
         <p className="text-xs text-slate-300 leading-relaxed mb-4">
@@ -96,11 +96,11 @@ export const SupportBACCard: React.FC<SupportBACCardProps> = ({ variant = 'banne
           <div className="text-[10px] text-slate-400 uppercase">Enquiries Hotline:</div>
           <div className="flex justify-between text-slate-300">
             <span>Donald:</span>
-            <a href="tel:07039874202" className="text-purple-300 hover:underline font-bold">07039874202</a>
+            <a href="tel:08125615709" className="text-purple-300 hover:underline font-bold">08125615709</a>
           </div>
           <div className="flex justify-between text-slate-300">
-            <span>Glory:</span>
-            <a href="tel:07087050702" className="text-purple-300 hover:underline font-bold">07087050702</a>
+            <span>Oluwaseun:</span>
+            <a href="tel:09026888679" className="text-purple-300 hover:underline font-bold">09026888679</a>
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@ export const SupportBACCard: React.FC<SupportBACCardProps> = ({ variant = 'banne
               </div>
 
               <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight mb-3">
-                Bag A Child 2.0 Interstate Project
+                DoVoix Foundation Project
               </h2>
 
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-4">
@@ -149,23 +149,23 @@ export const SupportBACCard: React.FC<SupportBACCardProps> = ({ variant = 'banne
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <a
-                  href="tel:07039874202"
+                  href="tel:08125615709"
                   className="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-mono transition-colors group"
                 >
                   <div className="flex items-center gap-2.5">
                     <Phone className="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform" />
-                    <span>Donald: <strong>07039874202</strong></span>
+                    <span>Donald: <strong>08125615709</strong></span>
                   </div>
                   <span className="text-[10px] text-purple-300 font-bold uppercase">Call</span>
                 </a>
 
                 <a
-                  href="tel:07087050702"
+                  href="tel:09026888679"
                   className="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-mono transition-colors group"
                 >
                   <div className="flex items-center gap-2.5">
                     <Phone className="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform" />
-                    <span>Glory: <strong>07087050702</strong></span>
+                    <span>Oluwaseun: <strong>09026888679</strong></span>
                   </div>
                   <span className="text-[10px] text-purple-300 font-bold uppercase">Call</span>
                 </a>

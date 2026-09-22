@@ -1,10 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Mail, X, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
+import { Mail, X, CheckCircle2, ArrowRight, User } from 'lucide-react';
 
 export const NewsletterModal: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -30,7 +32,7 @@ export const NewsletterModal: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email.trim()) {
+    if (email.trim() && firstName.trim()) {
       setSubmitted(true);
       localStorage.setItem('dovoix_newsletter_subscribed', 'true');
 
@@ -83,7 +85,7 @@ export const NewsletterModal: React.FC = () => {
             </h3>
 
             <p className="text-xs sm:text-sm text-[#999998] font-normal max-w-xs mx-auto leading-relaxed mb-6">
-              You are now subscribed to the official DoVoix Dispatch. Watch your inbox for our latest stories and opportunities.
+              Thank you, {firstName}! You are now subscribed to DoVoix. Watch your inbox for our latest stories and opportunities.
             </p>
 
             <button
@@ -113,7 +115,32 @@ export const NewsletterModal: React.FC = () => {
             </p>
 
             {/* Subscription Form */}
-            <form onSubmit={handleSubmit} className="space-y-3.5">
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-3.5">
+              {/* First Name & Last Name Grid */}
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <input
+                    type="text"
+                    required
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    placeholder="First name"
+                    className="w-full px-4 py-3.5 rounded-xl bg-[#141414] border border-[#3a3938] text-white placeholder-[#999998]/60 text-xs sm:text-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    required
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    placeholder="Last name"
+                    className="w-full px-4 py-3.5 rounded-xl bg-[#141414] border border-[#3a3938] text-white placeholder-[#999998]/60 text-xs sm:text-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
+                  />
+                </div>
+              </div>
+
+              {/* Email Address Input */}
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#999998]">
                   <Mail className="w-4 h-4" />
@@ -123,30 +150,20 @@ export const NewsletterModal: React.FC = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
+                  placeholder="Email address"
                   className="w-full pl-11 pr-4 py-3.5 rounded-xl bg-[#141414] border border-[#3a3938] text-white placeholder-[#999998]/60 text-xs sm:text-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
                 />
               </div>
 
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full group relative overflow-hidden py-3.5 px-6 rounded-xl bg-white hover:bg-slate-200 text-black font-mono font-bold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 hover:scale-[1.01] active:scale-98 flex items-center justify-center gap-2"
+                className="w-full group relative overflow-hidden py-3.5 px-6 rounded-xl bg-white hover:bg-slate-200 text-black font-mono font-bold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 hover:scale-[1.01] active:scale-98 flex items-center justify-center gap-2 mt-2"
               >
-                <span>Subscribe to Dispatch</span>
+                <span>Subscribe</span>
                 <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
-
-            <div className="flex items-center justify-between mt-5 pt-4 border-t border-[#3a3938]/50 text-[10px] sm:text-[11px] font-mono text-[#999998]">
-              <span>🔒 Zero spam. Unsubscribe anytime.</span>
-              <button
-                type="button"
-                onClick={handleClose}
-                className="text-[#999998] hover:text-white underline transition-colors"
-              >
-                Maybe later
-              </button>
-            </div>
           </div>
         )}
 

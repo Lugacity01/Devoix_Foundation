@@ -95,18 +95,21 @@ export default function ProjectsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 pt-4 border-t border-white/10">
-            {/* Category Filter Tabs */}
+            {/* Category Filter Tabs (Horizontal overflow on mobile only) */}
             <div>
-              <label className="text-[10px] sm:text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block mb-2">
-                Category
-              </label>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-[10px] sm:text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block">
+                  Category
+                </label>
+                <span className="text-[10px] font-mono text-purple-400 sm:hidden">Swipe ↔</span>
+              </div>
+              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth pb-1.5 sm:pb-0 sm:flex-wrap">
                 {categories.map((cat) => (
                   <button
                     key={cat}
                     type="button"
                     onClick={() => setSelectedCategory(cat)}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all ${
+                    className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all shrink-0 whitespace-nowrap ${
                       selectedCategory === cat
                         ? 'bg-purple-600 text-white shadow-md'
                         : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-white/5'
@@ -118,18 +121,21 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            {/* Status Filter Tabs */}
+            {/* Status Filter Tabs (Horizontal overflow on mobile only) */}
             <div>
-              <label className="text-[10px] sm:text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block mb-2">
-                Status
-              </label>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-[10px] sm:text-xs font-mono font-bold text-slate-400 uppercase tracking-wider block">
+                  Status
+                </label>
+                <span className="text-[10px] font-mono text-purple-400 sm:hidden">Swipe ↔</span>
+              </div>
+              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar scroll-smooth pb-1.5 sm:pb-0 sm:flex-wrap">
                 {statuses.map((status) => (
                   <button
                     key={status}
                     type="button"
                     onClick={() => setSelectedStatus(status)}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all ${
+                    className={`px-3.5 py-1.5 rounded-xl text-xs font-mono font-semibold transition-all shrink-0 whitespace-nowrap ${
                       selectedStatus === status
                         ? 'bg-white text-black font-bold shadow-md'
                         : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-white/5'
@@ -152,10 +158,10 @@ export default function ProjectsPage() {
             </div>
 
             <Card3DTilt maxTilt={3} scale={1.01} glareOpacity={0.1}>
-              <div className="rounded-3xl bg-slate-950/90 border border-purple-500/30 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0 group">
+              <div className="rounded-2xl sm:rounded-3xl bg-slate-950/90 border border-purple-500/30 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0 group">
                 
-                {/* Visual Frame (Span 7) */}
-                <div className="lg:col-span-7 relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto min-h-[340px] sm:min-h-[420px] bg-[#030611] overflow-hidden flex items-center justify-center p-4 sm:p-6">
+                {/* Visual Frame (Span 7) - Mobile Responsive Aspect Ratio */}
+                <div className="lg:col-span-7 relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto min-h-[260px] sm:min-h-[380px] lg:min-h-[440px] bg-[#030611] overflow-hidden flex items-center justify-center p-3 sm:p-6">
                   <img
                     src={spotlightProject.coverImage}
                     alt=""
@@ -167,16 +173,16 @@ export default function ProjectsPage() {
                   <img
                     src={spotlightProject.coverImage}
                     alt={spotlightProject.name}
-                    className="relative max-h-full max-w-full object-contain rounded-2xl shadow-2xl z-10 group-hover:scale-105 transition-transform duration-700"
+                    className="relative w-full h-full max-h-[240px] sm:max-h-[360px] lg:max-h-full max-w-full object-contain rounded-xl sm:rounded-2xl shadow-2xl z-10 group-hover:scale-105 transition-transform duration-700"
                   />
 
                   {/* Overlay Badges */}
-                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-20">
-                    <span className="px-3.5 py-1 rounded-lg bg-black/80 backdrop-blur-md text-purple-300 font-mono text-xs font-bold uppercase tracking-wider border border-white/15">
+                  <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between z-20">
+                    <span className="px-2.5 py-1 sm:px-3.5 sm:py-1 rounded-lg bg-black/80 backdrop-blur-md text-purple-300 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider border border-white/15">
                       {spotlightProject.state} STATE
                     </span>
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 font-mono text-xs font-bold uppercase border border-emerald-500/30 backdrop-blur-md">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1 rounded-lg bg-emerald-500/20 text-emerald-300 font-mono text-[10px] sm:text-xs font-bold uppercase border border-emerald-500/30 backdrop-blur-md">
+                      <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                       <span>{spotlightProject.status}</span>
                     </span>
                   </div>

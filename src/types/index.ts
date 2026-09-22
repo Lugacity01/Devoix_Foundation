@@ -81,6 +81,31 @@ export interface StudentRegistrationInput {
   personalStatement?: string;
 }
 
+export interface CampusChapterRegistrationInput {
+  leadFullName: string;
+  leadEmail: string;
+  leadPhone: string;
+  leadRole: string;
+  campus: string;
+  institutionName?: string;
+  state: string;
+  lga?: string;
+  totalMembers: string;
+  activeMembers: string;
+  teamLeadsDetails: string;
+  hasOrganisedActivities: 'Yes' | 'No';
+  previousActivities?: string;
+  whyRegister: string;
+  hopeToAchieve: string;
+  skillsToContribute: string;
+  mobilisationPlan: string;
+  willingToOrganiseActivity: 'Yes' | 'No';
+  estimatedReach: string;
+  existingPartnerships: string;
+  additionalNotes?: string;
+  confirmedAccuracy: boolean;
+}
+
 export interface ContactEnquiryInput {
   fullName: string;
   email: string;

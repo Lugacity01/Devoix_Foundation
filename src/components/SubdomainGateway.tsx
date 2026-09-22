@@ -56,10 +56,10 @@ export const SubdomainGateway: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#141414]/90 backdrop-blur-md border border-[#3a3938] text-white text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider mb-3 sm:mb-4">
-            <span className="relative flex h-2 w-2">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#141414]/90 backdrop-blur-md border border-[#3a3938] text-white text-sm sm:text-base font-mono font-extrabold uppercase tracking-wider mb-4 sm:mb-5 shadow-lg">
+            <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-white" />
             </span>
             <span>SUBDOMAIN GATEWAY</span>
           </div>
@@ -95,9 +95,13 @@ export const SubdomainGateway: React.FC = () => {
                     
                     {/* Arm Header Badge */}
                     <div className="flex items-center justify-between gap-2 sm:gap-4 mb-4 sm:mb-6 pb-3.5 sm:pb-4 border-b border-[#3a3938]/40">
-                      <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-                        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#262626] border border-[#3a3938] flex items-center justify-center text-white font-bold shrink-0 group-hover:scale-110 transition-transform">
-                          <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
+                      <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black border border-[#3a3938] flex items-center justify-center overflow-hidden shrink-0 group-hover:scale-110 transition-transform shadow-md">
+                          <img
+                            src="/assets/logo/Black_circle.png"
+                            alt="DoVoix Emblem"
+                            className="w-full h-full object-contain"
+                          />
                         </div>
                         <div className="min-w-0">
                           <h3 className="font-display text-[15px] sm:text-lg lg:text-xl font-extrabold text-white group-hover:text-[#999998] transition-colors whitespace-nowrap">

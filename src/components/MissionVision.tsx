@@ -47,10 +47,10 @@ export const MissionVision: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Tag */}
-        <div className="flex items-center gap-2.5 text-[11px] sm:text-xs font-mono font-bold tracking-[0.25em] uppercase text-[#000000] mb-8 sm:mb-12">
-          <span className="relative flex h-2 w-2">
+        <div className="flex items-center gap-3.5 text-base sm:text-lg lg:text-xl font-mono font-extrabold tracking-[0.25em] uppercase text-[#000000] mb-8 sm:mb-12">
+          <span className="relative flex h-3.5 w-3.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#000000]" />
+            <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#000000]" />
           </span>
           <span>MISSION & VISION</span>
         </div>
@@ -65,7 +65,7 @@ export const MissionVision: React.FC = () => {
                 <Target className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
 
-              <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#000000] mb-2 sm:mb-3">
+              <div className="flex items-center gap-2 text-sm sm:text-base font-mono font-extrabold uppercase tracking-wider text-[#000000] mb-2 sm:mb-3">
                 <span>OUR MISSION</span>
               </div>
 
@@ -88,7 +88,7 @@ export const MissionVision: React.FC = () => {
                 <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
 
-              <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#000000] mb-2 sm:mb-3">
+              <div className="flex items-center gap-2 text-sm sm:text-base font-mono font-extrabold uppercase tracking-wider text-[#000000] mb-2 sm:mb-3">
                 <span>OUR VISION</span>
               </div>
 
@@ -110,8 +110,8 @@ export const MissionVision: React.FC = () => {
         <div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between pb-4 sm:pb-6 mb-6 sm:mb-8 border-b border-[#e5e5e5]">
             <div>
-              <div className="flex items-center gap-2 text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#000000] mb-1">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="flex items-center gap-2 text-sm sm:text-base font-mono font-extrabold uppercase tracking-[0.25em] text-[#000000] mb-1.5">
+                <Sparkles className="w-4 h-4" />
                 <span>OPERATING PRINCIPLES</span>
               </div>
               <h3 className="font-display text-xl sm:text-2xl font-extrabold text-[#000000]">

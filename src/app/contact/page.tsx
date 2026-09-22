@@ -94,7 +94,7 @@ export default function ContactPage() {
                 </span>
                 <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/dovoix_?stkn=MXByOWR2azZxbHlvdQ%3D%3D&utm_source=qr"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="DoVoix Instagram"
@@ -103,7 +103,7 @@ export default function ContactPage() {
                     <Instagram className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/dovoix-foundation/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="DoVoix LinkedIn"
@@ -112,7 +112,7 @@ export default function ContactPage() {
                     <Linkedin className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://tiktok.com"
+                    href="https://www.tiktok.com/@dovoix.foundation?_r=1&_t=ZS-99w6osswkSt"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="DoVoix TikTok"
@@ -123,7 +123,7 @@ export default function ContactPage() {
                     </svg>
                   </a>
                   <a
-                    href="https://whatsapp.com"
+                    href="https://wa.me/2348125615709"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="DoVoix WhatsApp"

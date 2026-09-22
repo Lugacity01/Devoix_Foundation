@@ -72,8 +72,8 @@ export default function ProjectDetailPage({ params }: ProjectDetailProps) {
           </div>
         </div>
 
-        {/* Cover Image Frame */}
-        <div className="relative aspect-[21/9] min-h-[300px] sm:min-h-[420px] w-full rounded-3xl overflow-hidden mb-8 sm:mb-12 bg-slate-950 border border-slate-200 flex items-center justify-center p-4 sm:p-6">
+        {/* Cover Image Frame - Mobile Optimized Aspect Ratio & Padding */}
+        <div className="relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] min-h-[260px] sm:min-h-[380px] lg:min-h-[440px] max-h-[520px] w-full rounded-2xl sm:rounded-3xl overflow-hidden mb-8 sm:mb-12 bg-slate-950 border border-slate-200 flex items-center justify-center p-3 sm:p-6">
           {/* Ambient Glow Backdrop */}
           <img
             src={project.coverImage}
@@ -87,7 +87,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailProps) {
           <img
             src={project.coverImage}
             alt={project.name}
-            className="relative max-h-full max-w-full object-contain rounded-xl z-10 shadow-2xl"
+            className="relative w-full h-full max-h-[240px] sm:max-h-[360px] lg:max-h-full max-w-full object-contain rounded-xl z-10 shadow-2xl"
           />
         </div>
 
@@ -172,11 +172,6 @@ export default function ProjectDetailPage({ params }: ProjectDetailProps) {
             <SupportBACCard variant="sidebar" />
           </div>
 
-        </div>
-
-        {/* Full-Width Interactive BAC 2.0 Support Banner */}
-        <div className="mb-12 sm:mb-16">
-          <SupportBACCard />
         </div>
 
         {/* Related Projects */}

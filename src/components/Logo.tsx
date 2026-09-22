@@ -12,17 +12,16 @@ export const Logo: React.FC<LogoProps> = ({ variant = 'light', className = '' })
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg transition-transform hover:opacity-95 ${className}`}
+      className={`inline-flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg transition-transform hover:opacity-95 ${className}`}
     >
       <img
-        src={isLight ? '/assets/logo/black_bg_logo.PNG' : '/assets/logo/white_bg_logo.PNG'}
-        alt="DoVoix Foundation"
-        className={`h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${
-          isLight
-            ? 'mix-blend-screen filter contrast-200 brightness-110 drop-shadow-[0_0_12px_rgba(255,255,255,0.08)]'
-            : 'mix-blend-multiply filter contrast-150'
-        }`}
+        src="/assets/logo/Black_circle.png"
+        alt="DoVoix"
+        className="h-8 w-8 sm:h-9 sm:w-9 rounded-full object-contain border border-white/20 transition-transform duration-300 group-hover:scale-105"
       />
+      <span className={`font-display text-lg sm:text-xl font-extrabold tracking-tight ${isLight ? 'text-white' : 'text-slate-900'}`}>
+        DoVoix
+      </span>
     </Link>
   );
 };
