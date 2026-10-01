@@ -130,7 +130,7 @@ export const ImpactSummary: React.FC = () => {
               <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 p-4 sm:p-5 rounded-xl bg-black/90 border border-[#3a3938] backdrop-blur-md">
                 <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono font-bold text-white uppercase tracking-wider mb-1">
                   <Sparkles className="w-3.5 h-3.5 text-white animate-pulse" />
-                  <span>NOVEMBER 6, 2025 · THE JOURNEY</span>
+                  <span>NOVEMBER 28, 2025 · THE JOURNEY</span>
                 </div>
                 <div className="text-xs sm:text-sm text-white font-bold mb-0.5">
                   From a One-Man Vision to a Thriving Community
